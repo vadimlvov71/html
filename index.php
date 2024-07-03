@@ -18,6 +18,15 @@
                         5 – 10 Brandon Road, Islington,
                         London, N7 9AA
                     </div>
+                    <div class='text3'>
+                        Project Number: M/54CA04/00056
+                    </div>
+                    <div class='text4'>
+                    Insert Project duration: <span>start date – end date</span>
+                    </div>
+                    <div class='text4'>
+                    Insert Reporting Month: <span> April 2024</span>
+                    </div>
                 </div>
                 
                 <!--<div class="layer"></div>-->
