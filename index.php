@@ -24,11 +24,14 @@
                         Project Number: M/54CA04/00056
                     </div>
                     <div class='text4'>
-                    Insert Project duration: <span>start date – end date</span>
+                        <div>
+                            Insert Project duration: <span>start date – end date</span>
+                        </div>
+                        <div>
+                            Insert Reporting Month: <span> April 2024</span>
+                        </div>
                     </div>
-                    <div class='text4'>
-                    Insert Reporting Month: <span> April 2024</span>
-                    </div>
+                    
                 </div>
                 
                 <!--<div class="layer"></div>-->
@@ -41,9 +44,9 @@
                     src="images/encore_logo_2024.png"
                     alt="Grapefruit slice atop a pile of other slices" />
                 </div>
-                
+                <div class="partner-text text-align-center">In Partnership with</div>
                 <div class="partner">
-                    <div class="string1 text-align-center">In Partnership with</div>
+                    
                     <img
                     class="site-logo center"
                     src="images/sample_client_logo.png"
