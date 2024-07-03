@@ -18,7 +18,7 @@
                         5 – 10 Brandon Road, Islington,
                         <div>
                             London, N7 9AA
-                        <div>
+                        </div>
                     </div>
                     <div class='text3'>
                         Project Number: M/54CA04/00056
