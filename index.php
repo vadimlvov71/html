@@ -12,7 +12,8 @@
     <body>
         <div class="container">
             <div class="left-side">
-                <div>W A S T E
+            <div class="layer"></div>
+                <div class='text1'>W A S T E
                 M O V E M E N T
                 R E P O R T
                 </div>
