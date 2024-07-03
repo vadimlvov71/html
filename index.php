@@ -12,15 +12,16 @@
     <body>
         <div class="container">
             <div class="left-side">
-            <div class="layer"></div>
-                <div class='text1'>W A S T E
-                M O V E M E N T
-                R E P O R T
+                <div class='container-text1'>
+                    <div class='text1'>W A S T E<br>  M O V E M E N T<br>  R E P O R T</div>
+                    <div class='text2'>
+                        5 – 10 Brandon Road, Islington,
+                        London, N7 9AA
+                    </div>
                 </div>
-                <div>
-                5 – 10 Brandon Road, Islington,
-                London, N7 9AA
-                </div>
+                
+                <!--<div class="layer"></div>-->
+                
             </div>
             <div class="right-side">
                 <div class="container-logo">
