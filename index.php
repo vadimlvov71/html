@@ -13,10 +13,12 @@
         <div class="container">
             <div class="left-side">
                 <div class='container-text1'>
-                    <div class='text1'>W A S T E<br>  M O V E M E N T<br>  R E P O R T</div>
+                    <div class='text1'>WASTE  MOVEMENT  REPORT</div>
                     <div class='text2'>
                         5 – 10 Brandon Road, Islington,
-                        London, N7 9AA
+                        <div>
+                            London, N7 9AA
+                        <div>
                     </div>
                     <div class='text3'>
                         Project Number: M/54CA04/00056
