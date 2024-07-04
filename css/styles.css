@@ -103,7 +103,6 @@ body, html {
     width: 100%;
     height: 100%;
     padding: 0 5%;
-  
 } 
 .container-text2{
     color:#fff;
@@ -112,11 +111,41 @@ body, html {
     padding: 67px 67px;
   
 } 
+.container-data-text1{
+    color:#000;
+    width: 100%;
+    height: 100%;
+    padding: 81px 60px;
+} 
 .container-line-logo{
     display: flex;
     align-items: center;
     justify-content: space-between;
 
+}
+.data-text-1{
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+.data-text-2{
+    font-size: 1.1rem;
+    padding: 36px 0;
+    width:83%;
+}
+.data-text-3{
+    font-size: 0.9rem;
+}
+.data-text-right-1{
+    font-size: 0.9rem;
+    padding: 7px 0;
+   /* width:80%;*/
+}
+.data-track{
+    padding: 25px 0 0 0;
+    width:140px;
+}
+.data-text-right-1 span{
+    font-weight: 700;
 }
 .line-logo{
     border-bottom:2px solid #9e6eb7;
@@ -151,6 +180,28 @@ body, html {
 .report-text{
     padding: 20px 0 0 0;
 }
+.table-waste{
+    padding: 12px 0;
+    width: 90%;
+}
+.table-waste table, th, td {
+    border: 1px solid #fff;
+    border-collapse: collapse;
+    padding: 14px 36px 6px 11px;
+  }
+.table-waste th, td {
+    /*padding: 15px;*/
+}
+.table-waste th{
+    background: #8ec343;
+    font-size: 0.9rem;
+    color:#fff;
+}
+.table-waste td{
+    background: #e7f1d7;
+    font-size: 0.8rem;
+}
+
 .text1{
     padding: 9% 0 0 0;
     font-weight: 700;
@@ -190,6 +241,7 @@ body, html {
     font-size: 1.5rem;
     width: 58%;
 }
+
 .right-side {
     width: 30%;
     /*display: flex;
@@ -239,6 +291,14 @@ body, html {
 }
 .text-align-center{
     text-align:center;
+}
+.tonnage{
+    /*width: 70%;*/
+   /* background: url('../images/tonnage_weight.png') no-repeat center center;*/
+   /* background-size: cover;*/
+   /* height: 120px;*/
+    position: relative;
+    padding: 17px 0 0 0;
 }
 .waste-text-1{
     padding: 116px 0 0 0;

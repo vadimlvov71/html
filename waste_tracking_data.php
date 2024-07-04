@@ -13,22 +13,46 @@
         <div class="container">
             <div class="left-side-data">
                 <div class='container-data-text1'>
-                    <div class='data-text1'>Waste Tracking Data</div>
-                    <div class='data-text2'>
+                    <div class='data-text-1'>Waste Tracking Data</div>
+                    <div class='data-text-2'>
                         The table below shows the distance of the waste disposal sites for each waste stream 
                         collected from site. The waste disposal sites are selected based on the locality to the site 
                         to minimise vehicle carbon emissions. Project totals are shown on the right of this page.
                     </div>
-                    <div class='text3'>
-                        Project Number: M/54CA04/00056
+                    <div class='data-text-3'>
+                        Disposal site UB77SN
                     </div>
-                    <div class='text4'>
-                        <div>
-                            Insert Project duration: <span>start date – end date</span>
-                        </div>
-                        <div>
-                            Insert Reporting Month: <span> April 2024</span>
-                        </div>
+                    <div class='table-waste'>
+                        <table>
+                            <tr>
+                                <th>Waste type</th>
+                                <th>Total Tonnage</th>
+                                <th>Total Mileage</th>
+                                <th>Total Fuel (Litres) </th>
+                                <th>CO2 Emissions</th>
+                            </tr>
+                            <tr>
+                                <td>Mixed construction</td>
+                                <td>188.45</td>
+                                <td>1212</td>
+                                <td>573.94</td>
+                                <td>XX</td>
+                            </tr>
+                            <tr>
+                                <td>Plasterboard</td>
+                                <td>188.45</td>
+                                <td>1212</td>
+                                <td>573.94</td>
+                                <td>XX</td>
+                            </tr>
+                            <tr>
+                                <td>Timber</td>
+                                <td>188.45</td>
+                                <td>1212</td>
+                                <td>573.94</td>
+                                <td>XX</td>
+                            </tr>
+                        </table> 
                     </div>
                     
                 </div>
@@ -38,22 +62,20 @@
             </div>
             <div class="right-side">
                 <div class="container-logo">
-                    <img
-                    class="site-logo center"
-                    src="images/encore_logo_2024.png"
-                    alt="Grapefruit slice atop a pile of other slices" />
+                    <div class="data-text-1 text-align-center">Project Tools</div>
+                    <img class="data-track center" src="images/truck.png" alt="" />
+                    <div class="data-text-right-1 text-align-center">
+                        Total mileage to waste<br>disposal site: <span>3,611.4 miles<span>
+                    </div>
                 </div>
-                <div class="partner-text text-align-center">In Partnership with</div>
-                <div class="partner">
-                    
-                    <img
-                    class="site-logo center"
-                    src="images/sample_client_logo.png"
-                    alt="Grapefruit slice atop a pile of other slices" />
-                </div>
-
                 
-
+                <div class="tonnage">
+                    <img class="data-track center" src="images/tonnage_weight.png" alt="" />
+                </div>
+                <div class="data-text-tonnage text-align-center">572.12 Tonnes</div>
+                <div class="data-text-right-1 text-align-center">
+                Total tonnage of <br> waste collected to date<span>
+                </div>
             </div>
         </div>
     </body>
