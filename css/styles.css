@@ -88,6 +88,12 @@ body, html {
     top:0px;
     left:10px;
 }
+.container-line-logo-left{
+    width: 80%;
+}
+.container-line-logo-right{
+    width: 20%;
+}
 .container-text1{
     background-color:#7723a4b0;
     color:#fff;
@@ -124,7 +130,7 @@ body, html {
     border-top:2px solid #9e6eb7;
     width: 100%;
     left:0;
-    top:10px;
+    top:23px;
 }
 
 .line-logo-text-1{
@@ -135,11 +141,12 @@ body, html {
 }
 .line-logo-text-2{
     font-weight: 700;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     padding: 0px 14px;
+    letter-spacing: 0.3em;
 }
 .report-text{
-    /*padding: 20px 0 0 0;*/
+    padding: 20px 0 0 0;
 }
 .text1{
     padding: 9% 0 0 0;
@@ -200,6 +207,9 @@ body, html {
 }
 .site-logo{
     width: 60%;
+}
+.site-logo-1{
+    width: 80%;
 }
 .container-logo{
     

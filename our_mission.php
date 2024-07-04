@@ -78,7 +78,7 @@
             </div>
             <div class="container-line-logo-right">
                     <img
-                    class="site-logo center"
+                    class="site-logo-1 center"
                     src="images/encore_logo_2024.png"
                     alt="Grapefruit slice atop a pile of other slices" />
             </div>
