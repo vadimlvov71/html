@@ -52,6 +52,10 @@ body, html {
     width: 122px;
     height: 99px;
 }
+.waste-width-2{
+    width: 244px;
+    text-align: center;
+}
 .line-waste-left{
     /*border:1px solid gray;*/
    /* width: 3px;*/
@@ -187,15 +191,21 @@ body, html {
 }
 .waste-text-1{
     padding: 116px 0 0 0;
-    font-size: 26px;
+    font-size: 20px;
     text-align: center;
 }
 .waste-text-2{
-    font-weight: 800;
-    font-size: 26px;
+    font-weight: 600;
+    font-size: 20px;
     text-align: center;
+    color:#4c4c4c;
 }
 .waste-container{
+    display: flex;
+    justify-content: center;
+    height: 143px;
+}
+.waste-container-2{
     display: flex;
     justify-content: center;
     height: 104px;

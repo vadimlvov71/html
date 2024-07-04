@@ -54,7 +54,15 @@
                             <div class='line-dot-2'>
                                 <div class="line-waste-right center"></div>
                                 <div class="dot"></div>
-                            <div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="waste-container-2" >
+                        <div class='waste-width-2'>
+                            Waste carried by <div class="waste-text-2">Encore <br> Environment</div>
+                        </div>
+                        <div class='waste-width-2'>
+                            Waste disposed<br> and processed <div class="waste-text-2">(End destination)</div>
                         </div>
                     </div>
                 </div>
