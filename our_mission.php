@@ -66,19 +66,24 @@
             </div>
         </div>
         <div class="container-line-logo">
-            <div class="line-logo-text">
-                 &nbsp;
+            <div class="container-line-logo-left">
+                <div class="line-logo-text">
+                    &nbsp;
+                </div>
+                <div class="report-text">
+                    <span class='line-logo-text-1'>1</span><span class='line-logo-text-2'>
+                         CLIENT NAME - PROJECT TITLE - WASTE MOVEMENT REPORT 
+                    </span>
+                </div>
             </div>
-            <div class="container-logo">
+            <div class="container-line-logo-right">
                     <img
                     class="site-logo center"
                     src="images/encore_logo_2024.png"
                     alt="Grapefruit slice atop a pile of other slices" />
             </div>
         </div>
-        <div class="report-text">
-            <span>1</span> C L I E N T   N A M E   -   P R O J E C T   T I T L E   -   W A S T E   M O V E M E N T   R E P O R T 
-        </div>
+        
     </body>
     </html>
     
