@@ -13,9 +13,8 @@
         <div class="container">
             <div class="left-side-ourmission">
                 <div class='container-text2'>
-                    <div class='text1'> Our Mission:</div>
-                    <div class='text2'>
-                    Our Mission: 
+                    <div class='text-mission-1'> Our Mission:</div>
+                    <div class='text-mission-2'>
                     Offering clients the ability to track 
                     real time waste data as it moves from 
                     site to its disposal location. This level 
@@ -36,10 +35,28 @@
                 
             </div>
             <div class="right-side-ourmission">
-                <div class="container-waste">
-                    <span class="dot"></span>
-                    <div class="line-waste"></div>
-                
+
+                <div class="container-waste center">
+                    <div class="waste-text-1">
+                        Waste<br> 
+                        produced by
+                    </div>
+                    <div class="waste-text-2">
+                        (Client name)
+                    </div>
+                    <div class="dot center"></div>
+                    <div class="waste-container">
+                        <div class='waste-width'>
+                            <div class="line-waste-left center"></div>
+                            <div class="dot"></div>
+                        </div>
+                        <div class='waste-width'>
+                            <div class='line-dot-2'>
+                                <div class="line-waste-right center"></div>
+                                <div class="dot"></div>
+                            <div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
