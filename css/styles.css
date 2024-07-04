@@ -104,18 +104,34 @@ body, html {
   
 } 
 .container-line-logo{
-  display: flex;
+    display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 
 }
 .line-logo{
-    border-top:2px solid #9e6eb7;
-    padding:5px 2px 1px;
+    border-bottom:2px solid #9e6eb7;
+   /* margin:36px 0;*/
 }
-.line-logo span{
+
+.line-logo-text{
+    position:relative;
+    width: 100%;
+}
+.line-logo-text:after{
+    content:"";
+    position:absolute;
+    border-top:2px solid #9e6eb7;
+    width: 100%;
+    left:0;
+    top:10px;
+}
+.line-logo-text span{
     color: #9e6eb7;
     font-size: 2.9rem;
+}
+.report-text{
+    /*padding: 20px 0 0 0;*/
 }
 .text1{
     padding: 9% 0 0 0;

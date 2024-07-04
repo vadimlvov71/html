@@ -66,8 +66,8 @@
             </div>
         </div>
         <div class="container-line-logo">
-            <div class="line-logo">
-                <span>1</span> C L I E N T   N A M E   -   P R O J E C T   T I T L E   -   W A S T E   M O V E M E N T   R E P O R T 
+            <div class="line-logo-text">
+                 &nbsp;
             </div>
             <div class="container-logo">
                     <img
@@ -75,6 +75,9 @@
                     src="images/encore_logo_2024.png"
                     alt="Grapefruit slice atop a pile of other slices" />
             </div>
+        </div>
+        <div class="report-text">
+            <span>1</span> C L I E N T   N A M E   -   P R O J E C T   T I T L E   -   W A S T E   M O V E M E N T   R E P O R T 
         </div>
     </body>
     </html>
