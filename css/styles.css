@@ -103,6 +103,20 @@ body, html {
     padding: 67px 67px;
   
 } 
+.container-line-logo{
+  display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.line-logo{
+    border-top:2px solid #9e6eb7;
+    padding:5px 2px 1px;
+}
+.line-logo span{
+    color: #9e6eb7;
+    font-size: 2.9rem;
+}
 .text1{
     padding: 9% 0 0 0;
     font-weight: 700;
