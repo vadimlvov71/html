@@ -141,7 +141,9 @@ body, html {
    /* width:80%;*/
 }
 .data-track{
-    padding: 25px 0 0 0;
+    padding: 20px 0;
+}
+.data-right-img{
     width:140px;
 }
 .data-text-right-1 span{
@@ -299,6 +301,15 @@ body, html {
    /* height: 120px;*/
     position: relative;
     padding: 17px 0 0 0;
+}
+.data-text-tonnage{
+    font-size: 1 rem;
+    font-weight: 700;
+    color: #ff4d3b;
+    position: absolute;
+    top: 60px;
+    left: 155px;
+    width: 100px;
 }
 .waste-text-1{
     padding: 116px 0 0 0;

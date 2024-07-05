@@ -63,16 +63,17 @@
             <div class="right-side">
                 <div class="container-logo">
                     <div class="data-text-1 text-align-center">Project Tools</div>
-                    <img class="data-track center" src="images/truck.png" alt="" />
+                    <img class="data-track data-right-img center" src="images/truck.png" alt="" />
                     <div class="data-text-right-1 text-align-center">
                         Total mileage to waste<br>disposal site: <span>3,611.4 miles<span>
                     </div>
                 </div>
                 
                 <div class="tonnage">
-                    <img class="data-track center" src="images/tonnage_weight.png" alt="" />
+                    <img class="data-right-img center" src="images/tonnage_weight.png" alt="" />
+                    <div class="data-text-tonnage text-align-center">572.12 Tonnes</div>
                 </div>
-                <div class="data-text-tonnage text-align-center">572.12 Tonnes</div>
+                
                 <div class="data-text-right-1 text-align-center">
                 Total tonnage of <br> waste collected to date<span>
                 </div>
