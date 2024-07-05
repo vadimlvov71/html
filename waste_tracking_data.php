@@ -65,7 +65,7 @@
                     <div class="data-text-1 text-align-center">Project Tools</div>
                     <img class="data-track data-right-img center" src="images/truck.png" alt="" />
                     <div class="data-text-right-1 text-align-center">
-                        Total mileage to waste<br>disposal site: <span>3,611.4 miles<span>
+                        Total mileage to waste<br>disposal site: <span>3,611.4 miles</span>
                     </div>
                 </div>
                 
@@ -73,10 +73,25 @@
                     <img class="data-right-img center" src="images/tonnage_weight.png" alt="" />
                     <div class="data-text-tonnage text-align-center">572.12 Tonnes</div>
                 </div>
-                
                 <div class="data-text-right-1 text-align-center">
-                Total tonnage of <br> waste collected to date<span>
+                    Total tonnage of <br> waste collected to date
                 </div>
+                <div class="container-logo">
+                    <img class="data-track11 data-right-img center" src="images/co2_cloud.png" alt="" />
+                    <div class="data-text-right-1 text-align-center">
+                        <span>XXtonnes</span>
+                        <div>of CO2 emissions.</div>
+                    </div>
+                </div>
+                <div class="container-logo">
+                    <img class="data-track11 data-right-img center" src="images/pump.png" alt="" />
+                    <div class="data-text-right-1 text-align-center">
+                        <span>1710.18 Litres</span> of fuel used 
+                        <div>of CO2 emissions.</div>
+                    </div>
+                </div>
+                
+               
             </div>
         </div>
     </body>
