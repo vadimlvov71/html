@@ -19,44 +19,105 @@
                         collected from site. The waste disposal sites are selected based on the locality to the site 
                         to minimise vehicle carbon emissions. Project totals are shown on the right of this page.
                     </div>
-                    <div class='data-text-3'>
-                        Disposal site UB77SN
+                    <div class='data-text-table'>
+                        <div class='data-text-3'>
+                            Disposal site UB77SN
+                        </div>
+                        <div class='table-waste'>
+                            <table>
+                                <tr>
+                                    <th>Waste type</th>
+                                    <th>Total Tonnage</th>
+                                    <th>Total Mileage</th>
+                                    <th>Total Fuel (Litres) </th>
+                                    <th>CO2 Emissions</th>
+                                </tr>
+                                <tr>
+                                    <td>Mixed construction</td>
+                                    <td>188.45</td>
+                                    <td>1212</td>
+                                    <td>573.94</td>
+                                    <td>XX</td>
+                                </tr>
+                                <tr>
+                                    <td>Plasterboard</td>
+                                    <td>188.45</td>
+                                    <td>1212</td>
+                                    <td>573.94</td>
+                                    <td>XX</td>
+                                </tr>
+                                <tr>
+                                    <td>Timber</td>
+                                    <td>188.45</td>
+                                    <td>1212</td>
+                                    <td>573.94</td>
+                                    <td>XX</td>
+                                </tr>
+                            </table> 
+                        </div>
                     </div>
-                    <div class='table-waste'>
-                        <table>
-                            <tr>
-                                <th>Waste type</th>
-                                <th>Total Tonnage</th>
-                                <th>Total Mileage</th>
-                                <th>Total Fuel (Litres) </th>
-                                <th>CO2 Emissions</th>
-                            </tr>
-                            <tr>
-                                <td>Mixed construction</td>
-                                <td>188.45</td>
-                                <td>1212</td>
-                                <td>573.94</td>
-                                <td>XX</td>
-                            </tr>
-                            <tr>
-                                <td>Plasterboard</td>
-                                <td>188.45</td>
-                                <td>1212</td>
-                                <td>573.94</td>
-                                <td>XX</td>
-                            </tr>
-                            <tr>
-                                <td>Timber</td>
-                                <td>188.45</td>
-                                <td>1212</td>
-                                <td>573.94</td>
-                                <td>XX</td>
-                            </tr>
-                        </table> 
+                    <div class='data-text-table'>
+                        <div class='data-text-3'>
+                            Disposal site UB77SN
+                        </div>
+                        <div class='table-waste'>
+                            <table>
+                                <tr>
+                                    <th>Waste type</th>
+                                    <th>Total Tonnage</th>
+                                    <th>Total Mileage</th>
+                                    <th>Total Fuel (Litres) </th>
+                                    <th>CO2 Emissions</th>
+                                </tr>
+                                <tr>
+                                    <td>Mixed construction</td>
+                                    <td>188.45</td>
+                                    <td>1212</td>
+                                    <td>573.94</td>
+                                    <td>XX</td>
+                                </tr>
+                                <tr>
+                                    <td>Plasterboard</td>
+                                    <td>188.45</td>
+                                    <td>1212</td>
+                                    <td>573.94</td>
+                                    <td>XX</td>
+                                </tr>
+                                <tr>
+                                    <td>Timber</td>
+                                    <td>188.45</td>
+                                    <td>1212</td>
+                                    <td>573.94</td>
+                                    <td>XX</td>
+                                </tr>
+                            </table> 
+                        </div>
                     </div>
-                    
+                    <div class='data-text-table'>
+                        <div class='data-text-3'>
+                            Disposal site UB77SN
+                        </div>
+                        <div class='table-waste'>
+                            <table>
+                                <tr>
+                                    <th>Waste type</th>
+                                    <th>Total Tonnage</th>
+                                    <th>Total Mileage</th>
+                                    <th>Total Fuel (Litres) </th>
+                                    <th>CO2 Emissions</th>
+                                </tr>
+                                <tr>
+                                    <td>Mixed construction</td>
+                                    <td>188.45</td>
+                                    <td>1212</td>
+                                    <td>573.94</td>
+                                    <td>XX</td>
+                                </tr>
+                            </table> 
+                        </div>
+                    </div>
+                    Further supplier information and documentation can be found on our portal within the duty of care section
                 </div>
-                
                 <!--<div class="layer"></div>-->
                 
             </div>
@@ -77,14 +138,14 @@
                     Total tonnage of <br> waste collected to date
                 </div>
                 <div class="container-logo">
-                    <img class="data-track11 data-right-img center" src="images/co2_cloud.png" alt="" />
+                    <img class="data-right-img center" src="images/co2_cloud.png" alt="" />
                     <div class="data-text-right-1 text-align-center">
                         <span>XXtonnes</span>
                         <div>of CO2 emissions.</div>
                     </div>
                 </div>
                 <div class="container-logo">
-                    <img class="data-track11 data-right-img center" src="images/pump.png" alt="" />
+                    <img class="data-right-img center" src="images/pump.png" alt="" />
                     <div class="data-text-right-1 text-align-center">
                         <span>1710.18 Litres</span> of fuel used 
                         <div>of CO2 emissions.</div>
