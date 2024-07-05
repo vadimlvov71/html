@@ -1,17 +1,17 @@
     <!DOCTYPE html>
-    <html lang="en">
+    <html lang='en'>
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset='UTF-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
         <title>Split Page with Background Image</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="css/styles.css">
+        <link rel='preconnect' href='https://fonts.googleapis.com'>
+        <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
+        <link href='https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap' rel='stylesheet'>
+        <link rel='stylesheet' href='css/styles.css'>
     </head>
     <body>
-        <div class="container">
-            <div class="left-side-data">
+        <div class='container'>
+            <div class='left-side-data'>
                 <div class='container-data-text1'>
                     <div class='data-text-1'>Waste Tracking Data</div>
                     <div class='data-text-2'>
@@ -118,41 +118,39 @@
                     </div>
                     Further supplier information and documentation can be found on our portal within the duty of care section
                 </div>
-                <!--<div class="layer"></div>-->
+                <!--<div class='layer'></div>-->
                 
             </div>
-            <div class="right-side">
-                <div class="container-logo">
-                    <div class="data-text-1 text-align-center">Project Tools</div>
-                    <img class="data-track data-right-img center" src="images/truck.png" alt="" />
-                    <div class="data-text-right-1 text-align-center">
+            <div class='right-side'>
+                <div class='container-logo'>
+                    <div class='data-text-1 text-align-center'>Project Tools</div>
+                    <img class='data-track data-right-img center' src='images/truck.png' alt='' />
+                    <div class='data-text-right-1 text-align-center'>
                         Total mileage to waste<br>disposal site: <span>3,611.4 miles</span>
                     </div>
                 </div>
                 
-                <div class="tonnage">
-                    <img class="data-right-img center" src="images/tonnage_weight.png" alt="" />
-                    <div class="data-text-tonnage text-align-center">572.12 Tonnes</div>
+                <div class='tonnage'>
+                    <img class='data-right-img center' src='images/tonnage_weight.png' alt='' />
+                    <div class='data-text-tonnage text-align-center'>572.12 Tonnes</div>
                 </div>
-                <div class="data-text-right-1 text-align-center">
+                <div class='data-text-right-1 text-align-center'>
                     Total tonnage of <br> waste collected to date
                 </div>
-                <div class="container-logo">
-                    <img class="data-right-img center" src="images/co2_cloud.png" alt="" />
-                    <div class="data-text-right-1 text-align-center">
+                <div class='container-logo'>
+                    <img class='data-right-img center' src='images/co2_cloud.png' alt='' />
+                    <div class='data-text-right-1 text-align-center'>
                         <span>XXtonnes</span>
                         <div>of CO2 emissions.</div>
                     </div>
                 </div>
-                <div class="container-logo">
-                    <img class="data-right-img center" src="images/pump.png" alt="" />
-                    <div class="data-text-right-1 text-align-center">
+                <div class='container-logo'>
+                    <img class='data-right-img center' src='images/pump.png' alt='' />
+                    <div class='data-text-right-1 text-align-center'>
                         <span>1710.18 Litres</span> of fuel used 
                         <div>of CO2 emissions.</div>
                     </div>
                 </div>
-                
-               
             </div>
         </div>
     </body>
