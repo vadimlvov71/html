@@ -38,22 +38,44 @@
                                     jobs and workforce engagement.
                                 </div>
                             </div>
-                            <div class='width-50-procent'>
+                            <div class='width-50-procent rainbow'>
                                 <div class='text-last-img-1'><span>Most</span> preferable</div>
                                 <img class='heat-bars-img ' src='images/heat_bars.png' alt='' />
                                 
                                 <div class='text-last-img-1'><span>Least</span> preferable</div>
                             </div>
                         </div>
-                        <div class='container-flex' style='/*width:70%*/'>
-                            <div>
-                                <div>EncoreEnvironment</div>
-                                <div>company/encore-environment-ltd</div>
+                        <div class='container-flex social-media' >
+                            <div class='container-flex'>
+                                <div class='container-flex container-icon'>
+                                    <div><img class='icon-facebook' src='images/icons/img.icons8.png'></div>
+                                    <div class='icon-text'>/EncoreEnvironment</div>
+                                </div>
+                                <div class='container-flex '>
+                                    <div><img class='icon-facebook' src='images/icons/img.iconstwitter.png'></div>
+                                    <div class='icon-text'>/encore_enviro</div>
+                                </div>
                             </div>
-                            <div>
-                                /encore_enviro 
-                                /encoreenvironmentltd
+                        </div>
+                        <div class='container-flex social-media' style='/*width:70%*/'>
+                            <div class='container-flex'>
+                                <div class='container-flex container-icon'>
+                                    <div><img class='icon-facebook' src='images/icons/img.iconslinkin.png'></div>
+                                    <div class='icon-text'>/company/encore-environment-ltd</div>
+                                </div>
+                                <div class='container-flex'>
+                                    <div><img class='icon-facebook' src='images/icons/img.iconspint.png'></div>
+                                    <div class='icon-text'>/encoreenvironmentltd</div>
+                                </div>
                             </div>
+                           
+                        </div>
+                        <div class='contacts'>
+                            <span>01604 496987</span>  |  <span>sales@encore-environment.com</span>
+                        </div>
+                        <div class='our-site'>
+                            All reports availabe on our portal at<br>
+                            <a href='encore-environment.com'>encore-environment.com</a>
                         </div>
                     </div>
                 </div>
