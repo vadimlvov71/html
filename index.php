@@ -11,39 +11,41 @@
     </head>
     <body>
         <div class='container'>
-            <div class='left-side'>
-                <div class='container-text1'>
-                    <div class='text1'>WASTE  MOVEMENT  REPORT</div>
-                    <div class='text2'>
-                        5 – 10 Brandon Road, Islington,
-                        <div>
-                            London, N7 9AA
+            <div class='container-flex'>
+                <div class='left-side'>
+                    <div class='container-text1'>
+                        <div class='text1'>WASTE  MOVEMENT  REPORT</div>
+                        <div class='text2'>
+                            5 – 10 Brandon Road, Islington,
+                            <div>
+                                London, N7 9AA
+                            </div>
+                        </div>
+                        <div class='text3'>
+                            Project Number: M/54CA04/00056
+                        </div>
+                        <div class='text4'>
+                            <div>
+                                Insert Project duration: <span>start date – end date</span>
+                            </div>
+                            <div>
+                                Insert Reporting Month: <span> April 2024</span>
+                            </div>
                         </div>
                     </div>
-                    <div class='text3'>
-                        Project Number: M/54CA04/00056
-                    </div>
-                    <div class='text4'>
-                        <div>
-                            Insert Project duration: <span>start date – end date</span>
-                        </div>
-                        <div>
-                            Insert Reporting Month: <span> April 2024</span>
-                        </div>
-                    </div>
+                    <!--<div class='layer'></div>-->
                 </div>
-                <!--<div class='layer'></div>-->
-            </div>
-            <div class='right-side'>
-                <div class='container-logo'>
-                    <img
-                    class='site-logo center'
-                    src='images/encore_logo_2024.png'
-                    alt='Grapefruit slice atop a pile of other slices' />
-                </div>
-                <div class='partner-text text-align-center'>In Partnership with</div>
-                <div class='partner'>
-                    <img class='site-logo center' src='images/sample_client_logo.png' alt='' />
+                <div class='right-side'>
+                    <div class='container-logo'>
+                        <img
+                        class='site-logo center'
+                        src='images/encore_logo_2024.png'
+                        alt='' />
+                    </div>
+                    <div class='partner-text text-align-center'>In Partnership with</div>
+                    <div class='partner'>
+                        <img class='site-logo center' src='images/sample_client_logo.png' alt='' />
+                    </div>
                 </div>
             </div>
         </div>
