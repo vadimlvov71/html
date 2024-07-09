@@ -75,7 +75,7 @@ body, html {
 
 }
 .data-text-table{
-    padding: 36px 0 0 0;
+    /*padding: 36px 0 0 0;*/
 }
 .data-text-1{
     font-weight: 700;
@@ -87,6 +87,7 @@ body, html {
     width:86%;
 }
 .data-text-3{
+    padding: 36px 0 0 0;
     font-size: 0.9rem;
 }
 .data-text-right-1{
@@ -242,6 +243,9 @@ body, html {
     font-weight: 400;
     text-decoration: none;
 }
+.pbreak{
+    page-break-after: always;
+}
 .report-text{
     padding: 20px 0 0 0;
 }
@@ -276,7 +280,7 @@ body, html {
     word-spacing:9999px;
 }
 .text2{
-    padding: 9% 0 0 0;
+    padding: 111px 0 0 0;
     font-weight: 800;
     font-size: 1.6rem;
     
