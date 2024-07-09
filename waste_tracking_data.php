@@ -125,10 +125,11 @@
                             collected from site. The waste disposal sites are selected based on the locality to the site 
                             to minimise vehicle carbon emissions. Project totals are shown on the right of this page.
                         </div>
-                        <div class='data-text-table'>
+                        <div class='data-text-table' style='height: 536px;'>
                         
                             <?php 
-                                //$i = 0;
+                                $cell_count=0;
+                                $page_with_tables=1;
                                 foreach($group_by_postcode as $key => $group){
                                    
                                     //if($i==1){
@@ -149,34 +150,44 @@
                                             </tr>";*/
                                     //$group_count_array[$key]
                                             $i = 0;
+                                            $row_per_page=6;
                                             foreach($group as $stat){
-                                            
+                                                $row_count=test();
                                                 echo  "
                                                 <tr>
+                                                    <td>".$row_count."#".$row_per_page."</td>
                                                     <td>".$stat['waste_type_name']."</td>
                                                     <td>".$stat['total_tonnageNUM']."</td>
                                                     <td>".round($stat['total_milesNUM'], 2 )."</td>
                                                     <td>".round($stat['total_litres_usedNUM'], 2 )."</td>
                                                     <td>".round($stat['total_co2_emissionsNUM'], 2 )."</td>
                                                 </tr>";
-                                                if($i==6){
+                                                //$page_with_tables=1 &&
+                                                if( $row_count==$row_per_page){
                                                     echo "</table></div>";
                                                     $page++;
-                                                    $page_table=true;
+                                                    $row_per_page=$row_per_page+$row_per_page;
+                                    
+                                                    echo "<div class='footer-for-tables'>";
                                                     echo footer($page, $path_to_images);
-
-                                                    echo "
-                                                    <div style='padding:40px;'> PAGE 2 </div>";
+                                                    echo "</div>";
+                           
                                                     echo newTable($key, true);
-                                                    echo "<table>";
+                                                    echo "000000";
+                                                    echo "row_per_page".$row_per_page."<br>";
                                                  }
-                                                 $i++;
+                                                 //else if($page_with_tables!=1 && $row_count==12){
+                                                  //  echo "000000";
+                                                // }
+                                         
+                                                 
                                             }
                                             
                                            
                                     echo "
                                         </table> 
                                     </div>";
+                                    $page_with_tables++;
                                 }
                                 //exit;
                             ?>
@@ -184,7 +195,7 @@
                         </div><!--data-text-table-->
                         Further supplier information and documentation can be found on our portal within the duty of care section
                     </div><!--container-data-text1-->                
-                </div>
+                </div><!--left-side-data-->
                 <div class='right-side'>
                     <div class='container-logo'>
                         <div class='data-text-1 text-align-center'>Project Tools</div>
@@ -218,7 +229,7 @@
                 </div>
             </div>
             <?php
-                echo footer($page, $path_to_images);
+               // echo footer($page, $path_to_images);
             ?>
         </div>
     </body>
@@ -233,7 +244,7 @@
         <div class='data-text-3'>
             Disposal site ".$key.$cont."
         </div>
-        <div class='table-waste'>
+        <div class='table-waste' >
             <table>
                 <tr>
                     <th width='160' >Waste type</th>
@@ -247,7 +258,7 @@
     function footer($page, $path_to_images){
 		//global $global;
 		return("
-			<div class='container-line-logo' style='position: absolute;'>
+			<div class='container-line-logo' style='position: absolute;z-index: 1000;width: 138%;'>
 				<div class='container-line-logo-left'>
 					<div class='line-logo-text'>
 						&nbsp;
@@ -267,5 +278,12 @@
 			</div>
 		");
 	}
+    function test($num=0)
+{
+    static $i = 0;
+    //echo $i;
+    $i++;
+    return $i;
+}
     ?>
     

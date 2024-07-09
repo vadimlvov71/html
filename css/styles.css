@@ -112,6 +112,11 @@ body, html {
     border-radius: 50%;
     display: inline-block;
   }
+.footer-for-tables{
+    padding: 92px 0;
+    position:relative; 
+    height: 99px;
+}
 .heat-bars-img{
     width: 70%;
 }
