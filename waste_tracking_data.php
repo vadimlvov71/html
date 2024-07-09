@@ -37,7 +37,9 @@
             'wtn_destination_postcode' => 'BD18 1HY',
                 'waste_type_name' => 'cccc'
                 );
-        $temp[]= array( 'total_milesNUM' => 1071.71884125, 'total_litres_usedNUM' => 374.02987559625, 'total_tonnageNUM' => '', 'total_co2_emissionsNUM' => 952.29128418, 'wtn_destination_postcode' => '4444', 'waste_type_name' => 'N/A ');
+    $temp[]= array( 'total_milesNUM' => 1071.71884125, 'total_litres_usedNUM' => 374.02987559625, 'total_tonnageNUM' => '', 'total_co2_emissionsNUM' => 952.29128418, 'wtn_destination_postcode' => '4444', 'waste_type_name' => 'N/A ');
+    $temp[]= array( 'total_milesNUM' => 1071.71884125, 'total_litres_usedNUM' => 374.02987559625, 'total_tonnageNUM' => '', 'total_co2_emissionsNUM' => 952.29128418, 'wtn_destination_postcode' => '4444', 'waste_type_name' => 'N/A ');
+    $temp[]= array( 'total_milesNUM' => 1071.71884125, 'total_litres_usedNUM' => 374.02987559625, 'total_tonnageNUM' => '', 'total_co2_emissionsNUM' => 952.29128418, 'wtn_destination_postcode' => '4444', 'waste_type_name' => 'N/A ');
 
     $transport_stats['by_destination'] = $temp;
 
@@ -83,9 +85,9 @@
         $group_count++;
     }
     //echo "cells_count::".$cells_count."<br>";
-   /* echo "<pre>";
-    print_r($group_count_array);
-    echo "</pre>";*/
+   echo "<pre>";
+    print_r($group_by_postcode);
+    echo "</pre>";
   
     /*  
     foreach($group_count_array as $key => $count){
@@ -151,8 +153,8 @@
                                     //$group_count_array[$key]
                                             $i = 0;
                                             $row_per_page=6;
-                                            foreach($group as $stat){
-                                                $row_count=test();
+                                            foreach($group as $key1 => $stat){
+                                                $row_count=countRows('next');
                                                 echo  "
                                                 <tr>
                                                     <td>".$row_count."#".$row_per_page."</td>
@@ -163,37 +165,42 @@
                                                     <td>".round($stat['total_co2_emissionsNUM'], 2 )."</td>
                                                 </tr>";
                                                 //$page_with_tables=1 &&
-                                                if( $row_count==$row_per_page){
+                                                if( $row_count==6){
                                                     echo "</table></div>";
                                                     $page++;
-                                                    $row_per_page=$row_per_page+$row_per_page;
-                                    
+                     
+                                                    countRows('start');
                                                     echo "<div class='footer-for-tables'>";
                                                     echo footer($page, $path_to_images);
                                                     echo "</div>";
-                           
-                                                    echo newTable($key, true);
-                                                    echo "000000";
-                                                    echo "row_per_page".$row_per_page."<br>";
-                                                 }
-                                                 //else if($page_with_tables!=1 && $row_count==12){
-                                                  //  echo "000000";
-                                                // }
-                                         
-                                                 
+                                                    //echo "key::: ".$key." postcode".$stat['wtn_destination_postcode']."<br>";
+                                                    if ($key == $stat['wtn_destination_postcode']) {
+                                                        echo "<div class=pbreak></div>";
+                                                        echo newTable($key, true); 
+                                                    }
+                                                    
+                                                   // echo "row_per_page".$row_per_page."row_count".$row_count."<br>";
+                                                 }   
                                             }
                                             
                                            
                                     echo "
                                         </table> 
                                     </div>";
-                                    $page_with_tables++;
+                                    end($group_by_postcode);
+                                    if ($key === key($group_by_postcode)) {
+                                        $page++;
+                                        echo "Further supplier information and documentation can be found on our portal within the duty of care section";
+                                        echo "<div class='footer-for-tables'>";
+                                        echo footer($page, $path_to_images);
+                                        echo "</div>";
+                                     }
                                 }
                                 //exit;
                             ?>
                                 
                         </div><!--data-text-table-->
-                        Further supplier information and documentation can be found on our portal within the duty of care section
+                        
                     </div><!--container-data-text1-->                
                 </div><!--left-side-data-->
                 <div class='right-side'>
@@ -247,7 +254,7 @@
         <div class='table-waste' >
             <table>
                 <tr>
-                    <th width='160' >Waste type</th>
+                    <th width='160'>Waste type</th>
                     <th>Total Tonnage</th>
                     <th>Total Mileage</th>
                     <th>Total Fuel (Litres) </th>
@@ -278,12 +285,18 @@
 			</div>
 		");
 	}
-    function test($num=0)
+function countRows($type='next')
 {
     static $i = 0;
     //echo $i;
-    $i++;
+    if($type=='start'){
+        $i=0;
+    }else{
+        $i++;
+    }
+  
     return $i;
 }
+
     ?>
     
