@@ -1,4 +1,26 @@
     <?php
+    //Array ( [totals] => Array ( [total_milesNUM] => 29520.01814396 [total_litres_usedNUM] => 10302.48633224204 [total_tonnageNUM] => 141.45000000 [total_co2_emissionsNUM] => 26230.43927658 )
+    $temp1 = [];
+    $temp1=array('total_milesNUM' => 29520.01814396, 'total_litres_usedNUM' => 10302.48633224204, 'total_tonnageNUM' => 141.45000000, 'total_co2_emissionsNUM' => 26230.43927658);
+    $transport_stats['totals'] = $temp1;
+    $total_miles=0;
+    if(!empty($transport_stats['totals']['total_milesNUM'])){
+        $total_miles=round($transport_stats['totals']['total_milesNUM'], 2);
+    }
+    $total_litres=0;
+    if(!empty($transport_stats['totals']['total_litres_usedNUM'])){
+        $total_litres=round($transport_stats['totals']['total_litres_usedNUM'], 2);
+    }
+    $total_tonnage=0;
+    if(!empty($transport_stats['totals']['total_tonnageNUM'])){
+        $total_tonnage=round($transport_stats['totals']['total_tonnageNUM'], 2);
+    }
+    $total_co2=0;
+    if(!empty($transport_stats['totals']['total_co2_emissionsNUM'])){
+        $total_co2=round($transport_stats['totals']['total_co2_emissionsNUM'], 2);
+    }
+    
+    echo $total_co2;
     $path_to_images = "images/";
     ///Array ( [totals] => Array ( [total_milesNUM] => 29520.01814396 [total_litres_usedNUM] => 10302.48633224204 [total_tonnageNUM] => 141.45000000 [total_co2_emissionsNUM] => 26230.43927658 )
     $transport_stats = array();
@@ -130,7 +152,7 @@
                         <div class='data-text-table' style='height: 536px;'>
                         
                             <?php 
-                                $cell_count=0;
+
                                 $page_with_tables=1;
                                 foreach($group_by_postcode as $key => $group){
                                    
@@ -153,7 +175,7 @@
                                     //$group_count_array[$key]
                                             $i = 0;
                                             $row_per_page=6;
-                                            foreach($group as $key1 => $stat){
+                                            foreach($group as $stat){
                                                 $row_count=countRows('next');
                                                 echo  "
                                                 <tr>
@@ -168,18 +190,14 @@
                                                 if( $row_count==6){
                                                     echo "</table></div>";
                                                     $page++;
-                     
                                                     countRows('start');
                                                     echo "<div class='footer-for-tables'>";
                                                     echo footer($page, $path_to_images);
                                                     echo "</div>";
-                                                    //echo "key::: ".$key." postcode".$stat['wtn_destination_postcode']."<br>";
                                                     if ($key == $stat['wtn_destination_postcode']) {
                                                         echo "<div class=pbreak></div>";
                                                         echo newTable($key, true); 
                                                     }
-                                                    
-                                                   // echo "row_per_page".$row_per_page."row_count".$row_count."<br>";
                                                  }   
                                             }
                                             
@@ -214,7 +232,7 @@
                     
                     <div class='tonnage'>
                         <img class='data-right-img center' src='images/tonnage_weight.png' alt='' />
-                        <div class='data-text-tonnage text-align-center'>572.12 Tonnes</div>
+                        <div class='data-text-tonnage text-align-center'>572.12<br> Tonnes</div>
                     </div>
                     <div class='data-text-right-1 text-align-center'>
                         Total tonnage of <br> waste collected to date

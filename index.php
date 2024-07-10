@@ -14,17 +14,17 @@
             <div class='container-flex'>
                 <div class='left-side'>
                     <div class='container-text1'>
-                        <div class='text1'>WASTE  MOVEMENT  REPORT</div>
-                        <div class='text2'>
+                        <div class='monserat-text1'>WASTE  MOVEMENT  REPORT</div>
+                        <div class='monserat-text2'>
                             5 – 10 Brandon Road, Islington,
                             <div>
                                 London, N7 9AA
                             </div>
                         </div>
-                        <div class='text3'>
+                        <div class='monserat-text3'>
                             Project Number: M/54CA04/00056
                         </div>
-                        <div class='text4'>
+                        <div class='monserat-text4'>
                             <div>
                                 Insert Project duration: <span>start date – end date</span>
                             </div>

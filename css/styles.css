@@ -59,7 +59,7 @@ body, html {
     color:#fff;
     width: 100%;
     height: 100%;
-    padding: 67px 67px;
+    padding: 67px 68px 140px 58px
   
 } 
 .container-data-text1{
@@ -225,12 +225,60 @@ body, html {
 }
 .line-logo-text-2{
     font-weight: 700;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     padding: 0px 14px;
     letter-spacing: 0.3em;
 }
 .logo-last-right{
     padding: 32px 0;
+}
+.monserat-text1{
+    padding: 9% 0 0 0;
+    font-weight: 700;
+    font-size: 2.9rem;
+    font-family: 'Montserrat', sans-serif;
+    font-optical-sizing: auto;
+    letter-spacing: 0.3em;
+    line-height: 137%;
+    word-spacing:9999px;
+}
+.monserat-text2{
+    padding: 111px 0 0 0;
+    font-family: 'Montserrat', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-size: 1.6rem;
+    
+}
+.monserat-text3{
+    padding: 20px 0 0 0;
+    font-size: 2.1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+}
+.monserat-text4{
+    padding: 57px 0 75px 0;
+    font-weight: 300;
+    font-size: 1.0rem;
+}
+.monserat-text4 span{
+    font-weight: 600;
+}
+.monserat-text-mission-1{
+    padding: 30px 0 0 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 2.6rem;
+}
+
+.monserat-text-mission-2{
+    padding: 20px 0 0 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+    width: 67%;
 }
 .social-media{
     padding: 30px 37px; 
@@ -276,33 +324,7 @@ body, html {
     font-size: 0.8rem;
 }
 
-.text1{
-    padding: 9% 0 0 0;
-    font-weight: 700;
-    font-size: 2.9rem;
-    letter-spacing: 0.3em;
-    line-height: 137%;
-    word-spacing:9999px;
-}
-.text2{
-    padding: 111px 0 0 0;
-    font-weight: 800;
-    font-size: 1.6rem;
-    
-}
-.text3{
-    padding: 20px 0 0 0;
-    font-weight: 200;
-    font-size: 2.1rem;
-}
-.text4{
-    padding: 57px 0 75px 0;
-    font-weight: 300;
-    font-size: 1.6rem;
-}
-.text4 span{
-    font-weight: 600;
-}
+
 .text-last-right-1{
     padding: 30px 0 0 0;
     font-weight: 400;
@@ -322,18 +344,7 @@ body, html {
     font-weight: 800;
 }
 
-.text-mission-1{
-    padding: 30px 0 0 0;
-    font-weight: 800;
-    font-size: 2.6rem;
-}
 
-.text-mission-2{
-    padding: 20px 0 0 0;
-    font-weight: 400;
-    font-size: 1.5rem;
-    width: 67%;
-}
 .text-last-1{
     padding: 83px 0 0 0;
     font-weight: 800;
@@ -417,13 +428,14 @@ body, html {
    /* padding: 17px 0 0 0;*/
 }
 .data-text-tonnage{
-    font-size: 1 rem;
+    font-size: 1rem;
     font-weight: 700;
     color: #ff4d3b;
     position: absolute;
     top: 60px;
-    left: 155px;
-    width: 100px;
+    left: 0;
+    right: 0;
+    /*width: 100px;*/
 }
 .waste-text-1{
     padding: 116px 0 0 0;

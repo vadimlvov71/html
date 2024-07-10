@@ -1,3 +1,7 @@
+    <?php
+    $path_to_images = "images/";
+    $page=1;
+    ?>
     <!DOCTYPE html>
     <html lang='en'>
     <head>
@@ -15,8 +19,8 @@
             <div class='container-flex'>
                 <div class='left-side-ourmission'>
                     <div class='container-text2'>
-                        <div class='text-mission-1'> Our Mission:</div>
-                        <div class='text-mission-2'>
+                        <div class='monserat-text-mission-1'> Our Mission:</div>
+                        <div class='monserat-text-mission-2'>
                         Offering clients the ability to track 
                         real time waste data as it moves from 
                         site to its disposal location. This level 
@@ -53,27 +57,34 @@
                     </div>
                 </div>
             </div>
-        
-            <div class='container-line-logo'>
-                <div class='container-line-logo-left'>
-                    <div class='line-logo-text'>
-                        &nbsp;
-                    </div>
-                    <div class='report-text'>
-                        <span class='line-logo-text-1'>1</span><span class='line-logo-text-2'>
-                            CLIENT NAME - PROJECT TITLE - WASTE MOVEMENT REPORT 
-                        </span>
-                    </div>
-                </div>
-                <div class='container-line-logo-right'>
-                        <img
-                        class='site-logo-1 center'
-                        src='images/encore_logo_2024.png'
-                        alt='Grapefruit slice atop a pile of other slices' />
-                </div>
-            </div>   
+            <?php
+            echo footer($page, $path_to_images);
+            ?>
         </div>
         
     </body>
     </html>
-    
+    <?php 
+    function footer($page, $path_to_images){
+		//global $global;
+		return("
+			<div class='container-line-logo' style='position: absolute;z-index: 1000;width: 100%;'>
+				<div class='container-line-logo-left'>
+					<div class='line-logo-text'>
+						&nbsp;
+					</div>
+					<div class='report-text'>
+						<span class='line-logo-text-1'>".$page."</span><span class='line-logo-text-2'>
+							CLIENT NAME - PROJECT TITLE - WASTE MOVEMENT REPORT 
+						</span>
+					</div>
+				</div>
+				<div class='container-line-logo-right'>
+						<img
+						class='site-logo-1 center'
+						src='".$path_to_images."encore_logo_2024.png'
+						alt='Logo' />
+				</div>
+			</div>
+		");
+	}
