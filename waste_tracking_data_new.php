@@ -161,7 +161,7 @@
                                             $i = 0;
                                             foreach($group as $key1 => $stat){
                                                 if($page_with_tables==1){
-                                                    $row_per_page=2;
+                                                    $row_per_page=5;
                                                 }else{
                                                     $row_per_page=7;
                                                 }
@@ -181,7 +181,7 @@
                                                     $page_with_tables++;
                                                     $page++;
                                                     countRows('start');
-                                                    echo "<div class='footer-for-tables' style='position:relative'>";
+                                                    echo "<div class='footer-for-tables' style='position:relative; padding:120px 0 0 0'>";
                                                     echo footer($page, $path_to_images);
                                                     echo "</div>";
                                                     end($group);
@@ -208,7 +208,7 @@
                                     if ($key === key($group_by_postcode)) {
                                         $page++;
                                         echo "Further supplier information and documentation can be found on our portal within the duty of care section";
-                                        echo "<div class='footer-for-tables'>";
+                                        echo "<div class='footer-for-tables' style=''>";
                                         echo footer($page, $path_to_images);
                                         echo "</div>";
                                      }
