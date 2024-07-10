@@ -1,3 +1,10 @@
+    <?php
+    $site_city="";
+    $project['site_city']=" ";
+    if(empty($project['site_city'])){
+        $site_city=$project['site_city'].",,, ";
+    }
+    ?>
     <!DOCTYPE html>
     <html lang='en'>
     <head>
@@ -18,7 +25,7 @@
                         <div class='monserat-text2'>
                             5 – 10 Brandon Road, Islington,
                             <div>
-                                London, N7 9AA
+                                <?php echo $site_city ?> N7 9AA
                             </div>
                         </div>
                         <div class='monserat-text3'>
@@ -51,4 +58,11 @@
         </div>
     </body>
     </html>
+    <?php
+    $date_from = "2024-07-01 00:00:00";
+    $date_to = "2024-07-31 00:00:00";
+    $start_date=date("d M Y", strtotime($date_from));
+    $end_date=date("d M Y", strtotime($date_to));
+    $current=date("F Y"); 
+    echo  $current;
     

@@ -13,7 +13,10 @@ body, html {
    /* font-weight: <weight>;*/
     font-style: normal;
 }
-
+.cell-number{
+    text-align:right;
+    padding: 16px 14px 0px 0px;
+}
 .container-old {
     display: flex;
     height: 100vh; /* Full viewport height */
@@ -22,7 +25,7 @@ body, html {
 }
 .container {
     /*display: flex;*/
-    height: 100vh; /* Full viewport height */
+   /* height: 100vh; *//* Full viewport height */
     /*height: 100%; */
     width: 100%;
 }
@@ -36,8 +39,8 @@ body, html {
 }
 .contacts{
     font-weight: 700;
-    font-size: 1.5rem;
-    padding: 30px 37px;
+    font-size: 1.4rem;
+    padding: 25px 34px;
 }
 .container-icon{
     width: 312px;
@@ -66,7 +69,7 @@ body, html {
     color:#000;
     width: 100%;
     height: 100%;
-    padding: 81px 60px;
+    padding: 16px 28px 0 40px;
 } 
 .container-line-logo{
     display: flex;
@@ -87,8 +90,12 @@ body, html {
     width:86%;
 }
 .data-text-3{
-    padding: 36px 0 0 0;
+    padding: 29px 0 0 0;
     font-size: 0.9rem;
+}
+.data-text-right-project{
+    font-weight: 700;
+    font-size: 1.1rem;
 }
 .data-text-right-1{
     font-size: 0.9rem;
@@ -99,8 +106,8 @@ body, html {
     padding: 20px 0;
 }
 .data-right-img{
-    padding: 17px 0 0 0;
-    width:140px;
+    padding: 15px 0 0 0;
+    width: 112px;
 }
 .data-text-right-1 span{
     font-weight: 700;
@@ -145,6 +152,7 @@ body, html {
 .left-side-ourmission{
     background-color: #ff0000; /* Light gray background */
     width: 50%;
+    height: 593px;
     position: relative;
 }
 .left-side-data{
@@ -277,7 +285,7 @@ body, html {
     padding: 20px 0 0 0;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     width: 67%;
 }
 .social-media{
@@ -287,7 +295,7 @@ body, html {
 .our-site{
     font-size: 0.9rem;
     font-weight: 700;
-    padding: 4px 0 46px  0;
+    padding: 4px 0 32px  0;
 }
 .our-site a{
     color:#fff;
@@ -366,7 +374,7 @@ body, html {
     align-items: center;
     justify-content: center;*/
     background-color: #fff; /* Light gray background */
-    padding: 5% 0;
+    padding: 12px 0px 0 0;
     position: relative;
 }
 .right-side-last {
@@ -390,7 +398,7 @@ body, html {
     width: 60%;
 }
 .site-logo-1{
-    width: 80%;
+    width: 150px;
 }
 .container-logo{
     
@@ -428,14 +436,13 @@ body, html {
    /* padding: 17px 0 0 0;*/
 }
 .data-text-tonnage{
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-weight: 700;
     color: #ff4d3b;
     position: absolute;
-    top: 60px;
+    top: 48px;
     left: 0;
     right: 0;
-    /*width: 100px;*/
 }
 .waste-text-1{
     padding: 116px 0 0 0;

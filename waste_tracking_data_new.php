@@ -140,42 +140,25 @@
     <body>
         <div class=pbreak></div>
         <div class='container'>
-            <div class='container-flex'>
-                <div class='left-side-data'>
+            <div class='container-flex1' style='position:relative'>
+                <div class='left-side-data' style='width:100%;'>
+                
                     <div class='container-data-text1'>
                         <div class='data-text-1'>Waste Tracking Data</div>
-                        <div class='data-text-2'>
+                        <div class='data-text-2' style='width:60%'>
                             The table below shows the distance of the waste disposal sites for each waste stream 
                             collected from site. The waste disposal sites are selected based on the locality to the site 
                             to minimise vehicle carbon emissions. Project totals are shown on the right of this page.
                         </div>
-                        <div class='data-text-table' style='height: 536px;'>
+                        <div class='data-text-table' style='/*height: 536px;*/'>
                         
                             <?php 
 
                                 $page_with_tables=1;
                                 foreach($group_by_postcode as $key => $group){
                                    
-                                    //if($i==1){
                                        echo newTable($key, false);
-                                    //}
-                                    /*echo "
-                                    <div class='data-text-3'>
-                                        Disposal site ".$key."
-                                    </div>
-                                    <div class='table-waste'>
-                                        <table>
-                                            <tr>
-                                                <th width='160' >Waste type</th>
-                                                <th>Total Tonnage</th>
-                                                <th>Total Mileage</th>
-                                                <th>Total Fuel (Litres) </th>
-                                                <th>CO2 Emissions</th>
-                                            </tr>";*/
-                                    //$group_count_array[$key]
                                             $i = 0;
-                                            
-                                            
                                             foreach($group as $key1 => $stat){
                                                 if($page_with_tables==1){
                                                     $row_per_page=2;
@@ -198,7 +181,7 @@
                                                     $page_with_tables++;
                                                     $page++;
                                                     countRows('start');
-                                                    echo "<div class='footer-for-tables'>";
+                                                    echo "<div class='footer-for-tables' style='position:relative'>";
                                                     echo footer($page, $path_to_images);
                                                     echo "</div>";
                                                     end($group);
@@ -237,7 +220,7 @@
                         
                     </div><!--container-data-text1-->                
                 </div><!--left-side-data-->
-                <div class='right-side'>
+                <div class='right-side' style='position:absolute; top:0; right:0'>
                     <div class='container-logo'>
                         <div class='data-text-right-project text-align-center'>Project Tools</div>
                         <img class='data-track data-right-img center' src='images/truck.png' alt='' />
@@ -285,7 +268,7 @@
         <div class='data-text-3'>
             Disposal site ".$key.$cont."
         </div>
-        <div class='table-waste' >
+        <div class='table-waste' style='width:60%;/*height:500px;*/'>
             <table>
                 <tr>
                     <th width='160'>Waste type</th>
@@ -299,7 +282,7 @@
     function footer($page, $path_to_images){
 		//global $global;
 		return("
-			<div class='container-line-logo' style='position: absolute;z-index: 1000;left:0;right:0'>
+			<div class='container-line-logo' style='position: absolute;z-index: 1000;left:0;right:0;bottom:0'>
 				<div class='container-line-logo-left'>
 					<div class='line-logo-text'>
 						&nbsp;
@@ -310,7 +293,7 @@
 						</span>
 					</div>
 				</div>
-				<div class='container-line-logo-right'>
+				<div class='container-line-logo-right' style='padding: 10px 11px 26px 0;'>
 						<img
 						class='site-logo-1 center'
 						src='".$path_to_images."encore_logo_2024.png'
