@@ -234,7 +234,7 @@
         $page_i=1;
         $page=0;
         $row_per_page=7;
-        $key_i=array();
+        
         foreach($page_data_array as $page_content){
             echo "
             <div class=pbreak></div>
@@ -255,8 +255,16 @@
                                 </div>
                             ";
                         }
+                        $key_i=array();
+                        $i=0;
                         foreach($page_content as $key => $group){
-
+                            $key_i[$key]=$i;
+                            echo $key_i[$key]."<br>";
+                            if($key_i[$key]>0){
+                                $continue=true; 
+                            }else{
+                                $continue=false;
+                            }
                             echo newTable($key, $continue);
 
                             foreach($group as $key1 => $stat){
@@ -272,7 +280,7 @@
                             }
                             echo "</table></div>";
            
-                           
+                            $i++; 
                         }
 
                         echo footer($page, $path_to_images);
