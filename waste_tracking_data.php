@@ -178,7 +178,7 @@
                                             
                                             foreach($group as $key1 => $stat){
                                                 if($page_with_tables==1){
-                                                    $row_per_page=2;
+                                                    $row_per_page=5;
                                                 }else{
                                                     $row_per_page=7;
                                                 }
@@ -210,6 +210,7 @@
                                                     //end($group);
                                                     if ($key1 !== key($group)) {
                                                         echo "<div class=pbreak style='padding: 29px 0 0 0;'></div>";
+                                                        //echo  "start <div style='height:20cm'>";
                                                         echo newTable($key, true); 
                                                     }else{
                                                         echo "<div>";

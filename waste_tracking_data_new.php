@@ -95,20 +95,23 @@
     }
     $group_count_array=array();
     $group_count=0;
-    
+    $rows_array_count=0;
     foreach($group_by_postcode as $key => $group){
-        $cells_count=0;
-        foreach($group as $stat){
-            if ($key == $stat['wtn_destination_postcode']) {
-                $cells_count++;
-            }
-        }
-        $group_count_array[$key]=$cells_count;
-        $group_count++;
+        $rows_array_count+=count($group);
+    }
+    foreach($group_by_postcode as $key => $group){
+        
+       // foreach($group as $stat){
+            //if ($key == $stat['wtn_destination_postcode']) {
+                //$cells_count++;
+           // }
+       // }
+        //$group_count_array[$key]=$cells_count;
+        //$group_count++;
     }
     //echo "cells_count::".$cells_count."<br>";
-   /*echo "<pre>";
-    print_r($group_by_postcode);
+   /* echo "<pre>";
+    print_r($rows_array_count);
     echo "</pre>";*/
   
     /*  
@@ -144,22 +147,23 @@
                 <div class='left-side-data' style='width:100%;'>
                 
                     <div class='container-data-text1'>
-                        <div class='data-text-1'>Waste Tracking Data</div>
-                        <div class='data-text-2' style='width:60%'>
-                            The table below shows the distance of the waste disposal sites for each waste stream 
-                            collected from site. The waste disposal sites are selected based on the locality to the site 
-                            to minimise vehicle carbon emissions. Project totals are shown on the right of this page.
-                        </div>
-                        <div class='data-text-table'>
                         
+                        <div class='data-text-table'>
+                            <div class='data-text-1'>Waste Tracking Data</div>
+                            <div class='data-text-2' style='width:60%'>
+                                The table below shows the distance of the waste disposal sites for each waste stream 
+                                collected from site. The waste disposal sites are selected based on the locality to the site 
+                                to minimise vehicle carbon emissions. Project totals are shown on the right of this page.
+                            </div>
                             <?php 
                                 $page_with_tables=1;
                                 $start_last=0;
-                                $rows_array_count=15;
+                                //$rows_array_count=15;
                                 $i = 1;
+                                $end=0;
                                 foreach($group_by_postcode as $key => $group){
                                     if($page_with_tables==1){
-                                        echo  "<div style='height:10cm'>first";
+                                        echo  "first<div style='height:16cm'>";
                                     }else{
                                         //echo  "<div style='height:10cm'>next";
                                     }
@@ -167,10 +171,10 @@
                                             
                                             foreach($group as $key1 => $stat){
                                                 if($page_with_tables==1){
-                                                    $row_per_page=3;
+                                                    $row_per_page=5;
                                                    // echo  "<div style='height:10cm'>1111";
                                                 }else{
-                                                    $row_per_page=3;
+                                                    $row_per_page=6;
                                                 }
                                                 $row_count=countRows('next');
                                                 echo  "
@@ -182,14 +186,17 @@
                                                     <td class='cell-number'>".round($stat['total_litres_usedNUM'], 2 )."</td>
                                                     <td class='cell-number'>".round($stat['total_co2_emissionsNUM'], 2 )."</td>
                                                 </tr>";
+                                                
                                                 //$page_with_tables=1 &&
                                                 if( $row_count==$row_per_page){
                                                     echo "</table></div>";
                                                     if($page_with_tables==1){
-                                                        echo  "</div>";
+                                                        //echo  "end one</div>";
                                                     }else{
-                                                        echo  "</div>";
+                                                        $end=1;
+                                                       // echo  "end</div></div>";
                                                     }
+                                                    
                                                     if($i == $rows_array_count){
                                                        echo "Further supplier information and documentation can be found on our portal within the duty of care section";
                                                     }
@@ -197,30 +204,46 @@
                                                     $page_with_tables++;
                                                     $page++;
                                                     countRows('start');
-                                                    echo "<div class='footer-for-tables' style='position:relative; /*padding:120px 0 0 0*/'>";
+                                                    echo "<div class='/*footer-for-tables*/' style='position:relative; /*padding:120px 0 0 0*/'>";
                                                     echo footer($page, $path_to_images);
-                                                    echo "!!!!</div>";
+                                                    echo "</div>";
                                                     //echo  "start <div style='height:12cm'>";
                                                     end($group);
                                                     if ($key1 !== key($group)) {
                                                         echo "<div class=pbreak style='padding: 29px 0 0 0;'></div>";
-                                                        echo  "start <div style='height:12cm'>";
-                                                        echo newTable($key, true); 
+                                                        echo  "start <div style='height:20cm'>";
+                                                        $end=0;
+                                                        echo newTable($key, true, 1); 
                                                     }else{
-                                                        //echo "i:".$i."<br>";
+                                                        
+                                                        echo "i:".$i."<br>";
                                                        if($i < $rows_array_count){
                                                             echo "<div class=pbreak style='padding: 29px 0 0 0;'></div>";
-                                                            echo  "start last".$start_last."<div style='height:12cm'>"; 
+                                                            echo  "start2<div style='height:20cm'>"; 
                                                         }else{
                                                             //echo "more<br>";
                                                         }
                                                     }
-                                                } 
+                                                }else{
+                                                    if($i == $rows_array_count){
+                                                        echo "</table></div></div>";
+                                                       // echo "end2:".$i."<br>"; 
+                                                        $page++;
+                                                       // echo "<div class=pbreak style='padding: 29px 0 0 0;'></div>";
+                                                       echo "Further supplier information and documentation can be found on our portal within the duty of care section";
+                                                        echo "<div class='/*footer-for-tables*/' style='position:relative; /*padding:120px 0 0 0*/'>";
+                                                        echo footer($page, $path_to_images);
+                                                        echo "</div>";
+                                                    }
+                                                }
+                                               
+                                               
                                                 $i++;  
                                             }
                                             
                                            
-                                    echo "</table>"; 
+                                    echo "</table>";
+                                   // echo "wwwww".$end."<br>"; 
                                     //echo "</div>";
 
                                    // reset($group_by_postcode);
@@ -286,12 +309,21 @@
     </body>
     </html>
     <?php
-    function newTable($key, $continue){
+    function newTable($key, $continue, $new=0){
         $cont = " ";
+        $a = "aaaaaa";
+        $div = "";
         if($continue === true){
             $cont = " (cont.)";
         }
+        if($new == 1){
+            $a = "bbbbb";
+            $div = "</div>";
+        }
         return("
+        <div class='data-text-3'>
+            type ".$a."
+        </div>
         <div class='data-text-3'>
             Disposal site ".$key.$cont."
         </div>
