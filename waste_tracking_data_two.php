@@ -113,14 +113,14 @@
     }
     //echo " rows_array_count:". $rows_array_count."<br>";
     $page_count=ceil($rows_array_count/6);
-    echo $page_count;
+    //echo $page_count;
     $page_array=array_fill(0, $page_count, 'page');
         /////////////////////////
     $temp=array();
     $page=array();
     foreach($group_by_postcode as $key => $group){
         $page[] = $key;
-        echo count($group)."<br>";
+       // echo count($group)."<br>";
         
     }
 
@@ -135,7 +135,7 @@
                 $temp[]=$stat;
                 //continue;
             }else{
-                echo "more".$i." ".$stat['waste_type_name']."<br>";
+               // echo "more".$i." ".$stat['waste_type_name']."<br>";
                 $temp[]=$stat;
                 $page1[]=$temp;
                 $temp=[];
@@ -232,16 +232,17 @@
     <body>
         <?php
         $page_i=1;
+        $page=0;
         $row_per_page=7;
         $key_i=array();
-        foreach($page_data_array as $page){
+        foreach($page_data_array as $page_content){
             echo "
             <div class=pbreak></div>
-            <div class='container'>
-                <div class='container-flex1' style='position:relative'>
+            <div class='container' style='position:relative;height: 900px;'>
+                <div class='container-flex1' style='/*position:relative*/'>
                     <div class='left-side-data' style='width:100%;'>
-                        <div class='container-data-text1'>
-                        <div class='data-text-table'>
+                        <div class='container-data-text1' style='height: 700px;'>
+                        <div class='data-text-table' >
                         ";
                         if($page_i==1){
                             echo "
@@ -254,18 +255,11 @@
                                 </div>
                             ";
                         }
-                        
-                        $page_with_tables=1;
-                        $start_last=0;
-                        //$rows_array_count=15;
-                        $i = 1;
-                        $end=0;
-                        foreach($page as $key => $group){
-                            
+                        foreach($page_content as $key => $group){
+
                             echo newTable($key, $continue);
 
                             foreach($group as $key1 => $stat){
-                                $row_count=countRows('next');
                                 echo  "
                                 <tr>
                         
@@ -276,22 +270,21 @@
                                     <td class='cell-number'>".round($stat['total_co2_emissionsNUM'], 2 )."</td>
                                 </tr>";                                
                             }
-
-                                echo "</table></div>";
+                            echo "</table></div>";
            
                            
                         }
-                        echo "<div class='/*footer-for-tables*/' style='position:relative; /*padding:120px 0 0 0*/'>";
-                            echo footer($page, $path_to_images);
-                            echo "</div>";
+
+                        echo footer($page, $path_to_images);
+                            
                 echo "
-                    </div><!--container-data-text1-->   
+                    </div><!--data-text-table-->   
                     </div><!--container-data-text1-->     
                     </div><!--left-side-data-->     
                 </div><!--container-flex11-->                
             </div><!--container-->";
             $page_i++;
-
+            $page++;
         }
 ?>
                               
@@ -322,24 +315,26 @@
     function footer($page, $path_to_images){
 		//global $global;
 		return("
-			<div class='container-line-logo' style='position: absolute;z-index: 1000;left:0;right:0;bottom:0'>
-				<div class='container-line-logo-left'>
-					<div class='line-logo-text'>
-						&nbsp;
-					</div>
-					<div class='report-text'>
-						<span class='line-logo-text-1'>".$page."</span><span class='line-logo-text-2'>
-							CLIENT NAME - PROJECT TITLE - WASTE MOVEMENT REPORT 
-						</span>
-					</div>
-				</div>
-				<div class='container-line-logo-right' style='padding: 10px 11px 26px 0;'>
-						<img
-						class='site-logo-1 center'
-						src='".$path_to_images."encore_logo_2024.png'
-						alt='Logo' />
-				</div>
-			</div>
+            
+                <div class='container-line-logo' style='position: absolute;z-index: 1000;left:0;right:0;bottom:0'>
+                    <div class='container-line-logo-left'>
+                        <div class='line-logo-text'>
+                            &nbsp;
+                        </div>
+                        <div class='report-text'>
+                            <span class='line-logo-text-1'>".$page."</span><span class='line-logo-text-2'>
+                                CLIENT NAME - PROJECT TITLE - WASTE MOVEMENT REPORT 
+                            </span>
+                        </div>
+                    </div>
+                    <div class='container-line-logo-right' style='padding: 10px 11px 26px 0;'>
+                            <img
+                            class='site-logo-1 center'
+                            src='".$path_to_images."encore_logo_2024.png'
+                            alt='Logo' />
+                    </div>
+                </div>
+           
 		");
 	}
 function countRows($type='next')
