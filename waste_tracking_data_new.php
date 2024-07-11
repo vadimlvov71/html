@@ -150,20 +150,27 @@
                             collected from site. The waste disposal sites are selected based on the locality to the site 
                             to minimise vehicle carbon emissions. Project totals are shown on the right of this page.
                         </div>
-                        <div class='data-text-table' style='/*height: 536px;*/'>
+                        <div class='data-text-table'>
                         
                             <?php 
-
                                 $page_with_tables=1;
+                                $start_last=0;
+                                $rows_array_count=15;
+                                $i = 1;
                                 foreach($group_by_postcode as $key => $group){
-                                   
+                                    if($page_with_tables==1){
+                                        echo  "<div style='height:10cm'>first";
+                                    }else{
+                                        //echo  "<div style='height:10cm'>next";
+                                    }
                                        echo newTable($key, false);
-                                            $i = 0;
+                                            
                                             foreach($group as $key1 => $stat){
                                                 if($page_with_tables==1){
-                                                    $row_per_page=5;
+                                                    $row_per_page=3;
+                                                   // echo  "<div style='height:10cm'>1111";
                                                 }else{
-                                                    $row_per_page=7;
+                                                    $row_per_page=3;
                                                 }
                                                 $row_count=countRows('next');
                                                 echo  "
@@ -178,40 +185,60 @@
                                                 //$page_with_tables=1 &&
                                                 if( $row_count==$row_per_page){
                                                     echo "</table></div>";
+                                                    if($page_with_tables==1){
+                                                        echo  "</div>";
+                                                    }else{
+                                                        echo  "</div>";
+                                                    }
+                                                    if($i == $rows_array_count){
+                                                       echo "Further supplier information and documentation can be found on our portal within the duty of care section";
+                                                    }
+                                                    //}
                                                     $page_with_tables++;
                                                     $page++;
                                                     countRows('start');
-                                                    echo "<div class='footer-for-tables' style='position:relative; padding:120px 0 0 0'>";
+                                                    echo "<div class='footer-for-tables' style='position:relative; /*padding:120px 0 0 0*/'>";
                                                     echo footer($page, $path_to_images);
-                                                    echo "</div>";
+                                                    echo "!!!!</div>";
+                                                    //echo  "start <div style='height:12cm'>";
                                                     end($group);
-                                                    if ($key1 === key($group)) {
-                                                        //echo "!!!!!!!!!!!!!!!!!!";
-                                                    }else{
-                                                       // echo "noooooooooooooooo";
-                                                    }
-                                                    //end($group);
                                                     if ($key1 !== key($group)) {
                                                         echo "<div class=pbreak style='padding: 29px 0 0 0;'></div>";
+                                                        echo  "start <div style='height:12cm'>";
                                                         echo newTable($key, true); 
                                                     }else{
-                                                        echo "<div>";
+                                                        //echo "i:".$i."<br>";
+                                                       if($i < $rows_array_count){
+                                                            echo "<div class=pbreak style='padding: 29px 0 0 0;'></div>";
+                                                            echo  "start last".$start_last."<div style='height:12cm'>"; 
+                                                        }else{
+                                                            //echo "more<br>";
+                                                        }
                                                     }
-                                                 }   
+                                                } 
+                                                $i++;  
                                             }
                                             
                                            
-                                    echo "
-                                        </table> 
-                                    </div>";
+                                    echo "</table>"; 
+                                    //echo "</div>";
+
+                                   // reset($group_by_postcode);
+                                   // if ($key === key($group_by_postcode)) {
+                                     //   echo 'FIRST ELEMENT!';
+                                       // echo  "</div>";
+                                    //}
+                                     
                                     end($group_by_postcode);
                                     if ($key === key($group_by_postcode)) {
                                         $page++;
-                                        echo "Further supplier information and documentation can be found on our portal within the duty of care section";
-                                        echo "<div class='footer-for-tables' style=''>";
-                                        echo footer($page, $path_to_images);
-                                        echo "</div>";
-                                     }
+                                        //echo "Further supplier information and documentation can be found on our portal within the duty of care section";
+                                        //echo "<br>end last</div>";
+                                       // echo "<div class='footer-for-tables' style=''>";
+                                       // echo footer($page, $path_to_images);
+                                       // echo "</div>";
+                                       
+                                    }
                                 }
                                 //exit;
                             ?>
