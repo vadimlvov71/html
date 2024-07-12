@@ -103,8 +103,8 @@
     }
 
 
-    $group_count_array=array();
-    $group_count=0;
+    //$group_count_array=array();
+    //$group_count=0;
     $rows_array_count=0;
     $page_data=array();
     foreach($group_by_postcode as $key => $group){
@@ -116,14 +116,14 @@
     //echo $page_count;
     $page_array=array_fill(0, $page_count, 'page');
         /////////////////////////
-    $temp=array();
-    $page=array();
-    foreach($group_by_postcode as $key => $group){
+  
+    //$page=array();
+    /*foreach($group_by_postcode as $key => $group){
         $page[] = $key;
        // echo count($group)."<br>";
         
-    }
-
+    }*/
+    $temp=array();
     $page1=array();
     $i=1;
     foreach($group_by_postcode as $key => $group){
@@ -143,7 +143,7 @@
            
             if ($i == $rows_array_count && count($temp) < 6) {
                 //echo "last:".$i."<br>";
-                echo "count".count($temp)."<br>";
+                //echo "count".count($temp)."<br>";
                 $page1[]=$temp;
             }else{
                 //echo "nolast:".$i."<br>";
@@ -259,7 +259,7 @@
                         $i=0;
                         foreach($page_content as $key => $group){
                             $key_i[$key]=$i;
-                            echo $key_i[$key]."<br>";
+                           // echo $key_i[$key]."<br>";
                             if($key_i[$key]>0){
                                 $continue=true; 
                             }else{
@@ -294,8 +294,40 @@
             $page_i++;
             $page++;
         }
-?>
-                              
+
+                      echo"  <div class='right-side' style='position:absolute; top:0; right:0'>
+								<div class='container-logo'>
+									<div class='data-text-right-project text-align-center'>Project Tools</div>
+									<img class='data-track data-right-img center' src='".$path_to_images."truck.png' alt='' />
+									<div class='data-text-right-1 text-align-center'>
+										Total mileage to waste<br>disposal site: <span>".$total_miles."</span>
+									</div>
+								</div>
+								
+								<div class='tonnage center'>
+									<img class='data-right-img center' src='".$path_to_images."tonnage_weight.png' alt='' />
+									<div class='data-text-tonnage text-align-center'>".$total_litres."<br>Tonnes</div>
+								</div>
+								<div class='data-text-right-1 text-align-center'>
+									Total tonnage of <br> waste collected to date
+								</div>
+								<div class='container-logo'>
+									<img class='data-right-img center' src='".$path_to_images."co2_cloud.png' alt='' />
+									<div class='data-text-right-1 text-align-center'>
+										<span>".$total_tonnage." tonnes</span>
+										<div>of CO2 emissions.</div>
+									</div>
+								</div>
+								<div class='container-logo'>
+									<img class='data-right-img center' src='".$path_to_images."pump.png' alt='' />
+									<div class='data-text-right-1 text-align-center'>
+										<span>".$total_co2." Litres</span> of fuel used 
+										<div>of CO2 emissions.</div>
+									</div>
+								</div>
+							</div> 
+                            ";
+                            ?>                       
     </body>
     </html>
     <?php

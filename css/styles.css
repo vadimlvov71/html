@@ -106,8 +106,8 @@ body, html {
     padding: 20px 0;
 }
 .data-right-img{
-    padding: 15px 0 0 0;
-    width: 112px;
+    padding: 13px 0 0 0;
+      width: 109px;
 }
 .data-text-right-1 span{
     font-weight: 700;
@@ -374,7 +374,7 @@ body, html {
     align-items: center;
     justify-content: center;*/
     background-color: #fff; /* Light gray background */
-    padding: 12px 0px 0 0;
+    padding: 38px 0px 0 0;
     position: relative;
 }
 .right-side-last {
