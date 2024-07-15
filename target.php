@@ -15,6 +15,9 @@
         <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
         <link href='https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap' rel='stylesheet'>
         <link rel='stylesheet' href='css/styles1.css'>
+        <script src="https://www.gstatic.com/charts/51/loader.js"></script>
+        
+
     </head>
     <body>
         <?php
@@ -50,26 +53,122 @@
                         </div>
                     </div>
                 </div>
-
-            <dl>
-            <dt>
-            Browser market share June 2015
-            </dt>
-            <dd class='percentage percentage-11'><span class='text'>IE 11: 11.33%</span></dd>
-            <dd class='percentage percentage-49'><span class='text'>Chrome: 49.77%</span></dd>
-            <dd class='percentage percentage-16'><span class='text'>Firefox: 16.09%</span></dd>
-            <dd class='percentage percentage-5'><span class='text'>Safari: 5.41%</span></dd>
-            <dd class='percentage percentage-2'><span class='text'>Opera: 1.62%</span></dd>
-            <dd class='percentage percentage-2'><span class='text'>Android 4.4: 2%</span></dd>
-            </dl>
-
-
+                <div class='container-flex'>
+                    <div class='width-50-procents diagram-waste-left'>
+                        <div class='diagram-waste-left-content'>
+                            <div class='diagram-waste-left-title'>Waste Progress Bar</div>
+                        </div>
+                    </div>
+                    <div class='width-50-procents diagram-waste-right'>
+                        <div class='diagram-waste-right-title'>Totals to date</div>
+                        <div class='container-flex'>
+                            <div class='diagram-waste-right-content'>
+                                88%
+                                <div>(XX tonnes) <span>recycled</span></div>
+                            </div>
+                            <div class='diagram-waste-right-content'>
+                            88%
+                            <div>(XX tonnes) <span>Landfill</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+               
             </div>
         ");
         ?>
     </body>
     </html>
 <style>
+
+
+
+*,
+*::before,
+*::after {
+box-sizing: border-box;
+}
+
+body {
+font-family: "Bitter", sans-serif;
+margin: 0;
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
+font-size: 1.125rem;
+color: #101820;
+background-color: #f8f8f8;
+}
+.center{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+.diagram-waste-left{
+    
+    height:500px;
+    padding: 12px;
+}
+.diagram-waste-left-content{
+    border: 2px solid #d7b1cd;
+    height:500px;
+}
+.diagram-waste-left-title{
+    text-align:center;
+}
+.diagram-waste-right{
+    background-color: #ff0000;
+    color:#fff;
+    height:500px;
+    padding: 12px;
+}
+.diagram-waste-right-title{
+    text-align:center;
+}
+.diagram-waste-right-content{
+    padding: 26px 0 0 37px;
+}
+section {
+width: 100%;
+max-width: 30rem;
+padding: 1.5rem 1.5rem 2rem;
+border: 2px solid #a7a8aa;
+border-radius: 0.5rem;
+margin: auto;
+}
+
+h2 {
+margin: 0 0 2.5rem;
+}
+
+.chart {
+display: grid;
+grid-template-columns: auto;
+gap: 0.5em 0;
+align-items: center;
+margin: 0;
+padding: 0;
+list-style-type: none;
+grid-auto-columns: 1fr;
+}
+
+li {
+background: #ffd100;
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 0.25rem 0.5rem;
+}
+
+li span {
+font-weight: bold;
+}
+
+View SCSS Code
+
+
 .page_box{
     font-family: 'Muli', sans-serif;
     position:relative;
@@ -123,6 +222,9 @@
     font-size: 0.9rem;
     font-weight: 700;
     color: #8ec343;
+}
+.width-50-procents{
+    width:50%;
 }
 dl {
   display: flex;
@@ -184,3 +286,17 @@ dt {
 }
 
 </style>   
+<div style='display:none;'>
+
+<dl>
+                        <dt>
+                        Browser market share June 2015
+                        </dt>
+                        <dd class='percentage percentage-11'><span class='text'>IE 11: 11.33%</span></dd>
+                        <dd class='percentage percentage-49'><span class='text'>Chrome: 49.77%</span></dd>
+                        <dd class='percentage percentage-16'><span class='text'>Firefox: 16.09%</span></dd>
+                        <dd class='percentage percentage-5'><span class='text'>Safari: 5.41%</span></dd>
+                        <dd class='percentage percentage-2'><span class='text'>Opera: 1.62%</span></dd>
+                        <dd class='percentage percentage-2'><span class='text'>Android 4.4: 2%</span></dd>
+                        </dl>
+</div>
