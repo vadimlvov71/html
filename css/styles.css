@@ -295,7 +295,7 @@ body, html {
 .our-site{
     font-size: 0.9rem;
     font-weight: 700;
-    padding: 4px 0 32px  0;
+    padding: 24px 0 32px  0;
 }
 .our-site a{
     color:#fff;
@@ -354,7 +354,7 @@ body, html {
 
 
 .text-last-1{
-    padding: 83px 0 0 0;
+    padding: 55px 0 0 0;
     font-weight: 800;
 }
 .text-last-2{
@@ -366,7 +366,7 @@ body, html {
     width: 60%;
 }
 .rainbow{
-    padding: 103px 20px 0 0;
+    padding: 72px 20px 0 0;
 }
 .right-side {
     width: 30%;

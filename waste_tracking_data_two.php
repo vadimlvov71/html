@@ -112,8 +112,8 @@
         $page_data[] = $key;
     }
     //echo " rows_array_count:". $rows_array_count."<br>";
-    $page_count=ceil($rows_array_count/6);
-    //echo $page_count;
+    $page_count=ceil($rows_array_count/5);
+    echo $page_count;
     $page_array=array_fill(0, $page_count, 'page');
         /////////////////////////
   
@@ -129,19 +129,19 @@
     foreach($group_by_postcode as $key => $group){
         foreach($group as $key1 => $stat){
             
-            if(count($temp)< 6){
-                //echo count($temp)."<br>";
-               // echo "lower".$i." ".$stat['waste_type_name']."<br>";
+            if(count($temp) < 4){
+                echo count($temp)."<br>";
+                echo "lower".$i." ".$stat['waste_type_name']."<br>";
                 $temp[]=$stat;
                 //continue;
             }else{
-               // echo "more".$i." ".$stat['waste_type_name']."<br>";
+                echo "more".$i." ".$stat['waste_type_name']."<br>";
                 $temp[]=$stat;
                 $page1[]=$temp;
                 $temp=[];
             }
            
-            if ($i == $rows_array_count && count($temp) < 6) {
+            if ($i == $rows_array_count && count($temp) < 4) {
                 //echo "last:".$i."<br>";
                 //echo "count".count($temp)."<br>";
                 $page1[]=$temp;
@@ -152,6 +152,9 @@
             $i++ ; 
         }
     }
+    echo "<pre>";
+    print_r($page1);
+    echo "</pre>";
     //$page_data=array();
     $page_data_array=array();
     $x=0;
@@ -172,7 +175,9 @@
         $x++;
     }
 
-    
+    echo "<pre>";
+    //print_r($page_data_array);
+    echo "</pre>";
        /* foreach($transport_stats['by_destination'] as $stat){
             $temp[$stat['wtn_destination_postcode']][]="";
             if(count($temp[$stat['wtn_destination_postcode']])==7){
@@ -231,11 +236,10 @@
     </head>
     <body>
         <?php
-        $page_i=1;
         $page=0;
         $row_per_page=7;
-        
-        foreach($page_data_array as $page_content){
+        $page_i=1;
+        foreach($page_data_array as $key_page => $page_content){
             echo "
             <div class=pbreak></div>
             <div class='container' style='position:relative;height: 900px;'>
@@ -279,10 +283,14 @@
                                 </tr>";                                
                             }
                             echo "</table></div>";
-           
+                            
                             $i++; 
                         }
-
+                        end($page_data_array);
+                        if ($key_page === key($page_data_array)) {
+                            //$page++;
+                            echo "Further supplier information and documentation can be found on our portal within the duty of care section";
+                        }
                         echo footer($page, $path_to_images);
                             
                 echo "

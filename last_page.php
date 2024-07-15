@@ -1,4 +1,10 @@
-    <!DOCTYPE html>
+   <?php
+    $global['pdf'] = true;
+   $global['pdf']? $padding="35px 0 0 0" : $padding="0 0 0 0";
+   ?>
+   
+   
+   <!DOCTYPE html>
     <html lang='en'>
     <head>
         <meta charset='UTF-8'>
@@ -45,32 +51,33 @@
                                 <div class='text-last-img-1'><span>Least</span> preferable</div>
                             </div>
                         </div>
-                        <div class='container-flex social-media' >
-                            <div class='container-flex'>
-                                <div class='container-flex container-icon'>
-                                    <div><img class='icon-facebook' src='images/icons/img.icons8.png'></div>
-                                    <div class='icon-text'>/EncoreEnvironment</div>
-                                </div>
-                                <div class='container-flex '>
-                                    <div><img class='icon-facebook' src='images/icons/img.iconstwitter.png'></div>
-                                    <div class='icon-text'>/encore_enviro</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class='container-flex social-media' style='/*width:70%*/'>
-                            <div class='container-flex'>
-                                <div class='container-flex container-icon'>
-                                    <div><img class='icon-facebook' src='images/icons/img.iconslinkin.png'></div>
-                                    <div class='icon-text'>/company/encore-environment-ltd</div>
-                                </div>
+                        <div class='social-media' >
+                            <div class='container-flex' >
                                 <div class='container-flex'>
-                                    <div><img class='icon-facebook' src='images/icons/img.iconspint.png'></div>
-                                    <div class='icon-text'>/encoreenvironmentltd</div>
+                                    <div class='container-flex container-icon'>
+                                        <div><img class='icon-facebook' src='images/icons/img.icons8.png'></div>
+                                        <div class='icon-text'>/EncoreEnvironment</div>
+                                    </div>
+                                    <div class='container-flex '>
+                                        <div><img class='icon-facebook' src='images/icons/img.iconstwitter.png'></div>
+                                        <div class='icon-text'>/encore_enviro</div>
+                                    </div>
                                 </div>
                             </div>
-                           
+                            <div class='container-flex' style='/*width:70%*/'>
+                                <div class='container-flex'>
+                                    <div class='container-flex container-icon'>
+                                        <div><img class='icon-facebook' src='images/icons/img.iconslinkin.png'></div>
+                                        <div class='icon-text'>/company/encore-environment-ltd</div>
+                                    </div>
+                                    <div class='container-flex'>
+                                        <div><img class='icon-facebook' src='images/icons/img.iconspint.png'></div>
+                                        <div class='icon-text'>/encoreenvironmentltd</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class='contacts'>
+                        <div class='contacts' style='padding:<?php echo $padding?>' >
                             <span>01604 496987</span>  |  <span>sales@encore-environment.com</span>
                         </div>
                         <div class='our-site'>
