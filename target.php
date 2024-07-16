@@ -21,6 +21,10 @@
     </head>
     <body>
         <?php
+            $client=[];
+            $client['name']="Client Loooooooooooooooooooooooong";
+            $project=[];
+            $project['project_title']="Project Name 11111111111";
         $page=1;
          $path_to_images = "images/";
         echo("
@@ -70,25 +74,25 @@
                                     <div>(XX tonnes) <span>recycled</span></div>
                                 </div>
                                 <div class='diagram-waste-right-cell'>
-                                88%
-                                <div>(XX tonnes) <span>Landfill</span></div>
+                                    <div class='waste-percent-text'>88%</div>
+                                    <div>(XX tonnes) <span>Landfill</span></div>
                                 </div>
                             </div>
                             <div class='container-flex'>
                                 <div class='diagram-waste-right-cell'>
-                                    88%
+                                    <div class='waste-percent-text'>88%</div>
                                     <div>(XX tonnes) <span>EFW</span></div>
                                 </div>
                                 <div class='diagram-waste-right-cell'>
-                                88%
-                                <div>(XX tonnes) <span>Diversion of Landfill</span></div>
+                                    <div class='waste-percent-text'>88%</div>
+                                    <div>(XX tonnes) <span>Diversion of Landfill</span></div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 ");
-                echo footer($page, $path_to_images);
+                echo footer($page, $path_to_images, $client['name'], $project['project_title']);
         echo("
             </div>
         ");
@@ -97,7 +101,35 @@
     </html>
 
     <?php
-    function footer($page, $path_to_images){
+    function footer1($page, $path_to_images, $client_name, $project_name){
+		global $global;
+		return("
+			<div class='container-line-logo' style='position: absolute;z-index: 1000;left:0;right:0;bottom:0;'>
+				<div class='container-line-logo-left'>
+					<div class='line-logo-text'>
+						&nbsp;
+					</div>
+					<div class='report-text'>
+						<div class='container-flex line-logo-text-2' style='flex-direction: row;'>
+							<div class='line-logo-text-1' style='width:40px;'>".$page."</div>
+							<div style='text-align:right' class='cut-text uppercase'>".$client_name." </div> 
+							<div class='footer-divide'>-</div>
+							<div class='cut-text uppercase'> ".$project_name." </div> 
+							<div class='footer-divide'>-</div>
+							<div style='padding:4px 0 0 14px'>  WASTE MOVEMENT REPORT</div> 
+						</div> 
+					</div>
+				</div>
+				<div class='container-line-logo-right'>
+						<img
+						class='site-logo-1 center'
+						src='".$path_to_images."encore_logo_2024.png'
+						alt='Logo' />
+				</div>
+			</div>
+		");
+	}
+    function footer($page, $path_to_images, $client_name, $project_name){
 		//global $global;
 		return("
             
@@ -106,10 +138,13 @@
                         <div class='footer-logo-text'>
                             &nbsp;
                         </div>
-                        <div class='footer-report-text'>
-                            <span class='footer-logo-text-1'>".$page."</span><span class='footer-logo-text-2'>
-                                CLIENT NAME - PROJECT TITLE - WASTE MOVEMENT REPORT 
-                            </span>
+                        <div class='container-flex footer-report-text'>
+                            <div class='line-logo-text-1' style='width:40px;'>".$page."</div>
+                            <div style='text-align:right' class='cut-text uppercase'>".$client_name." </div> 
+                            <div class='footer-divide'>-</div>
+                            <div class='cut-text uppercase'> ".$project_name." </div> 
+                            <div class='footer-divide'>-</div>
+                            <div style='padding:4px 0 0 14px'>  WASTE MOVEMENT REPORT</div> 
                         </div>
                     </div>
                     <div class='footer-logo-right' style='padding: 10px 11px 26px 0;'>
@@ -124,11 +159,7 @@
 
 
 
-*,
-*::before,
-*::after {
-box-sizing: border-box;
-}
+
 
 body {
 font-family: "Bitter", sans-serif;
@@ -146,6 +177,17 @@ background-color: #f8f8f8;
     margin-right: auto;
     display: block;
 }
+.cut-text{
+		text-overflow: ellipsis;
+		overflow: hidden; 
+		width: 200px; 
+		height: 1.2em; 
+		padding: 4px 4px 0 4px;
+		white-space: nowrap;
+	}
+	.uppercase{
+		text-transform: uppercase;
+	}
 .diagram-waste-left{
     padding: 22px 6px;
 }
@@ -154,6 +196,8 @@ background-color: #f8f8f8;
     height:360px;
 }
 .diagram-waste-left-title{
+    font-weight: 700;
+    padding: 12px 0 0 0;
     text-align:center;
 }
 .diagram-waste-right{
@@ -202,7 +246,10 @@ background-color: #f8f8f8;
   top: 23px;
 }
 .footer-report-text{
-    padding: 20px 0 0 0;
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 0.3em;
+    padding: 10px 0 0 0;
 }
 
 .footer-logo-text-1 {
@@ -223,8 +270,19 @@ background-color: #f8f8f8;
 .footer-logo-1 {
   width: 150px;
 }
+.footer-divide{
+    width:40px;
+    text-align:center;
+}
+.line-logo-text-1 {
+  font-weight: 700;
+  color: #9e6eb7;
+  font-size: 1.1rem;
+  padding: 0px 30px;
+}
 .waste-percent-text{
-
+    font-weight: 100;
+    font-size: 2.1rem;
 }
 section {
 width: 100%;

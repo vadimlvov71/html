@@ -1,12 +1,15 @@
     <?php
     $site_city="";
-    $project['site_city']=" ";
-    if(empty($project['site_city'])){
-        $site_city=$project['site_city'].",,, ";
+    $project['site_city']="London";
+    //$project['site_city']=" ";
+    if(!empty($project['site_city'])){
+        $site_city=$project['site_city'].", ";
     }
+
     $project['site_address1']="5 – 10 Brandon Road";
-    $site_address2="Loooong beach long address, ";
-    $project['site_address3']="Islington long name";
+    $site_address2="Long beach, ";
+    $project['site_address3']="Islington";
+    $project['site_postcode']="N7 9AA";
     ?>
     <!DOCTYPE html>
     <html lang='en'>
@@ -26,14 +29,15 @@
                     <div class='container-text1'>
                         <div class='monserat-text1'>WASTE  MOVEMENT  REPORT</div>
                         <div class='monserat-text2'>
-                            <div class='container-flex'>
+                    
                                 <?php  echo ("
-                                <div class='cut-text' style='width:100px'>".$project['site_address1']."</div><div class='cut-text'>".$site_address2."</div><div class='cut-text'>".$project['site_address3']."</div>
-                                "); ?>
-                            </div>
-                            <div>
-                                <?php echo $site_city ?> N7 9AA
-                            </div>
+                               
+                                    <span>".$project['site_address1']." ".$site_address2." ".$project['site_address3']." ".$site_city." ".$project['site_postcode']."</span>
+                                    "); ?>
+                           
+                                    
+                               
+                            
                         </div>
                         <div class='monserat-text3'>
                             Project Number: M/54CA04/00056
@@ -72,4 +76,15 @@
     $end_date=date("d M Y", strtotime($date_to));
     $current=date("F Y"); 
     echo  $current;
-    
+    ?>
+<style>
+.monserat-text2 span {
+  display: -webkit-box;
+  max-width: 500px;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+  }
+  </style>  
