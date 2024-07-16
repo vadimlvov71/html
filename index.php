@@ -5,10 +5,18 @@
     if(!empty($project['site_city'])){
         $site_city=$project['site_city'].", ";
     }
+    $project['site_address1']="5 – 10";
+   // $site_address2="";
+    $project['site_address2']="Long be";
+    if(!empty($project['site_address2'])){
+        $site_address2=$project['site_address2'].", ";
+    }
 
-    $project['site_address1']="5 – 10 Brandon Road";
-    $site_address2="Long beach, ";
     $project['site_address3']="Islington";
+    if(!empty($project['site_address3'])){
+        $site_address3=$project['site_address3'].", ";
+    }
+   
     $project['site_postcode']="N7 9AA";
     ?>
     <!DOCTYPE html>
@@ -32,7 +40,7 @@
                     
                                 <?php  echo ("
                                
-                                    <span>".$project['site_address1']." ".$site_address2." ".$project['site_address3']." ".$site_city." ".$project['site_postcode']."</span>
+                                    <span>".$project['site_address1']." ".$site_address2." ".$site_address3." ".$site_city." ".$project['site_postcode']."</span>
                                     "); ?>
                            
                                     
@@ -86,5 +94,5 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
-  }
+
   </style>  

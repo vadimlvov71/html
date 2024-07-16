@@ -28,7 +28,7 @@
         $page=1;
          $path_to_images = "images/";
         echo("
-            <div class='page_box'>
+            <div class='page_box' style='height:20cm'>
                 <div class='title_page'>Project Waste Targets</div>
                 <div class='container-flex'>
                     <div class='target'>
