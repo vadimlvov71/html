@@ -24,8 +24,10 @@
    // echo $total_co2;
     $path_to_images = "images/";
     ///Array ( [totals] => Array ( [total_milesNUM] => 29520.01814396 [total_litres_usedNUM] => 10302.48633224204 [total_tonnageNUM] => 141.45000000 [total_co2_emissionsNUM] => 26230.43927658 )
-    
-    
+    $client=[];
+    $client['name']="Client Loooooooooooooooooooooooong";
+    $project=[];
+    $project['project_title']="Project Name 11111111111";
     $transport_stats = array();
     $temp = [];
     $temp[]= array( 'total_milesNUM' => 1071.71884125, 'total_litres_usedNUM' => 374.02987559625, 'total_tonnageNUM' => '', 'total_co2_emissionsNUM' => 952.29128418, 'wtn_destination_postcode' => '0000', 'waste_type_name' => '8888 ');
@@ -79,100 +81,105 @@
     echo "</pre>";*/
     $group_by_postcode=array();
     $cells_count=0;
-    foreach($transport_stats['by_destination'] as $stat){
-        $cells_count++;
-        if (!array_key_exists($stat['wtn_destination_postcode'], $group_by_postcode)) {
-           /* echo "<pre>";
-            print_r($stat);
-            echo "</pre>"; */
-            $group_by_postcode[$stat['wtn_destination_postcode']][]=$stat;
-        }else{
-            //echo "key::: ".key($group_by_postcode)."code::: ".$stat['wtn_destination_postcode']."<br>";
-            foreach($group_by_postcode as $key => $group){
-               // echo "key::: ".$key."<br>";
-                if ($key == $stat['wtn_destination_postcode']) {
+    $transport_stats_exists=false;
+		if($transport_stats['by_destination']){
+			$transport_stats_exists=true;
+            foreach($transport_stats['by_destination'] as $stat){
+                $cells_count++;
+                if (!array_key_exists($stat['wtn_destination_postcode'], $group_by_postcode)) {
+                /* echo "<pre>";
+                    print_r($stat);
+                    echo "</pre>"; */
                     $group_by_postcode[$stat['wtn_destination_postcode']][]=$stat;
                 }else{
-                    /*echo "<pre>";
-                    print_r($stat);
-                    echo "</pre>";*/
+                    //echo "key::: ".key($group_by_postcode)."code::: ".$stat['wtn_destination_postcode']."<br>";
+                    foreach($group_by_postcode as $key => $group){
+                    // echo "key::: ".$key."<br>";
+                        if ($key == $stat['wtn_destination_postcode']) {
+                            $group_by_postcode[$stat['wtn_destination_postcode']][]=$stat;
+                        }else{
+                            /*echo "<pre>";
+                            print_r($stat);
+                            echo "</pre>";*/
 
-                }
-            }
-        }
-    }
-
-
-    //$group_count_array=array();
-    //$group_count=0;
-    $rows_array_count=0;
-    $page_data=array();
-    foreach($group_by_postcode as $key => $group){
-        $rows_array_count+=count($group);
-        $page_data[] = $key;
-    }
-    //echo " rows_array_count:". $rows_array_count."<br>";
-    $page_count=ceil($rows_array_count/5);
-    echo $page_count;
-    $page_array=array_fill(0, $page_count, 'page');
-        /////////////////////////
-  
-    //$page=array();
-    /*foreach($group_by_postcode as $key => $group){
-        $page[] = $key;
-       // echo count($group)."<br>";
-        
-    }*/
-    $temp=array();
-    $page1=array();
-    $i=1;
-    foreach($group_by_postcode as $key => $group){
-        foreach($group as $key1 => $stat){
-            
-            if(count($temp) < 4){
-                echo count($temp)."<br>";
-                echo "lower".$i." ".$stat['waste_type_name']."<br>";
-                $temp[]=$stat;
-                //continue;
-            }else{
-                echo "more".$i." ".$stat['waste_type_name']."<br>";
-                $temp[]=$stat;
-                $page1[]=$temp;
-                $temp=[];
-            }
-           
-            if ($i == $rows_array_count && count($temp) < 4) {
-                //echo "last:".$i."<br>";
-                //echo "count".count($temp)."<br>";
-                $page1[]=$temp;
-            }else{
-                //echo "nolast:".$i."<br>";
-               // echo "nolast____________".$rows_array_count."<br>";
-            }
-            $i++ ; 
-        }
-    }
-    echo "<pre>";
-    print_r($page1);
-    echo "</pre>";
-    //$page_data=array();
-    $page_data_array=array();
-    $x=0;
-    foreach($page1 as $key => $page){
-        foreach($page as $key1 => $item){
-            //echo "item".$item['wtn_destination_postcode']."<br>";
-            foreach($page_data as $data){
-                if ($data == $item['wtn_destination_postcode']) {
-                    if ($x == $key) {
-                        $page_data_array[$x][$data][]=$item;
-                        //echo "x:: ".$x."key:: ".$key."data".$item['waste_type_name']."<br>";
+                        }
                     }
-                    //echo "key:: ".$key."data".$item['waste_type_name']."<br>";
-                    //$group_by_postcode[$stat['wtn_destination_postcode']][]=$stat;
                 }
-             }
+            }
+
+
+        //$group_count_array=array();
+        //$group_count=0;
+        $rows_array_count=0;
+        $page_data=array();
+        foreach($group_by_postcode as $key => $group){
+            $rows_array_count+=count($group);
+            $page_data[] = $key;
         }
-        $x++;
+        //echo " rows_array_count:". $rows_array_count."<br>";
+        $page_count=ceil($rows_array_count/5);
+        //echo $page_count;
+        $page_array=array_fill(0, $page_count, 'page');
+            /////////////////////////
+    
+        //$page=array();
+        /*foreach($group_by_postcode as $key => $group){
+            $page[] = $key;
+        // echo count($group)."<br>";
+            
+        }*/
+        $temp=array();
+        $page1=array();
+        $i=1;
+        
+        foreach($group_by_postcode as $key => $group){
+            foreach($group as $key1 => $stat){
+                
+                if(count($temp) < 4){
+                    echo count($temp)."<br>";
+                    //echo "lower".$i." ".$stat['waste_type_name']."<br>";
+                    $temp[]=$stat;
+                    //continue;
+                }else{
+                   // echo "more".$i." ".$stat['waste_type_name']."<br>";
+                    $temp[]=$stat;
+                    $page1[]=$temp;
+                    $temp=[];
+                }
+            
+                if ($i == $rows_array_count && count($temp) < 4) {
+                    //echo "last:".$i."<br>";
+                    //echo "count".count($temp)."<br>";
+                    $page1[]=$temp;
+                }else{
+                    //echo "nolast:".$i."<br>";
+                // echo "nolast____________".$rows_array_count."<br>";
+                }
+                $i++ ; 
+            }
+        }
+       /* echo "<pre>";
+        print_r($page1);
+        echo "</pre>";*/
+        //$page_data=array();
+        $page_data_array=array();
+        $x=0;
+        foreach($page1 as $key => $page){
+            foreach($page as $key1 => $item){
+                //echo "item".$item['wtn_destination_postcode']."<br>";
+                foreach($page_data as $data){
+                    if ($data == $item['wtn_destination_postcode']) {
+                        if ($x == $key) {
+                            $page_data_array[$x][$data][]=$item;
+                            //echo "x:: ".$x."key:: ".$key."data".$item['waste_type_name']."<br>";
+                        }
+                        //echo "key:: ".$key."data".$item['waste_type_name']."<br>";
+                        //$group_by_postcode[$stat['wtn_destination_postcode']][]=$stat;
+                    }
+                }
+            }
+            $x++;
+        }
     }
 
     echo "<pre>";
@@ -239,6 +246,18 @@
         $page=0;
         $row_per_page=7;
         $page_i=1;
+        if($transport_stats_exists==false){
+            echo("
+                <div class=pbreak></div>
+                <div class='container' style='position:relative;height: 18cm;text-align:center'>
+                    <div class='center' style=color:red;>There are no entries during this period.</div>
+            ");
+                    echo footer($page, $path_to_images, $client['name'], $project['project_title']);
+            echo("
+                </div>
+            ");
+        }
+        static $key_i=array();
         foreach($page_data_array as $key_page => $page_content){
             echo "
             <div class=pbreak></div>
@@ -259,14 +278,23 @@
                                 </div>
                             ";
                         }
-                        $key_i=array();
+                        
                         $i=0;
                         foreach($page_content as $key => $group){
-                            $key_i[$key]=$i;
-                           // echo $key_i[$key]."<br>";
-                            if($key_i[$key]>0){
+                            if($key_i[$key]){
+                                $key_i[$key]++;
+                            }else{
+                                $key_i[$key]=$i;
+                            }
+                            
+                           // echo "key_i:: ".$key_i[$key]."<br>";
+                            //echo "key::".$i."<br>";
+                            if($key_i[$key]>0 && $i==0){
+                               // echo "true:<br>";
+
                                 $continue=true; 
                             }else{
+                                //echo "false:<br>";
                                 $continue=false;
                             }
                             echo newTable($key, $continue);
@@ -283,7 +311,7 @@
                                 </tr>";                                
                             }
                             echo "</table></div>";
-                            
+                            $key_i[$key]++;
                             $i++; 
                         }
                         end($page_data_array);
@@ -291,50 +319,59 @@
                             //$page++;
                             echo "Further supplier information and documentation can be found on our portal within the duty of care section";
                         }
-                        echo footer($page, $path_to_images);
+                        echo footer($page, $path_to_images, $client['name'], $project['project_title']);
                             
-                echo "
+                echo ("
                     </div><!--data-text-table-->   
                     </div><!--container-data-text1-->     
                     </div><!--left-side-data-->     
-                </div><!--container-flex11-->                
-            </div><!--container-->";
+                </div><!--container-flex11--> 
+                
+            ");
+            //echo ("page_i".$page_i."<br>");
+            if($page_i==1){
+                echo ("
+                <div class='right-side' style='position:absolute; top:0; right:0'>
+                        <div class='container-logo'>
+                            <div class='data-text-right-project text-align-center'>Project Tools</div>
+                            <img class='data-track data-right-img center' src='".$path_to_images."truck.png' alt='' />
+                            <div class='data-text-right-1 text-align-center'>
+                                Total mileage to waste<br>disposal site: <span>".$total_miles."</span>
+                            </div>
+                        </div>
+                        
+                        <div class='tonnage center'>
+                            <img class='data-right-img center' src='".$path_to_images."tonnage_weight.png' alt='' />
+                            <div class='data-text-tonnage text-align-center'>".$total_litres."<br>Tonnes</div>
+                        </div>
+                        <div class='data-text-right-1 text-align-center'>
+                            Total tonnage of <br> waste collected to date
+                        </div>
+                        <div class='container-logo'>
+                            <img class='data-right-img center' src='".$path_to_images."co2_cloud.png' alt='' />
+                            <div class='data-text-right-1 text-align-center'>
+                                <span>".$total_tonnage." tonnes</span>
+                                <div>of CO2 emissions.</div>
+                            </div>
+                        </div>
+                        <div class='container-logo'>
+                            <img class='data-right-img center' src='".$path_to_images."pump.png' alt='' />
+                            <div class='data-text-right-1 text-align-center'>
+                                <span>".$total_co2." Litres</span> of fuel used 
+                                <div>of CO2 emissions.</div>
+                            </div>
+                        </div>
+                    </div> 
+                ");	
+            } 
+            echo ("              
+            </div><!--container-->
+            ");	
             $page_i++;
             $page++;
         }
 
-                      echo"  <div class='right-side' style='position:absolute; top:0; right:0'>
-								<div class='container-logo'>
-									<div class='data-text-right-project text-align-center'>Project Tools</div>
-									<img class='data-track data-right-img center' src='".$path_to_images."truck.png' alt='' />
-									<div class='data-text-right-1 text-align-center'>
-										Total mileage to waste<br>disposal site: <span>".$total_miles."</span>
-									</div>
-								</div>
-								
-								<div class='tonnage center'>
-									<img class='data-right-img center' src='".$path_to_images."tonnage_weight.png' alt='' />
-									<div class='data-text-tonnage text-align-center'>".$total_litres."<br>Tonnes</div>
-								</div>
-								<div class='data-text-right-1 text-align-center'>
-									Total tonnage of <br> waste collected to date
-								</div>
-								<div class='container-logo'>
-									<img class='data-right-img center' src='".$path_to_images."co2_cloud.png' alt='' />
-									<div class='data-text-right-1 text-align-center'>
-										<span>".$total_tonnage." tonnes</span>
-										<div>of CO2 emissions.</div>
-									</div>
-								</div>
-								<div class='container-logo'>
-									<img class='data-right-img center' src='".$path_to_images."pump.png' alt='' />
-									<div class='data-text-right-1 text-align-center'>
-										<span>".$total_co2." Litres</span> of fuel used 
-										<div>of CO2 emissions.</div>
-									</div>
-								</div>
-							</div> 
-                            ";
+                     
                             ?>                       
     </body>
     </html>
@@ -360,7 +397,7 @@
                 </tr>");
                 
     }
-    function footer($page, $path_to_images){
+    function footer($page, $path_to_images, $client_name, $project_name){
 		//global $global;
 		return("
             
@@ -370,9 +407,16 @@
                             &nbsp;
                         </div>
                         <div class='report-text'>
-                            <span class='line-logo-text-1'>".$page."</span><span class='line-logo-text-2'>
-                                CLIENT NAME - PROJECT TITLE - WASTE MOVEMENT REPORT 
-                            </span>
+                            
+                            <div class='container-flex line-logo-text-2' style='flex-direction: row;'>
+                                <div class='line-logo-text-1' style='width:40px;'>".$page."</div>
+                                <div style='text-align:right' class='cut-text uppercase'>".$client_name."</div>
+                                <div class='footer-divide'>-</div>
+                                <div class='cut-text uppercase'>".$project_name."</div> 
+                                <div class='footer-divide'>-</div>
+                                <div style='padding:4px 0 0 14px'> WASTE MOVEMENT REPORT</div> 
+                            </div> 
+                            <div class='overflow' style='float: left; width: 50px'>Long text that might overflow</div>
                         </div>
                     </div>
                     <div class='container-line-logo-right' style='padding: 10px 11px 26px 0;'>
@@ -399,4 +443,29 @@ function countRows($type='next')
 }
 
     ?>
-    
+    <style>
+.footer-divide{
+    width:40px;
+    text-align:center;
+}
+        .overflow1 {
+  overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.overflow1 {
+  overflow: visible;
+}
+
+.cut-text1:hover .overflow {
+  position: absolute;
+  top:20px;
+  left:20px;
+  background-color: white;
+
+  box-shadow: 0 0 4px 0 black;
+  border-radius: 1px;
+}
+</style>

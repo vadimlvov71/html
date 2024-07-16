@@ -2,7 +2,9 @@
 <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
 <link href='https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap' rel='stylesheet'>
 
-
+[data-tooltip]::after {
+    content: attr(data-tooltip); /* Выводим текст */
+  }
 body, html {
     margin: 0;
     padding: 0;
@@ -76,6 +78,26 @@ body, html {
     align-items: center;
     justify-content: space-between;
 
+}
+.cut-text{
+    position:relative;
+    text-align: center;
+    text-overflow: ellipsis;
+    overflow: hidden; 
+    width: 200px; 
+    height: 60px; 
+    padding: 4px 4px 0 4px;
+    white-space: nowrap;
+}
+.cut-text:hover::after { 
+    position: absolute; /* Абсолютное позиционирование */
+    left: 1px; top: 4px; /* Положение подсказки */
+    z-index: 1;
+    height: 40px;  
+    content: attr(data-title); 
+   }
+.uppercase{
+    text-transform: uppercase;
 }
 .data-text-table{
     /*padding: 36px 0 0 0;*/

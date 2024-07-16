@@ -4,6 +4,9 @@
     if(empty($project['site_city'])){
         $site_city=$project['site_city'].",,, ";
     }
+    $project['site_address1']="5 – 10 Brandon Road";
+    $site_address2="Loooong beach long address, ";
+    $project['site_address3']="Islington long name";
     ?>
     <!DOCTYPE html>
     <html lang='en'>
@@ -23,7 +26,11 @@
                     <div class='container-text1'>
                         <div class='monserat-text1'>WASTE  MOVEMENT  REPORT</div>
                         <div class='monserat-text2'>
-                            5 – 10 Brandon Road, Islington,
+                            <div class='container-flex'>
+                                <?php  echo ("
+                                <div class='cut-text' style='width:100px'>".$project['site_address1']."</div><div class='cut-text'>".$site_address2."</div><div class='cut-text'>".$project['site_address3']."</div>
+                                "); ?>
+                            </div>
                             <div>
                                 <?php echo $site_city ?> N7 9AA
                             </div>

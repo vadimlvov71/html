@@ -21,6 +21,8 @@
     </head>
     <body>
         <?php
+        $page=1;
+         $path_to_images = "images/";
         echo("
             <div class='page_box'>
                 <div class='title_page'>Project Waste Targets</div>
@@ -36,7 +38,7 @@
                     </div>
                     <div class='target'>
                         <div class='target-title'>Diversion from landfill</div>
-                        <div class='table-waste' style='width:60%;/*height:500px;*/'>
+                        <div class='table-waste' style='width:90%;/*height:500px;*/'>
                             <table>
                             <tr><th width='160'>Target</th><th width='160'>Current</th></tr>
                             <tr><td class='cell-number'>90%</td><td class='cell-number'>98.58%</td></tr>
@@ -53,33 +55,71 @@
                         </div>
                     </div>
                 </div>
-                <div class='container-flex'>
+                <div class='container-flex' style='padding:0 0 40px 0'>
                     <div class='width-50-procents diagram-waste-left'>
                         <div class='diagram-waste-left-content'>
                             <div class='diagram-waste-left-title'>Waste Progress Bar</div>
                         </div>
                     </div>
                     <div class='width-50-procents diagram-waste-right'>
-                        <div class='diagram-waste-right-title'>Totals to date</div>
-                        <div class='container-flex'>
-                            <div class='diagram-waste-right-content'>
+                        <div class='diagram-waste-right-content'>
+                            <div class='diagram-waste-right-title'>Totals to date</div>
+                            <div class='container-flex'>
+                                <div class='diagram-waste-right-cell'>
+                                    <div class='waste-percent-text'>88%</div>
+                                    <div>(XX tonnes) <span>recycled</span></div>
+                                </div>
+                                <div class='diagram-waste-right-cell'>
                                 88%
-                                <div>(XX tonnes) <span>recycled</span></div>
+                                <div>(XX tonnes) <span>Landfill</span></div>
+                                </div>
                             </div>
-                            <div class='diagram-waste-right-content'>
-                            88%
-                            <div>(XX tonnes) <span>Landfill</span></div>
+                            <div class='container-flex'>
+                                <div class='diagram-waste-right-cell'>
+                                    88%
+                                    <div>(XX tonnes) <span>EFW</span></div>
+                                </div>
+                                <div class='diagram-waste-right-cell'>
+                                88%
+                                <div>(XX tonnes) <span>Diversion of Landfill</span></div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                
-               
+                ");
+                echo footer($page, $path_to_images);
+        echo("
             </div>
         ");
         ?>
     </body>
     </html>
+
+    <?php
+    function footer($page, $path_to_images){
+		//global $global;
+		return("
+            
+                <div class='footer-container'>
+                    <div class='footer-line-logo-left'>
+                        <div class='footer-logo-text'>
+                            &nbsp;
+                        </div>
+                        <div class='footer-report-text'>
+                            <span class='footer-logo-text-1'>".$page."</span><span class='footer-logo-text-2'>
+                                CLIENT NAME - PROJECT TITLE - WASTE MOVEMENT REPORT 
+                            </span>
+                        </div>
+                    </div>
+                    <div class='footer-logo-right' style='padding: 10px 11px 26px 0;'>
+                        <img class='footer-logo-1 center' src='".$path_to_images."encore_logo_2024.png' />
+                    </div>
+                </div>
+           
+		");
+	}
+    ?>
 <style>
 
 
@@ -107,28 +147,84 @@ background-color: #f8f8f8;
     display: block;
 }
 .diagram-waste-left{
-    
-    height:500px;
-    padding: 12px;
+    padding: 22px 6px;
 }
 .diagram-waste-left-content{
     border: 2px solid #d7b1cd;
-    height:500px;
+    height:360px;
 }
 .diagram-waste-left-title{
     text-align:center;
 }
 .diagram-waste-right{
-    background-color: #ff0000;
-    color:#fff;
-    height:500px;
-    padding: 12px;
+    
+    padding: 22px 6px;
 }
 .diagram-waste-right-title{
-    text-align:center;
+    font-weight: 700;
+    padding: 26px 0 20px 37px;
+}
+.diagram-waste-right-cell{
+    font-size: 0.9rem;
+    padding: 26px 0 0 37px;
+}
+.diagram-waste-right-cell span{
+    font-weight: 700;
 }
 .diagram-waste-right-content{
+    color:#fff;
+    height:360px;
+    background-color: #ff0000;
     padding: 26px 0 0 37px;
+}
+.footer-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    z-index: 1000;
+    left: 0;
+    right: 0;
+    bottom:0;
+}
+.footer-line-logo-left{
+    width: 80%;
+}
+.footer-logo-text{
+    position: relative;
+}
+.footer-logo-text::after {
+  content: '';
+  position: absolute;
+  border-top: 2px solid #9e6eb7;
+  width: 100%;
+  left: 0;
+  top: 23px;
+}
+.footer-report-text{
+    padding: 20px 0 0 0;
+}
+
+.footer-logo-text-1 {
+  font-weight: 700;
+  color: #9e6eb7;
+  font-size: 1.4rem;
+  padding: 0px 30px;
+}
+.footer-logo-text-2 {
+  font-weight: 700;
+  font-size: 0.8rem;
+  padding: 0px 14px;
+  letter-spacing: 0.3em;
+}
+.footer-logo-right{
+    width: 20%;
+}
+.footer-logo-1 {
+  width: 150px;
+}
+.waste-percent-text{
+
 }
 section {
 width: 100%;
@@ -189,6 +285,7 @@ View SCSS Code
 .title_page{
     font-weight: 700;
     font-size: 1.1rem;
+    padding: 30px 0 0 0;
 }
 .container-flex {
     display: flex;
