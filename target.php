@@ -28,7 +28,8 @@
         $page=1;
          $path_to_images = "images/";
         echo("
-            <div class='page_box' style='height:20cm'>
+            <div class='page_box1' style='padding:10px 0 0 34px;height:20cm'>
+
                 <div class='title_page'>Project Waste Targets</div>
                 <div class='container-flex'>
                     <div class='target'>
@@ -63,12 +64,13 @@
                     <div class='width-50-procents diagram-waste-left'>
                         <div class='diagram-waste-left-content'>
                             <div class='diagram-waste-left-title'>Waste Progress Bar</div>
+                            <div class=chart_div id='chart_progress_bar'></div>
                         </div>
                     </div>
                     <div class='width-50-procents diagram-waste-right'>
                         <div class='diagram-waste-right-content'>
                             <div class='diagram-waste-right-title'>Totals to date</div>
-                            <div class='container-flex'>
+                            <div class='container-flex' style='padding:0 80px 40px 0'>
                                 <div class='diagram-waste-right-cell'>
                                     <div class='waste-percent-text'>88%</div>
                                     <div>(XX tonnes) <span>recycled</span></div>
@@ -97,6 +99,59 @@
             </div>
         ");
         ?>
+        <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+				<script type='text/javascript'>
+					google.charts.load('current', {packages:['corechart']});
+					google.charts.setOnLoadCallback(drawChart);
+					function drawChart() {
+					var data = google.visualization.arrayToDataTable([
+						['Element', '', { role: 'style' } ],
+						//[null, 572.12, '#f4833d'],
+						//[null, 3390, '#4e79ca'],
+                        ['Actual Waste', 572.12, '#f4833d'],
+						['Forecasted Waste', 3390, '#4e79ca'],
+
+					]);
+                    data.getProperty(0, 0, "Actual Waste");
+					var view = new google.visualization.DataView(data);
+                    
+					view.setColumns([0, 1,
+									{ calc: 'stringify',
+										sourceColumn: 1,
+										type: 'string',
+										role: 'annotation' },
+									2]);
+                    //view.hideColumns([0]); 
+                    data.setColumnLabel(0, 'aaaa');
+					var options = {
+						
+						//title: 'Waste Review',
+						width: 600,
+						height: 400,
+						bar: {groupWidth: '95%'},
+                        vAxis: {
+                            title: 'Waste Review',
+                        },
+                        isStacked: true,
+                        hAxis: { 
+                            minValue: 0,
+                            gridlines: {
+                                count: 10
+                            },
+                            format: '0',
+                           // ticks: [0,500,1000,15,20] 
+                        },
+						//legend: { position: 'bottom' },
+                        /*series: [
+                            {color: 'black', visibleInLegend: true}, 
+                            {color: 'red', visibleInLegend: true}
+                        ]*/
+                      
+					};
+					var chart = new google.visualization.BarChart(document.getElementById('chart_progress_bar'));
+					chart.draw(view, options);
+				}
+  				</script>
     </body>
     </html>
 
@@ -185,9 +240,9 @@ background-color: #f8f8f8;
 		padding: 4px 4px 0 4px;
 		white-space: nowrap;
 	}
-	.uppercase{
-		text-transform: uppercase;
-	}
+.uppercase{
+    text-transform: uppercase;
+}
 .diagram-waste-left{
     padding: 22px 6px;
 }
@@ -209,6 +264,7 @@ background-color: #f8f8f8;
     padding: 26px 0 20px 37px;
 }
 .diagram-waste-right-cell{
+    width: 200px;
     font-size: 0.9rem;
     padding: 26px 0 0 37px;
 }
@@ -340,14 +396,15 @@ View SCSS Code
     box-sizing: border-box;
     color:black;
 }
+.container-flex {
+    display: flex;
+}
 .title_page{
     font-weight: 700;
     font-size: 1.1rem;
     padding: 30px 0 0 0;
 }
-.container-flex {
-    display: flex;
-}
+
 .table-waste{
     padding: 12px 0;
     width: 90%;
