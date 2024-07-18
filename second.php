@@ -31,11 +31,19 @@
 
     </head>
     <body>
+    <?php
+            $client=[];
+            $client['name']="Client Loooooooooooooooooooooooong";
+            $project=[];
+            $project['project_title']="Project Name 11111111111";
+        $page=1;
+         $path_to_images = "images/";
+        echo("
         <div class='container' style='height:22cm;'>
             <div class='container-flex'>
-                <div class='left-side-second'>
-                    <div class='container-text1'>
-                        <div class='diagram-waste-right-title'>Totals to date</div>
+                <div class='second-left-side'>
+                    <div class='second-container-text1'>
+                        <div class='diagram-waste-right-title'>This month (March 2024)</div>
                             
                         <div class='diagram-waste-right-cell'>
                             <div class='waste-percent-text'>88%</div>
@@ -58,26 +66,66 @@
 
                     </div>
                 </div>
-                <div class='right-side-second'>
-                    <div class='red-zone-second'>
-                            Key Waste Management Statistics:
-                            Mixed Construction Waste and/or Demolition Waste
-                            Plasterboard/Gypsum
-                            Total Project Waste Generated
+                <div class='second-right-side'>
+                    <div class='second-red-zone'>
+                        <div class='second-title'>Key Waste Management Statistics: <span>Test data</span></div>
+                        <div class='second-red'>Mixed Construction Waste and/or Demolition Waste <span>(Test data)</span></div>
+                        <div class='second-red'>Plasterboard/Gypsum <span>Test data</span></div>
+                        <div class='second-red-total'>TOTAL PROJECT WASTE GENERATED: <span>Test data</span></div>
                     </div>
-                    right
+                    
+                    <div style='width:99%;padding:10px'>
+                        <div style='background-color:#a02b93;color:#fff;padding:10px;font-weight:800;'>PROJECT DETAILS:</div>
+                        <table class='second-table'>
+                        <tr><td>Project details </td><td>98.58%</td></tr>
+                        <tr><td>Project start date </td><td>98.58%</td></tr>
+                        <tr><td>Project end date </td><td>98.58%</td></tr>
+                        <tr><td>Project floor area (m2) </td><td>98.58%</td></tr>
+                        <tr><td>Project value </td><td>98.58%</td></tr>
+                        </table>
+                    </div>
                 </div>
             </div>
+            ");
+                echo footer($page, $path_to_images, $client['name'], $project['project_title']);
+        echo("
         </div>
+        ");
+        ?>
     </body>
     </html>
     <?php
+    function footer($page, $path_to_images, $client_name, $project_name){
+		//global $global;
+		return("
+                <div class='footer-container'>
+                    <div class='footer-line-logo-left'>
+                        <div class='footer-logo-text'>
+                            &nbsp;
+                        </div>
+                        <div class='container-flex footer-report-text'>
+                            <div class='line-logo-text-1' style='width:40px;'>".$page."</div>
+                            <div style='text-align:right' class='cut-text uppercase'>".$client_name." </div> 
+                            <div class='footer-divide'>-</div>
+                            <div class='cut-text uppercase'> ".$project_name." </div> 
+                            <div class='footer-divide'>-</div>
+                            <div style='padding:4px 0 0 14px'>  WASTE MOVEMENT REPORT</div> 
+                        </div>
+                    </div>
+                    <div class='footer-logo-right' style='padding: 10px 11px 26px 0;'>
+                        <img class='footer-logo-1 center' src='".$path_to_images."encore_logo_2024.png' />
+                    </div>
+                </div>
+           
+		");
+	}
+ 
     $date_from = "2024-07-01 00:00:00";
     $date_to = "2024-07-31 00:00:00";
     $start_date=date("d M Y", strtotime($date_from));
     $end_date=date("d M Y", strtotime($date_to));
     $current=date("F Y"); 
-    echo  $current;
+   // echo  $current;
     ?>
 <style>
     .container {
@@ -89,6 +137,9 @@
 .container-flex {
     display: flex;
     align-items: stretch;
+}
+.second-container-text1 div{
+    color:#fff;
 }
 .diagram-waste-right{
     
@@ -109,14 +160,14 @@
 .diagram-waste-right-content{
     color:#fff;
     height:360px;
-    background-color: #ff0000;
+    background-color: #f04d46;
     padding: 26px 0 0 37px;
 }
-.left-side-second {
-    
-    height:100%;
+.second-left-side {
+    flex-grow: 1; 
+    /*height:100%;*/
     width: 30%;
-    background-color: #93c13d; /* Light gray background */
+    background-color: #93c13d;
     background-size: cover;
     position: relative;
 }
@@ -128,25 +179,59 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.red-zone-second{
+.second-red-zone{
     color: #fff;
-    height: 360px;
-    background-color: #ff0000;
+    height: 202px;
+    background-color: #f04d46;
     padding: 26px 0 0 37px;
 }
-
-
-.right-side-second {
+.second-right-side {
     width: 70%;
-    /*display: flex;
-    align-items: center;
-    justify-content: center;*/
-    background-color: #fff; /* Light gray background */
-    padding: 38px 0px 0 0;
+    background-color: #fff; 
     position: relative;
+}
+.second-title{
+    font-weight: 700;
+    padding: 38px 0px 20px 0;
+}
+.second-red{
+    font-weight: 300; 
+    padding: 5px 0px 0 0; 
+}
+.second-red span{
+    font-weight: 700; 
 }
 .waste-percent-text{
     font-weight: 100;
     font-size: 2.1rem;
+}
+.second-red-total{
+    font-weight: 700;
+    padding: 5px 0px 0 0;   
+}
+.second-red-total span{
+    font-weight: 300;  
+}
+.second-table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+.second-table td {
+    text-align: left;
+    padding: 16px;
+}
+.second-table tr td:first-child{
+    width:200px;
+}
+.second-table tr td:last-child{
+    width:400px;
+}
+.second-table tr:nth-child(even) {
+  background-color: #f0e8ee;
+}
+.second-table tr:nth-child(odd) {
+  background-color: #dfcddc;
 }
   </style>  
