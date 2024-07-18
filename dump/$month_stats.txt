@@ -1,0 +1,181 @@
+Array
+(
+    [total_tonnageNUM] => 61.09
+    [total_tonnage1NUM] => 61.09
+    [total_tonnage2NUM] => 0
+    [total_transportNUM] => 360
+    [total_totalNUM] => 18321.86
+    [total_costNUM] => 11797.82
+    [total_vatNUM] => 3053.64
+    [service_count] => 26
+    [estimated_landfill_emission] => 47711.01
+    [tonnes_recycled] => 25
+    [tonnes_to_efw] => 0
+    [tonnes_to_landfill] => 36.09
+    [recycled_emission] => 4325
+    [carbon_saved] => 475
+    [services] => Array
+        (
+            [2] => Array
+                (
+                    [service_name] => Compactor
+                    [total_tonnageNUM] => 28.11
+                    [total_totalNUM] => 11527.2
+                    [service_count] => 10
+                )
+
+            [3] => Array
+                (
+                    [service_name] => Wait and Load
+                    [total_tonnageNUM] => 32.98
+                    [total_totalNUM] => 5904.86
+                    [service_count] => 9
+                )
+
+            [7] => Array
+                (
+                    [service_name] => Waiting Time
+                    [total_tonnageNUM] => 0
+                    [total_totalNUM] => 259.8
+                    [service_count] => 4
+                )
+
+            [5] => Array
+                (
+                    [service_name] => Collection
+                    [total_tonnageNUM] => 0
+                    [total_totalNUM] => 420
+                    [service_count] => 2
+                )
+
+            [1] => Array
+                (
+                    [service_name] => Delivery
+                    [total_tonnageNUM] => 0
+                    [total_totalNUM] => 210
+                    [service_count] => 1
+                )
+
+        )
+
+    [waste_types] => Array
+        (
+            [2] => Array
+                (
+                    [total_tonnageNUM] => 25
+                    [waste_type_name] => Plasterboard/Gypsum 17 08 02
+                    [estimated_landfill_emission] => 4800
+                    [tonnes_recycled] => 25
+                    [tonnes_to_efw] => 0
+                    [tonnes_to_landfill] => 0
+                    [recycled_emission] => 4325
+                    [carbon_saved] => 475
+                    [suppliers] => Array
+                        (
+                            [1] => Array
+                                (
+                                    [total_tonnageNUM] => 25
+                                    [waste_type_name] => Plasterboard/Gypsum 17 08 02
+                                    [supplier_name] => Test Supplier
+                                    [estimated_landfill_emission] => 4800
+                                    [tonnes_recycled] => 25
+                                    [tonnes_to_efw] => 0
+                                    [tonnes_to_landfill] => 0
+                                    [recycled_emission] => 4325
+                                    [carbon_saved] => 475
+                                )
+
+                        )
+
+                )
+
+            [0] => Array
+                (
+                    [total_tonnageNUM] => 0
+                    [waste_type_name] => 
+                    [estimated_landfill_emission] => 0
+                    [tonnes_recycled] => 0
+                    [tonnes_to_efw] => 0
+                    [tonnes_to_landfill] => 0
+                    [recycled_emission] => 0
+                    [carbon_saved] => 0
+                    [suppliers] => Array
+                        (
+                            [1] => Array
+                                (
+                                    [total_tonnageNUM] => 0
+                                    [waste_type_name] => 
+                                    [supplier_name] => Test Supplier
+                                    [estimated_landfill_emission] => 0
+                                    [tonnes_recycled] => 0
+                                    [tonnes_to_efw] => 0
+                                    [tonnes_to_landfill] => 0
+                                    [recycled_emission] => 0
+                                    [carbon_saved] => 0
+                                )
+
+                        )
+
+                )
+
+            [1] => Array
+                (
+                    [total_tonnageNUM] => 36.09
+                    [waste_type_name] => Mixed Construction Waste and/or Demolition Waste17 09 04
+                    [estimated_landfill_emission] => 42911.01
+                    [tonnes_recycled] => 0
+                    [tonnes_to_efw] => 0
+                    [tonnes_to_landfill] => 36.09
+                    [recycled_emission] => 0
+                    [carbon_saved] => 0
+                    [suppliers] => Array
+                        (
+                            [1] => Array
+                                (
+                                    [total_tonnageNUM] => 36.09
+                                    [waste_type_name] => Mixed Construction Waste and/or Demolition Waste17 09 04
+                                    [supplier_name] => Test Supplier
+                                    [estimated_landfill_emission] => 42911.01
+                                    [tonnes_recycled] => 0
+                                    [tonnes_to_efw] => 0
+                                    [tonnes_to_landfill] => 36.09
+                                    [recycled_emission] => 0
+                                    [carbon_saved] => 0
+                                )
+
+                        )
+
+                )
+
+            [20] => Array
+                (
+                    [total_tonnageNUM] => 0
+                    [waste_type_name] => N/A
+                    [estimated_landfill_emission] => 0
+                    [tonnes_recycled] => 0
+                    [tonnes_to_efw] => 0
+                    [tonnes_to_landfill] => 0
+                    [recycled_emission] => 0
+                    [carbon_saved] => 0
+                    [suppliers] => Array
+                        (
+                            [1] => Array
+                                (
+                                    [total_tonnageNUM] => 0
+                                    [waste_type_name] => N/A
+                                    [supplier_name] => Test Supplier
+                                    [estimated_landfill_emission] => 0
+                                    [tonnes_recycled] => 0
+                                    [tonnes_to_efw] => 0
+                                    [tonnes_to_landfill] => 0
+                                    [recycled_emission] => 0
+                                    [carbon_saved] => 0
+                                )
+
+                        )
+
+                )
+
+        )
+
+)
