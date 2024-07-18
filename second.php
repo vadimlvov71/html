@@ -40,7 +40,7 @@
          $path_to_images = "images/";
         echo("
         <div class='container' style='height:22cm;'>
-            <div class='container-flex'>
+            <div class='container-flex' style='height:94%'>
                 <div class='second-left-side'>
                     <div class='second-container-text1'>
                         <div class='diagram-waste-right-title'>This month (March 2024)</div>
@@ -75,9 +75,9 @@
                     </div>
                     
                     <div style='width:99%;padding:10px'>
-                        <div style='background-color:#a02b93;color:#fff;padding:10px;font-weight:800;'>PROJECT DETAILS:</div>
+                        <div style='background-color:#a02b93;color:#fff;padding:20px;10px;font-weight:800;'>PROJECT DETAILS:</div>
                         <table class='second-table'>
-                        <tr><td>Project details </td><td>98.58%</td></tr>
+                        <tr><td style='height:60px;'>Project details </td><td>98.58%</td></tr>
                         <tr><td>Project start date </td><td>98.58%</td></tr>
                         <tr><td>Project end date </td><td>98.58%</td></tr>
                         <tr><td>Project floor area (m2) </td><td>98.58%</td></tr>
@@ -128,6 +128,11 @@
    // echo  $current;
     ?>
 <style>
+    .center{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
     .container {
     /*display: flex;*/
    /* height: 100vh; *//* Full viewport height */
@@ -138,6 +143,20 @@
     display: flex;
     align-items: stretch;
 }
+.cut-text{
+		text-overflow: ellipsis;
+		overflow: hidden; 
+		width: 200px; 
+		height: 1.2em; 
+		padding: 4px 4px 0 4px;
+		white-space: nowrap;
+	}
+.second-container-text1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+}
 .second-container-text1 div{
     color:#fff;
 }
@@ -147,7 +166,7 @@
 }
 .diagram-waste-right-title{
     font-weight: 700;
-    padding: 26px 0 20px 37px;
+    text-align:center;
 }
 .diagram-waste-right-cell{
     width: 200px;
@@ -162,6 +181,65 @@
     height:360px;
     background-color: #f04d46;
     padding: 26px 0 0 37px;
+}
+.footer-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    z-index: 1000;
+    left: 0;
+    right: 0;
+    bottom:0;
+}
+.footer-line-logo-left{
+    width: 80%;
+}
+.footer-logo-text{
+    position: relative;
+}
+.footer-logo-text::after {
+  content: '';
+  position: absolute;
+  border-top: 2px solid #9e6eb7;
+  width: 100%;
+  left: 0;
+  top: 23px;
+}
+.footer-report-text{
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 0.3em;
+    padding: 10px 0 0 0;
+}
+
+.footer-logo-text-1 {
+  font-weight: 700;
+  color: #9e6eb7;
+  font-size: 1.4rem;
+  padding: 0px 30px;
+}
+.footer-logo-text-2 {
+  font-weight: 700;
+  font-size: 0.8rem;
+  padding: 0px 14px;
+  letter-spacing: 0.3em;
+}
+.footer-logo-right{
+    width: 20%;
+}
+.footer-logo-1 {
+  width: 150px;
+}
+.footer-divide{
+    width:40px;
+    text-align:center;
+}
+.line-logo-text-1 {
+  font-weight: 700;
+  color: #9e6eb7;
+  font-size: 1.1rem;
+  padding: 0px 30px;
 }
 .second-left-side {
     flex-grow: 1; 
@@ -181,7 +259,7 @@
 }
 .second-red-zone{
     color: #fff;
-    height: 202px;
+    height: 280px;
     background-color: #f04d46;
     padding: 26px 0 0 37px;
 }
