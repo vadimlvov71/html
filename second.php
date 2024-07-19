@@ -125,7 +125,7 @@
     $start_date=date("d M Y", strtotime($date_from));
     $end_date=date("d M Y", strtotime($date_to));
     $current=date("F Y"); 
-   // echo  $current;
+    echo  date("d\s\\t M");
     ?>
 <style>
     .center{
@@ -151,15 +151,7 @@
 		padding: 4px 4px 0 4px;
 		white-space: nowrap;
 	}
-.second-container-text1{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    height: 100%;
-}
-.second-container-text1 div{
-    color:#fff;
-}
+
 .diagram-waste-right{
     
     padding: 22px 6px;
@@ -241,14 +233,6 @@
   font-size: 1.1rem;
   padding: 0px 30px;
 }
-.second-left-side {
-    flex-grow: 1; 
-    /*height:100%;*/
-    width: 30%;
-    background-color: #93c13d;
-    background-size: cover;
-    position: relative;
-}
 .monserat-text2 span {
   display: -webkit-box;
   max-width: 500px;
@@ -257,6 +241,24 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.second-container-text1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+}
+.second-container-text1 div{
+    color:#fff;
+}
+.second-left-side {
+    flex-grow: 1; 
+    /*height:100%;*/
+    width: 30%;
+    background-color: #93c13d;
+    background-size: cover;
+    position: relative;
+}
+
 .second-red-zone{
     color: #fff;
     height: 280px;
@@ -270,7 +272,7 @@
 }
 .second-title{
     font-weight: 700;
-    padding: 38px 0px 20px 0;
+    padding: 38px 0px 40px 0;
 }
 .second-red{
     font-weight: 300; 
@@ -285,7 +287,7 @@
 }
 .second-red-total{
     font-weight: 700;
-    padding: 5px 0px 0 0;   
+    padding: 10px 0px 0 0;   
 }
 .second-red-total span{
     font-weight: 300;  
