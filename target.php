@@ -122,7 +122,7 @@
 										role: 'annotation' },
 									2]);
                     //view.hideColumns([0]); 
-                    data.setColumnLabel(0, 'aaaa');
+                    //data.setColumnLabel(0, 'aaaa');
 					var options = {
 						
 						//title: 'Waste Review',

@@ -32,17 +32,18 @@
     </head>
     <body>
         <div class='container'>
-            <div class='chart_pie'>
-                 Waste and Service Types Summary for   1
+            <div class='chart-pie-header'>
+                <div style='height:120px;'></div>
+                <div style='padding:0px 0 0 60px;'>Waste and Service Types Summary for </div>
             </div>
             <div class='container-flex'>
-                <div class='chart_pie'>
+                <div class='chart-pie'>
                     1
                 </div>
-                <div class='chart_pie'>
+                <div class='chart-pie'>
                     2
                 </div>
-                <div class='chart_pie'>
+                <div class='chart-pie'>
                     3
                 </div>
             </div>
@@ -58,9 +59,20 @@
     echo  $current;
     ?>
 <style>
-    .container-flex {
-					display: flex;
-				}
+.container-flex {
+    display: flex;
+}
+.chart-pie-header{
+    color:#fff;
+    font-size: 1.125rem;
+    font-weight: 700;
+    height:170px;
+    background-color: #93c13d;
+}
+.chart-pie{
+    padding:70px 0 0 0;
+    width:33.3%;
+}
 .monserat-text2 span {
   display: -webkit-box;
   max-width: 500px;
