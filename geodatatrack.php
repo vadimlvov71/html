@@ -12,6 +12,7 @@
     </head>
     <body>
         <?php
+            $headers=array("Name", "Address", "Contact", "Telephone", "Email", "Metadata");
             $value=array();
             $value['name']="TestName";
             $value['address']="Baker street";
@@ -74,14 +75,18 @@
                     </div>
                     <div class='row row-block form-block'>
                         <div class='col-sm-12 title-row'>Properties</div>
-               
-                            <div class='col-sm-2'>Name</div>
+                        ";
+                        foreach($data as $dataItem){
+                            echo "<div class='col-sm-2 header-row'>Name</div>";
+                        }          
+                            <div class='col-sm-2 header-row'>Name</div>
                             <div class='col-sm-2'>Address</div>
                             <div class='col-sm-2'>Contact</div>
                             <div class='col-sm-2'>Telephone</div>
                             <div class='col-sm-2'>Email</div>
                             <div class='col-sm-2'>Metadata</div>  
                     ";
+                    
                     foreach($data as $dataItem){
                             foreach($dataItem as $item){
                                 echo "<div class='col-sm-2 data-item'>".$item."</div>";
@@ -114,6 +119,10 @@
     .header{
         padding:10px 20px;
     }
+    .header-row{
+        font-style: italic;
+    }
+    
     .page-title{
         font-size:1.3rem;
     }
