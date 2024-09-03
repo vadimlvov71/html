@@ -37,7 +37,7 @@
                     <div class='row form-block'>";
                      
                         echo "
-                            <div class='col-sm-6' style='padding: 6px 6px;'>
+                            <div class='col-sm-4' style='padding: 6px 6px;'>
                         ";
                             inputFields("Name", $value['name']);
                             inputFields("Contact", $value['contact']);
@@ -45,25 +45,32 @@
                             inputFields("Email", $value['email']);
                             inputFields("Category", $value['category'], "Category 2");
                         echo "
-                                <div class='btn btn-outline-secondary form-group' style='margin: 0 6px;' onclick='add_edit_propety();'>Edit</div>
+                                
                             </div>
                         ";
                         echo "
-                            <div class='col-sm-6' style='padding: 6px 6px;'>
+                            <div class='col-sm-4' style='padding: 6px 6px;'>
                         ";
-                            inputFields("Address", $value['address']);
-                            inputFields("Suburb", $value['address']);
-                            inputFields("Town/City", $value['address']);
-                            inputFields("Postcode", $value['postcode']);
-                            inputFields("State/Region", $value['state']);
-                            inputFields("Country", $value['country']);
+                                inputFields("Address", $value['address']);
+                                inputFields("Suburb", $value['address']);
+                                inputFields("Town/City", $value['address']);
+                                inputFields("Postcode", $value['postcode']);
+                                inputFields("State/Region", $value['state']);
+                                inputFields("Country", $value['country']);
                          echo "
-                            <div class='btn btn-outline-secondary' onclick='add_edit_category();'>Add Property</div>
-                        </div>
-                    ";
-                    
+                                
+                            </div>
+                            ";
+                        echo "
+                            <div class='col-sm-4'>
+                                <div class='map'>
+                                    <img src='images/map1.png'>
+                                </div>
+                            </div>
+                        ";
                     echo "
                     </div>
+                    <div class='btn btn-outline-secondary' onclick='add_edit_category();'>Add Area</div>
                 </div>";
 ?>
     </body>
@@ -98,6 +105,12 @@
         border-bottom-left-radius: 0.25rem;
         transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
     }
+    .map{
+        padding: 10px 15px;
+        width:100%;
+        height:100%;
+        border: 1px solid #ced4da;  
+    }
     </style>
 </html>
 
@@ -105,8 +118,8 @@
     function inputFields($label, $value, $cat=null){
         echo ("
         <div class='form-group' style='padding: 6px 6px;'>
-            <div><label>".$label."</label></div>
-            <input class='form-control-new search-input' type=text name='global[fields'][_id']' value='".$value."'>
+            <div><label style='white-space:nowrap'>".$label."</label></div>
+            <div><input class='form-control-new search-input' type=text name='global[fields'][_id']' value='".$value."'></div>
         </div>
         ");
         if($cat){
