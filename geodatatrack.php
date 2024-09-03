@@ -95,8 +95,8 @@
     <style>
     .data-item{
         color: #9ea5c1;
-        padding: 10px 0;
-        background:#faffff;
+        padding: 4px 0;
+        background:#fff;
         border-top: 1px solid #dbedff;
     }
     .form-block{
@@ -115,6 +115,7 @@
     .header-row{
         color: #6ab1f9;
         font-style: italic;
+        padding:10px 0;
     }
     
     .page-title{
