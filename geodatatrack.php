@@ -21,6 +21,10 @@
             $value['email']="aaa@aaa.com";
             $value['category']="Category 1";
             $value['address']="Baker street";
+            $value['suburb']="Suburb";
+            $value['postcode']="12345678";
+            $value['state']="Nevada";
+            $value['country']="USA";
             /////
              echo "<div class='container'>
                     <div class='header row'>
@@ -30,7 +34,7 @@
                             <div class='btn btn-outline-secondary' onclick='add_edit_propety();'>Edit</div>
                         </div>
                     </div>
-                    <div class='row' style='padding:16px 0;background:#f4f4f7;'>";
+                    <div class='row form-block'>";
                      
                         echo "
                             <div class='col-sm-6' style='padding: 6px 6px;'>
@@ -41,7 +45,7 @@
                             inputFields("Email", $value['email']);
                             inputFields("Category", $value['category'], "Category 2");
                         echo "
-                                <div class='btn btn-outline-secondary' onclick='add_edit_propety();'>Edit</div>
+                                <div class='btn btn-outline-secondary form-group' style='margin: 0 6px;' onclick='add_edit_propety();'>Edit</div>
                             </div>
                         ";
                         echo "
@@ -50,9 +54,9 @@
                             inputFields("Address", $value['address']);
                             inputFields("Suburb", $value['address']);
                             inputFields("Town/City", $value['address']);
-                            inputFields("Postcode", $value['address']);
-                            inputFields("State/Region", $value['address']);
-                            inputFields("Country", $value['address']);
+                            inputFields("Postcode", $value['postcode']);
+                            inputFields("State/Region", $value['state']);
+                            inputFields("Country", $value['country']);
                          echo "
                             <div class='btn btn-outline-secondary' onclick='add_edit_category();'>Add Property</div>
                         </div>
@@ -64,6 +68,16 @@
 ?>
     </body>
     <style>
+    .form-block{
+        padding:16px 0;
+        background:#fff;
+        border: 1px solid #ced4da;
+        border-radius: .75rem;
+        border-top-left-radius: 0.75rem;
+        border-bottom-left-radius: 0.75rem;
+        transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 3px;
+    }
     .header{
         padding:10px 20px;
     }
