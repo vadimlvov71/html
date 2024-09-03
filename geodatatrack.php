@@ -99,7 +99,7 @@
             color: #9ea5c1;
             padding: 10px 0;
             background:#faffff;
-            border-bottom: 1px solid #e9f4ff;
+            border-top: 1px solid #e9f4ff;
         }
     .form-block{
         padding:16px 0;
@@ -137,7 +137,7 @@
     }
     .row-block{
         margin-top: 10px;
-        padding: 20px;
+        padding: 10px 20px;
     }
     .title-row{
         border-bottom: 1px solid #e9f4ff;
