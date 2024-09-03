@@ -14,11 +14,12 @@
         <?php
             $value=array();
             $value['name']="TestName";
+            $value['address']="Baker street";
             $value['contact']="aaaaaa";
             $value['telephone']="000-00-00";
             $value['email']="aaa@aaa.com";
             $value['category']="Category 1";
-            $value['address']="Baker street";
+           
             $data=array();
             $data[]=$value;
             $data[]=$value;
@@ -71,27 +72,34 @@
                     ";
                     echo "
                     </div>
-                    <div class='page-title col-sm-6'>Propeties</div>
-                    <div class='row'>
-                        <div class='col-sm-2'>Name</div>
-                        <div class='col-sm-2'>Address</div>
-                        <div class='col-sm-2'>Contact</div>
-                        <div class='col-sm-2'>Telephone</div>
-                        <div class='col-sm-2'>Email</div>
-                        <div class='col-sm-2'>Metadata</div>  
-                   ";
-                   foreach($data as $dataItem){
-                        foreach($dataItem as $item){
-                            echo "<div class='col-sm-2'>".$item."</div>";
-                        }
-                   }
+                    <div class='col-sm-12'>
+                        <div class='page-title'>Propeties</div>
+                        <div class='row'>
+                            <div class='col-sm-2'>Name</div>
+                            <div class='col-sm-2'>Address</div>
+                            <div class='col-sm-2'>Contact</div>
+                            <div class='col-sm-2'>Telephone</div>
+                            <div class='col-sm-2'>Email</div>
+                            <div class='col-sm-2'>Metadata</div>  
+                    ";
+                    foreach($data as $dataItem){
+                            foreach($dataItem as $item){
+                                echo "<div class='col-sm-2 data-item'>".$item."</div>";
+                            }
+                    }
 
-                    echo "
+                        echo "
+                        </div>
                     </div>
                 </div>";
 ?>
     </body>
     <style>
+        .data-item{
+            padding: 10px 0;
+            background:#faffff;
+            border-bottom: 1px solid #e9f4ff;
+        }
     .form-block{
         padding:16px 0;
         background:#fff;
