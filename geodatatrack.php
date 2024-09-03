@@ -30,7 +30,7 @@
                     <div class='header row'>
                         <div class='page-title col-sm-6'>ABC Org</div>
                         <div class='col-sm-6'>
-                            <div class='btn btn-outline-secondary' onclick='add_edit_propety();'>Report</div>
+                            <div class='btn btn-outline-primary' onclick='add_edit_propety();'>Report</div>
                             <div class='btn btn-outline-secondary' onclick='add_edit_propety();'>Edit</div>
                         </div>
                     </div>
@@ -45,7 +45,7 @@
                             inputFields("Email", $value['email']);
                             inputFields("Category", $value['category'], "Category 2");
                         echo "
-                                <div class='btn btn-outline-secondary form-group' style='margin: 0 6px;' onclick='add_edit_propety();'>Edit</div>
+                                <div class='btn btn-outline-secondary form-group' style='margin: 21px 0 0 6px;' onclick='add_edit_propety();'>Edit</div>
                             </div>
                         ";
                         echo "
@@ -98,20 +98,24 @@
         border-bottom-left-radius: 0.25rem;
         transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
     }
+    .input{
+        padding:0; 
+        margin:0;
+    }
     </style>
 </html>
 
     <?php
     function inputFields($label, $value, $cat=null){
         echo ("
-        <div class='form-group' style='padding: 6px 6px;'>
-            <div><label>".$label."</label></div>
-            <input class='form-control-new search-input' type=text name='global[fields'][_id']' value='".$value."'>
+        <div class='form-group1' style='padding: 6px 6px;'>
+            <div><label class='input'>".$label."</label></div>
+            <div class='input'><input class='form-control-new search-input' type=text name='global[fields'][_id']' value='".$value."'></div>
         </div>
         ");
         if($cat){
             echo ("
-            <div class='form-group' style='padding: 6px 6px;'>
+            <div class='form-group1 input' style='padding: 6px 6px;'>
                 <input class='form-control-new search-input' type=text name='global[fields'][_id']' value='".$cat."'>
             </div>
             ");
