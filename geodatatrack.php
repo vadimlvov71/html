@@ -102,7 +102,7 @@
     .form-block{
         padding:16px 0;
         background:#fff;
-        border: 1px solid #ced4da;
+        border: 1px solid #e5e9ee;
         border-radius: .75rem;
         border-top-left-radius: 0.75rem;
         border-bottom-left-radius: 0.75rem;
