@@ -76,22 +76,15 @@
                     <div class='row row-block form-block'>
                         <div class='col-sm-12 title-row'>Properties</div>
                         ";
-                        foreach($data as $dataItem){
-                            echo "<div class='col-sm-2 header-row'>Name</div>";
+                        foreach($headers as $header){
+                            echo "<div class='col-sm-2 header-row'>".$header."</div>";
                         }          
-                            <div class='col-sm-2 header-row'>Name</div>
-                            <div class='col-sm-2'>Address</div>
-                            <div class='col-sm-2'>Contact</div>
-                            <div class='col-sm-2'>Telephone</div>
-                            <div class='col-sm-2'>Email</div>
-                            <div class='col-sm-2'>Metadata</div>  
-                    ";
-                    
-                    foreach($data as $dataItem){
-                            foreach($dataItem as $item){
-                                echo "<div class='col-sm-2 data-item'>".$item."</div>";
-                            }
-                    }
+                                        
+                        foreach($data as $dataItem){
+                                foreach($dataItem as $item){
+                                    echo "<div class='col-sm-2 data-item'>".$item."</div>";
+                                }
+                        }
 
                         echo "
                       
@@ -100,12 +93,12 @@
 ?>
     </body>
     <style>
-        .data-item{
-            color: #9ea5c1;
-            padding: 10px 0;
-            background:#faffff;
-            border-top: 1px solid #e9f4ff;
-        }
+    .data-item{
+        color: #9ea5c1;
+        padding: 10px 0;
+        background:#faffff;
+        border-top: 1px solid #dbedff;
+    }
     .form-block{
         padding:16px 0;
         background:#fff;
@@ -120,6 +113,7 @@
         padding:10px 20px;
     }
     .header-row{
+        color: #6ab1f9;
         font-style: italic;
     }
     
