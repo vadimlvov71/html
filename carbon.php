@@ -21,6 +21,9 @@
     </head>
     <body>
         <?php
+            $car="442.18";
+            $elec="0.27";
+            $tree="0.17";
             $client=[];
             $client['name']="Client Loooooooooooooooooooooooong";
             $project=[];
@@ -68,28 +71,39 @@
                         </div>
                     </div>
                     <div class='width-50-procents diagram-waste-right'>
-                        <div class='diagram-waste-right-content'>
-                            <div class='diagram-waste-right-title'>Totals to date</div>
-                            <div class='container-flex' style='padding:0 80px 40px 0'>
-                                <div class='diagram-waste-right-cell'>
-                                    <div class='waste-percent-text'>88%</div>
-                                    <div>(XX tonnes) <span>recycled</span></div>
+                        <div class=''>
+                            <div class='container-flex'>
+                                <div class='carbonbox'>
+                                    0000
                                 </div>
-                                <div class='diagram-waste-right-cell'>
-                                    <div class='waste-percent-text'>88%</div>
-                                    <div>(XX tonnes) <span>Landfill</span></div>
-                                </div>
+                                <div class='carbonbox vertical-align'>This month</div>
+                                <div class='carbonbox vertical-align'>Project to date</div>
                             </div>
                             <div class='container-flex'>
-                                <div class='diagram-waste-right-cell'>
-                                    <div class='waste-percent-text'>88%</div>
-                                    <div>(XX tonnes) <span>EFW</span></div>
+                                <div class='carbonbox'>
+                                    <img src=/custom_modules/img/icon_tyre.png style=margin-left:10px;margin-right:10px;width:65px;>
+                                    <div>Miles per year driven by an average passenger car.</div>
                                 </div>
-                                <div class='diagram-waste-right-cell'>
-                                    <div class='waste-percent-text'>88%</div>
-                                    <div>(XX tonnes) <span>Diversion of Landfill</span></div>
-                                </div>
+                                <div class='carbonbox vertical-align'>$car </div>
+                                <div class='carbonbox vertical-align'>?????</div>
                             </div>
+                            <div class='container-flex'>
+                                <div class=carbonbox>
+                                    <img src=/img/icon_bolt.png style=margin-left:10px;margin-right:10px;width:65px;>
+                                    <div>Homes electricity for the period of a year.</div>
+                                </div>
+                                <div class='carbonbox vertical-align'>$elec </div>
+                                <div class='carbonbox vertical-align'>?????</div>
+
+                            </div>
+                            <div class='container-flex'>
+                                <div class=carbonbox>
+                                    <img src=img/yellow_tree2.png style=margin-left:10px;margin-right:10px;width:65px;>
+                                    <div>Carbon sequestered by acres of forests in one year.</div>
+                                </div>
+                                <div class='carbonbox vertical-align'>$tree </div>
+                                <div class='carbonbox vertical-align'>?????</div>
+                            </div>  
                         </div>
                     </div>
                 </div>
@@ -99,6 +113,20 @@
             </div>
         ");
         ?>
+        <style>
+            .vertical-align{
+                display: flex;
+                align-items: center;
+            }
+            .carbonbox{
+               
+                line-height:9pt;
+                width:33.3%;
+            }
+            .carbonbox div{
+                font-size:0.8rem;
+            }
+        </style>
         <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 				<script type='text/javascript'>
 					google.charts.load('current', {packages:['corechart']});
