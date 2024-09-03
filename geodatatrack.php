@@ -67,13 +67,13 @@
                             inputFields("State/Region", $value['state']);
                             inputFields("Country", $value['country']);
                          echo "
-                            <div class='btn btn-outline-secondary' onclick='add_edit_category();'>Add Property</div>
+                            <div style='margin: 10px 0 0 6px;' class='btn btn-outline-secondary' onclick='add_edit_category();'>Add Property</div>
                         </div>
                     ";
                     echo "
                     </div>
                     <div class='row row-block form-block'>
-                        <div class='col-sm-12 page-title'>Properties</div>
+                        <div class='col-sm-12 title-row'>Properties</div>
                
                             <div class='col-sm-2'>Name</div>
                             <div class='col-sm-2'>Address</div>
@@ -136,7 +136,13 @@
         margin:0;
     }
     .row-block{
-        padding: 20px 0;
+        margin-top: 10px;
+        padding: 20px;
+    }
+    .title-row{
+        border-bottom: 1px solid #e9f4ff;
+        font-size:1.1rem;
+        padding-left:0!important;
     }
     </style>
 </html>
