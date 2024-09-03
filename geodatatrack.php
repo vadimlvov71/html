@@ -72,9 +72,9 @@
                     ";
                     echo "
                     </div>
-                    <div class='col-sm-12'>
-                        <div class='page-title'>Propeties</div>
-                        <div class='row'>
+                    <div class='row row-block form-block'>
+                        <div class='col-sm-12 page-title'>Properties</div>
+               
                             <div class='col-sm-2'>Name</div>
                             <div class='col-sm-2'>Address</div>
                             <div class='col-sm-2'>Contact</div>
@@ -89,13 +89,14 @@
                     }
 
                         echo "
-                        </div>
+                      
                     </div>
                 </div>";
 ?>
     </body>
     <style>
         .data-item{
+            color: #9ea5c1;
             padding: 10px 0;
             background:#faffff;
             border-bottom: 1px solid #e9f4ff;
@@ -133,6 +134,9 @@
     .input{
         padding:0; 
         margin:0;
+    }
+    .row-block{
+        padding: 20px 0;
     }
     </style>
 </html>
