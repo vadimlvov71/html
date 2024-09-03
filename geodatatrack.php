@@ -14,50 +14,91 @@
         <?php
             
             $value=array();
-            $value[]="TestName";
-            $value[]="Category";
+            $value['name']="TestName";
+            $value['contact']="aaaaaa";
+            $value['telephone']="000-00-00";
+         
+            $value['email']="aaa@aaa.com";
+            $value['category']="Category 1";
+            $value['address']="Baker street";
             /////
              echo "<div class='container'>
-                    <div class='c'>ABC Org</div>
+                    <div class='header row'>
+                        <div class='page-title col-sm-6'>ABC Org</div>
+                        <div class='col-sm-6'>
+                            <div class='btn btn-outline-secondary' onclick='add_edit_propety();'>Report</div>
+                            <div class='btn btn-outline-secondary' onclick='add_edit_propety();'>Edit</div>
+                        </div>
+                    </div>
                     <div class='row' style='padding:16px 0;background:#f4f4f7;'>";
                      
-                    echo "
-                        <div class='col-sm-3' style='padding: 6px 6px;'>
-                    ";
-                            inputFields("Name", $value);
-                            inputFields("Contact", $value);
-                            inputFields("Telephone", $value);
-                            inputFields("Email", $value);
-                            inputFields("Category", $value, true);
-                    echo "
+                        echo "
+                            <div class='col-sm-6' style='padding: 6px 6px;'>
+                        ";
+                            inputFields("Name", $value['name']);
+                            inputFields("Contact", $value['contact']);
+                            inputFields("Telephone", $value['telephone']);
+                            inputFields("Email", $value['email']);
+                            inputFields("Category", $value['category'], "Category 2");
+                        echo "
+                                <div class='btn btn-outline-secondary' onclick='add_edit_propety();'>Edit</div>
+                            </div>
+                        ";
+                        echo "
+                            <div class='col-sm-6' style='padding: 6px 6px;'>
+                        ";
+                            inputFields("Address", $value['address']);
+                            inputFields("Suburb", $value['address']);
+                            inputFields("Town/City", $value['address']);
+                            inputFields("Postcode", $value['address']);
+                            inputFields("State/Region", $value['address']);
+                            inputFields("Country", $value['address']);
+                         echo "
+                            <div class='btn btn-outline-secondary' onclick='add_edit_category();'>Add Property</div>
                         </div>
                     ";
+                    
                     echo "
-                        <div class='col-sm-3' style='padding: 6px 6px;'>
-                    ";
-                            inputFields("Name", $value);
-                            inputFields("Contact", $value);
-                    echo "
-                        </div>
-                    ";
-                    echo "</div>
+                    </div>
                 </div>";
 ?>
     </body>
-    </html>
+    <style>
+    .header{
+        padding:10px 20px;
+    }
+    .page-title{
+        font-size:1.3rem;
+    }
+    .form-control-new{
+        padding: .375rem .75rem;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #495057;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid #ced4da;
+        border-radius: .25rem;
+        border-top-left-radius: 0.25rem;
+        border-bottom-left-radius: 0.25rem;
+        transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    }
+    </style>
+</html>
 
     <?php
-    function inputFields($label, $value, $cat=false){
+    function inputFields($label, $value, $cat=null){
         echo ("
-        <div class='col-sm-3' style='padding: 6px 6px;'>
+        <div class='col-sm-3 form-group input-group' style='padding: 6px 6px;'>
             <div><label>".$label."</label></div>
-            <input type=text name='global[fields][_id]' value=".$value[0].">
+            <input class='form-control-new search-input' type=text name='global[fields'][_id']' value='".$value."'>
         </div>
         ");
-        if($cat==true){
+        if($cat){
             echo ("
-            <div class='col-sm-3' style='padding: 6px 6px;'>
-                <input type=text name='global[fields][_id]' value=".$value[1].">
+            <div class='col-sm-3 form-group' style='padding: 6px 6px;'>
+                <input class='form-control-new search-input' type=text name='global[fields'][_id']' value='".$cat."'>
             </div>
             ");
         }
