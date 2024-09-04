@@ -7,35 +7,13 @@
         <link rel='preconnect' href='https://fonts.googleapis.com'>
         <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
         <link href='https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap' rel='stylesheet'>
-        <link rel='stylesheet' href='css/styles.css'>
+        <link rel='stylesheet' href='css/styles-new.css'>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     </head>
     <body>
         <?php
-            $headers=array("Name", "Address", "Contact", "Telephone", "Email", "Metadata");
-            $value=array();
-            $value['name']="TestName";
-            $value['address']="Baker street";
-            $value['contact']="aaaaaa";
-            $value['telephone']="000-00-00";
-            $value['email']="aaa@aaa.com";
-            $value['category']="Category 1";
-           
-            $data=array();
-            $data[]=$value;
-            $data[]=$value;
-            $data[]=$value;
-            $value=array();
-            $value['name']="TestName";
-            $value['contact']="aaaaaa";
-            $value['telephone']="000-00-00";
-            $value['email']="aaa@aaa.com";
-            $value['category']="Category 1";
-            $value['address']="Baker street";
-            $value['suburb']="Suburb";
-            $value['postcode']="12345678";
-            $value['state']="Nevada";
-            $value['country']="USA";
+        include "includes/data.php";
+            
             /////
              echo "<div class='container'>
                     <div class='header row'>
@@ -93,79 +71,10 @@
 ?>
     </body>
     <style>
-    .data-item{
-        color: #9ea5c1;
-        padding: 4px 0;
-        background:#fff;
-        border-top: 1px solid #dbedff;
-    }
-    .form-block{
-        padding:16px 0;
-        background:#fff;
-        border: 1px solid #e5e9ee;
-        border-radius: .75rem;
-        border-top-left-radius: 0.75rem;
-        border-bottom-left-radius: 0.75rem;
-        transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 3px;
-    }
-    .header{
-        padding:10px 20px;
-    }
-    .header-row{
-        color: #6ab1f9;
-        font-style: italic;
-        padding:10px 0;
-    }
     
-    .page-title{
-        font-size:1.3rem;
-    }
-    .form-control-new{
-        padding: .375rem .75rem;
-        font-size: 1rem;
-        font-weight: 400;
-        line-height: 1.5;
-        color: #495057;
-        background-color: #fff;
-        background-clip: padding-box;
-        border: 1px solid #ced4da;
-        border-radius: .25rem;
-        border-top-left-radius: 0.25rem;
-        border-bottom-left-radius: 0.25rem;
-        transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-    }
-    .input{
-        padding:0; 
-        margin:0;
-    }
-    .row-block{
-        margin-top: 10px;
-        padding: 10px 20px;
-    }
-    .title-row{
-        border-bottom: 1px solid #e9f4ff;
-        color: #74787b;
-        font-size:1.1rem;
-        padding-left:0!important;
-    }
     </style>
 </html>
 
     <?php
-    function inputFields($label, $value, $cat=null){
-        echo ("
-        <div class='form-group1' style='padding: 6px 6px;'>
-            <div><label class='input'>".$label."</label></div>
-            <div class='input'><input class='form-control-new search-input' type=text name='global[fields'][_id']' value='".$value."'></div>
-        </div>
-        ");
-        if($cat){
-            echo ("
-            <div class='form-group1 input' style='padding: 6px 6px;'>
-                <input class='form-control-new search-input' type=text name='global[fields'][_id']' value='".$cat."'>
-            </div>
-            ");
-        }
-    }
+   
     ?>
