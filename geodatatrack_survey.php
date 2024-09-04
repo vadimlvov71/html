@@ -9,7 +9,8 @@
         <link href='https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap' rel='stylesheet'>
         <link rel='stylesheet' href='css/styles-new.css'>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    </head>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>    </head>
     <body>
         <?php
             
@@ -67,7 +68,7 @@
                             } 
                         echo "
                             <div class='col-sm-2 header-row'>Latest Survey</div>
-                            <div class='col-sm-2 data-item'>000</div>
+                            <div class='col-sm-2 data-item'>-</div>
                         </div>
                         
                         
@@ -83,8 +84,21 @@
                                     echo "<div class='col-sm-2 data-item'>".$dataItem['latest']."</div>";
                                     echo "<div class='col-sm-2 data-item'>
                                         <div class='container-flex'>
-                                            <div>1111</div>
-                                            <div>2222</div>
+                                            <div>
+                                                <div class='btn-group'>
+                                                <button type='button' class='btn btn-danger dropdown-toggle' data-toggle='dropdown' aria-expanded='false'>
+                                                Action
+                                                </button>
+                                                <div class='dropdown-menu'>
+                                                    <a class='dropdown-item' href='#'>Action</a>
+                                                    <a class='dropdown-item' href='#'>Another action</a>
+                                                    <a class='dropdown-item' href='#'>Something else here</a>
+                                                <div class='dropdown-divider'></div>
+                                                <a class='dropdown-item' href='#'>Separated link</a>
+                                                </div>
+                                                </div>
+                                            </div>
+                                            <div style='font-size:0.7rem;' class='btn btn-outline-secondary ' onclick='add_edit_category();'>Add Survey</div>
                                         </div>
                                     </div>";
                                 //}
