@@ -19,8 +19,8 @@
                     <div class='header row'>
                         <div class='page-title col-sm-6'>ABC Org <span>/Farm ABC</span></div>
                         <div class='col-sm-6'>
-                            <div class='btn btn-outline-secondary' onclick='add_edit_propety();'>Report</div>
-                            <div class='btn btn-outline-secondary' onclick='add_edit_propety();'>Edit</div>
+                            <div class='btn btn-outline-secondary btn-add' onclick='add_edit_propety();'>Edit</div>
+                            <div class='btn btn-outline-primary btn-add' onclick='add_edit_propety();'>Report</div>
                         </div>
                     </div>
                     <div class='row form-block'>";
@@ -60,19 +60,28 @@
                     echo "
                     </div>
                     <div class='btn btn-outline-secondary btn-add' onclick='add_edit_category();'>Add Area</div>
+                    <div class='row row-block form-block'>
+                        <div class='col-sm-12 title-row'>Properties</div>
+                        ";
+                        foreach($headers as $header){
+                            echo "<div class='col-sm-2 header-row'>".$header."</div>";
+                        }          
+                                        
+                        foreach($data as $dataItem){
+                                foreach($dataItem as $item){
+                                    echo "<div class='col-sm-2 data-item'>".$item."</div>";
+                                }
+                        }
+
+                        echo "
+                      
+                    </div>
                 </div>";
+
 ?>
     </body>
     <style>
-    .btn-add{
-        float:right;margin: 10px 0 0 6px;
-    }
-    .map{
-        padding: 10px 15px;
-        width:100%;
-        height:100%;
-        border: 1px solid #ced4da;  
-    }
+    
     </style>
 </html>
 

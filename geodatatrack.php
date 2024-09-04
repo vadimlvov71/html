@@ -19,8 +19,8 @@
                     <div class='header row'>
                         <div class='page-title col-sm-6'>ABC Org</div>
                         <div class='col-sm-6'>
-                            <div class='btn btn-outline-primary' onclick='add_edit_propety();'>Report</div>
-                            <div class='btn btn-outline-secondary' onclick='add_edit_propety();'>Edit</div>
+                            <div class='btn btn-outline-secondary btn-add'  onclick='add_edit_propety();'>Edit</div>
+                            <div class='btn btn-outline-primary btn-add' onclick='add_edit_propety();'>Report</div>
                         </div>
                     </div>
                     <div class='row form-block'>";
@@ -46,7 +46,7 @@
                             inputFields("State/Region", $value['state']);
                             inputFields("Country", $value['country']);
                          echo "
-                            <div style='margin: 10px 0 0 6px;' class='btn btn-outline-secondary' onclick='add_edit_category();'>Add Property</div>
+                            <div style='margin: 10px 0 0 6px;' class='btn btn-outline-secondary btn-add' onclick='add_edit_category();'>Add Property</div>
                         </div>
                     ";
                     echo "
