@@ -60,21 +60,21 @@
                     <div class='row row-block form-block'>
                         <div class='col-sm-12 title-row'>Surveys Points</div>
                         ";
-                        foreach($headers_areas as $header){
-                            echo "<div class='col-sm-3 header-row'>".$header."</div>";
+                        foreach($headers_surveys as $header){
+                            echo "<div class='col-sm-2 header-row'>".$header."</div>";
                         }          
                                         
                         foreach($data_areas as $dataItem){
                             //foreach($dataItem as $item){
-                                echo "<div class='col-sm-3 data-item'>".$dataItem['name']."</div>";
-                                echo "<div class='col-sm-3 data-item coordinates'><span class='coordinates'>".$dataItem['latitude']."</span> / ".$dataItem['long']."</div>";
-                                echo "<div class='col-sm-3 data-item'>".$dataItem['category']."</div>";
-                                echo "<div class='col-sm-3 data-item'>".$dataItem['metadata']."</div>";
+                                echo "<div class='col-sm-2 data-item'>".$dataItem['name']."</div>";
+                                echo "<div class='col-sm-2 data-item coordinates'><span class='coordinates'>".$dataItem['latitude']."</span> / ".$dataItem['long']."</div>";
+                                echo "<div class='col-sm-2 data-item'>".$dataItem['category']."</div>";
+                                echo "<div class='col-sm-2 data-item'>".$dataItem['metadata']."</div>";
                             //}
                         }
 
                         echo "
-                      
+                        <div class='col-sm-2 data-item'>2222</div>
                     </div>
                 </div>";
                 /*echo "<pre>";
