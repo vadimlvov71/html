@@ -45,8 +45,16 @@ $value1['name']="TestName111";
 $value1['latitude']="60";
 $value1['long']="120";
 $value1['metadata']="Metadata";
+$value1['category']="Category 1";
+
+$value2=array();
+$value2['name']="TestName";
+$value2['latitude']="600";
+$value2['long']="20";
+$value2['metadata']="Metadata";
+$value2['category']="Category 2";
 
 $data_areas=array();
 $data_areas[]=$value1;
-$data_areas[]=$value1;
+$data_areas[]=$value2;
 $data_areas[]=$value1;

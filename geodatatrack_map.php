@@ -71,8 +71,8 @@
                         foreach($data_areas as $dataItem){
                             //foreach($dataItem as $item){
                                 echo "<div class='col-sm-3 data-item'>".$dataItem['name']."</div>";
-                                echo "<div class='col-sm-3 data-item'>".$dataItem['latitude']."</div>";
-                                echo "<div class='col-sm-3 data-item'>".$dataItem['long']."</div>";
+                                echo "<div class='col-sm-3 data-item coordinates'><span class='coordinates'>".$dataItem['latitude']."</span> / ".$dataItem['long']."</div>";
+                                echo "<div class='col-sm-3 data-item'>".$dataItem['category']."</div>";
                                 echo "<div class='col-sm-3 data-item'>".$dataItem['metadata']."</div>";
                             //}
                         }
@@ -81,18 +81,13 @@
                       
                     </div>
                 </div>";
-                echo "<pre>";
-                print_r($data_areas);
+                /*echo "<pre>";
+                print_r($data_areas);*/
 
 ?>
     </body>
     <style>
-        .coordinates{
-
         
-        }
-        
-    \00B0
     </style>
 </html>
 
