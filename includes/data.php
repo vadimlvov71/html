@@ -44,16 +44,13 @@ $value1=array();
 $value1['name']="TestName111";
 $value1['latitude']="60";
 $value1['long']="120";
-$value1['coord_from']="120";
-$value1['coord_to']="80";
 $value1['metadata']="Metadata";
-$value1['category1']="Category 1";
-$value1['category2']="Category 2";
+$value1['category']="Category 1";
 
 $value2=array();
 $value2['name']="TestName";
-$value2['latitude']="820";
-$value2['long']="41";
+$value2['latitude']="480";
+$value2['long']="73";
 $value2['metadata']="Metadata";
 $value2['category']="Category 2";
 
@@ -61,3 +58,10 @@ $data_areas=array();
 $data_areas[]=$value1;
 $data_areas[]=$value2;
 $data_areas[]=$value1;
+
+$value3=array();
+$value3['name']="TestName111";
+$value3['coord_from']="84";
+$value3['coord_to']="12";
+$value3['metadata']="Metadata";
+$value3['category1']="Category 1";
