@@ -86,12 +86,14 @@
                                         <div class='container-flex'>
                                             <div>
                                                 <div class='btn-group'>
-                                                <button type='button' class='btn btn-outline-secondary dropdown-toggle' data-toggle='dropdown' aria-expanded='false'>
+                                                <button type='button' style='font-size: 0.7rem; padding:5px 6px;' class='btn btn-outline-secondary dropdown-toggle' data-toggle='dropdown' aria-expanded='false'>
                                                     Survey type
                                                 </button>
-                                                <div class='dropdown-menu'>
+                                                <div class='dropdown-menu' style='font-size: 0.7rem; min-width: 2rem;'>
                                                     <a class='dropdown-item' href='#'>type1</a>
+                                                    <div class='dropdown-divider'></div>
                                                     <a class='dropdown-item' href='#'>type2</a>
+                                                    <div class='dropdown-divider'></div>
                                                     <a class='dropdown-item' href='#'>type3</a>
                                                 </div>
                                                 </div>
@@ -104,10 +106,10 @@
 
                             echo "
                         </div>
-                        <div class='col-sm-12 data-item'>
+                        <div class='col-sm-12 data-item' style='padding:20px 0;'>
                             <div class='container-flex'>
-                                <div>1111</div>
-                                <div>2222</div>
+                                <div></div>
+                                <div></div>
                             </div>
                         </div>
                     </div>
