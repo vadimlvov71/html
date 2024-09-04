@@ -16,7 +16,7 @@
 }
 $headers_propeties=array("Name", "Address", "Contact", "Telephone", "Email", "Metadata");
 $headers_areas=array("Name", "Long/Latit", "Categories", "Metadata");
-$headers_surveys=array("Name", "Long/Latit", "Categories", "Metadata", "Latest Survey");
+$headers_surveys=array("Name", "Long/Latit", "Categories", "Metadata");
 $value=array();
 $value['name']="TestName";
 $value['address']="Baker street";

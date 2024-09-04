@@ -58,27 +58,29 @@
                     <div class='btn btn-outline-secondary btn-add' onclick='add_edit_category();'>Add Surveys Point</div>
                     <div style=clear:both;></div>
                     <div class='row row-block form-block'>
-                        <div class='col-sm-9 title-row'>Surveys Points</div>
+                        <div class='col-sm-12 title-row'>Surveys Points</div>
+                        <div class='col-sm-9 row'>
                         
                             ";
                             foreach($headers_surveys as $header){
                                 echo "<div class='col-sm-2 header-row'>".$header."</div>";
                             }          
-                            echo "<div class='col-sm-3 header-row'>Latest Survey</div>";                
+                            echo "<div class='col-sm-4 header-row'>Latest Survey</div>";                
                             foreach($data_surveys as $dataItem){
                                 //foreach($dataItem as $item){
                                     echo "<div class='col-sm-2 data-item'>".$dataItem['name']."</div>";
                                     echo "<div class='col-sm-2 data-item coordinates'><span class='coordinates'>".$dataItem['latitude']."</span> / ".$dataItem['long']."</div>";
                                     echo "<div class='col-sm-2 data-item'>".$dataItem['category']."</div>";
                                     echo "<div class='col-sm-2 data-item'>".$dataItem['metadata']."</div>";
-                                    echo "<div class='col-sm-3 data-item'>".$dataItem['latest']."</div>";
+                                    echo "<div class='col-sm-4 data-item'>".$dataItem['latest']."</div>";
                                 //}
                             }
 
                             echo "
-                        
                         </div>
                         <div class='col-sm-3 data-item'>2222</div>
+                    </div>
+                    
                 </div>";
                 /*echo "<pre>";
                 print_r($data_areas);*/
