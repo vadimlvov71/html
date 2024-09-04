@@ -66,3 +66,15 @@ $value3['coord_from']="84";
 $value3['coord_to']="12";
 $value3['metadata']="Metadata";
 $value3['category1']="Category 1";
+
+$value4=array();
+$value4['name']="TestName111";
+$value4['latitude']="60";
+$value4['long']="120";
+$value4['metadata']="Metadata";
+$value4['category']="Category 1";
+
+$data_surveys=array();
+$data_surveys[]=$value4;
+$data_surveys[]=$value4;
+$data_surveys[]=$value4;

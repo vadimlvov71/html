@@ -64,7 +64,7 @@
                             echo "<div class='col-sm-2 header-row'>".$header."</div>";
                         }          
                                         
-                        foreach($data_areas as $dataItem){
+                        foreach($data_surveys as $dataItem){
                             //foreach($dataItem as $item){
                                 echo "<div class='col-sm-2 data-item'>".$dataItem['name']."</div>";
                                 echo "<div class='col-sm-2 data-item coordinates'><span class='coordinates'>".$dataItem['latitude']."</span> / ".$dataItem['long']."</div>";
