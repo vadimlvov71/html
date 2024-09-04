@@ -72,6 +72,7 @@
                             $i=0;
                                 foreach($dataItem as $item){
                                     if($i<4){
+                                        echo "I ::".$i."<br>";
                                         echo "<div class='col-sm-2 data-item'>".$item."</div>";
                                     }
                                     
