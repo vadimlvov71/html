@@ -69,9 +69,12 @@
                         }          
                                         
                         foreach($data_areas as $dataItem){
-                            foreach($dataItem as $item){
-                                echo "<div class='col-sm-3 data-item'>".$item."</div>";
-                            }
+                            //foreach($dataItem as $item){
+                                echo "<div class='col-sm-3 data-item'>".$dataItem['name']."</div>";
+                                echo "<div class='col-sm-3 data-item'>".$dataItem['latitude']."</div>";
+                                echo "<div class='col-sm-3 data-item'>".$dataItem['long']."</div>";
+                                echo "<div class='col-sm-3 data-item'>".$dataItem['metadata']."</div>";
+                            //}
                         }
 
                         echo "
@@ -84,7 +87,12 @@
 ?>
     </body>
     <style>
-    
+        .coordinates{
+
+        
+        }
+        
+    \00B0
     </style>
 </html>
 

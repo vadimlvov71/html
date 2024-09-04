@@ -42,9 +42,9 @@ $value['country']="USA";
 
 $value1=array();
 $value1['name']="TestName111";
-$value1['address']="Baker street11";
-$value1['contact']="aaaaaa11";
-$value1['telephone']="000-00-0011";
+$value1['latitude']="60";
+$value1['long']="120";
+$value1['metadata']="Metadata";
 
 $data_areas=array();
 $data_areas[]=$value1;
