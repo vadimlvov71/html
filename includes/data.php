@@ -14,27 +14,28 @@
         ");
     }
 }
-$headers=array("Name", "Address", "Contact", "Telephone", "Email", "Metadata");
-            $value=array();
-            $value['name']="TestName";
-            $value['address']="Baker street";
-            $value['contact']="aaaaaa";
-            $value['telephone']="000-00-00";
-            $value['email']="aaa@aaa.com";
-            $value['category']="Category 1";
-           
-            $data=array();
-            $data[]=$value;
-            $data[]=$value;
-            $data[]=$value;
-            $value=array();
-            $value['name']="TestName";
-            $value['contact']="aaaaaa";
-            $value['telephone']="000-00-00";
-            $value['email']="aaa@aaa.com";
-            $value['category']="Category 1";
-            $value['address']="Baker street";
-            $value['suburb']="Suburb";
-            $value['postcode']="12345678";
-            $value['state']="Nevada";
-            $value['country']="USA";
+$headers_propeties=array("Name", "Address", "Contact", "Telephone", "Email", "Metadata");
+$headers_areas=array("Name", "Long/Latit", "Categories", "Metadata");
+$value=array();
+$value['name']="TestName";
+$value['address']="Baker street";
+$value['contact']="aaaaaa";
+$value['telephone']="000-00-00";
+$value['email']="aaa@aaa.com";
+$value['category']="Category 1";
+
+$data=array();
+$data[]=$value;
+$data[]=$value;
+$data[]=$value;
+$value=array();
+$value['name']="TestName";
+$value['contact']="aaaaaa";
+$value['telephone']="000-00-00";
+$value['email']="aaa@aaa.com";
+$value['category']="Category 1";
+$value['address']="Baker street";
+$value['suburb']="Suburb";
+$value['postcode']="12345678";
+$value['state']="Nevada";
+$value['country']="USA";

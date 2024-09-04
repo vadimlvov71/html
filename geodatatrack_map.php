@@ -60,16 +60,22 @@
                     echo "
                     </div>
                     <div class='btn btn-outline-secondary btn-add' onclick='add_edit_category();'>Add Area</div>
+                    <div style=clear:both;></div>
                     <div class='row row-block form-block'>
-                        <div class='col-sm-12 title-row'>Properties</div>
+                        <div class='col-sm-12 title-row'>Areas</div>
                         ";
-                        foreach($headers as $header){
+                        foreach($headers_areas as $header){
                             echo "<div class='col-sm-2 header-row'>".$header."</div>";
                         }          
                                         
                         foreach($data as $dataItem){
+                            $i=0;
                                 foreach($dataItem as $item){
-                                    echo "<div class='col-sm-2 data-item'>".$item."</div>";
+                                    if($i<4){
+                                        echo "<div class='col-sm-2 data-item'>".$item."</div>";
+                                    }
+                                    
+                                    $i++;
                                 }
                         }
 

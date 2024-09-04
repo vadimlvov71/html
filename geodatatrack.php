@@ -54,7 +54,7 @@
                     <div class='row row-block form-block'>
                         <div class='col-sm-12 title-row'>Properties</div>
                         ";
-                        foreach($headers as $header){
+                        foreach($headers_propeties as $header){
                             echo "<div class='col-sm-2 header-row'>".$header."</div>";
                         }          
                                         
