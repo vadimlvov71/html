@@ -59,12 +59,14 @@
                         ";
                     echo "
                     </div>
-                    <div class='btn btn-outline-secondary' onclick='add_edit_category();'>Add Area</div>
+                    <div class='btn btn-outline-secondary btn-add' onclick='add_edit_category();'>Add Area</div>
                 </div>";
 ?>
     </body>
     <style>
-    
+    .btn-add{
+        float:right;margin: 10px 0 0 6px;
+    }
     .map{
         padding: 10px 15px;
         width:100%;
