@@ -30,7 +30,7 @@ $data[]=$value;
 $data[]=$value;
 $value=array();
 $value['name']="TestName";
-$value['long']="60";
+$value['contact']="aaaaaa";
 $value['telephone']="000-00-00";
 $value['email']="aaa@aaa.com";
 $value['category']="Category 1";
@@ -40,6 +40,13 @@ $value['postcode']="12345678";
 $value['state']="Nevada";
 $value['country']="USA";
 
-$data_area[]=$value;
-$data_area[]=$value;
-$data_area[]=$value;
+$value1=array();
+$value1['name']="TestName111";
+$value1['address']="Baker street11";
+$value1['contact']="aaaaaa11";
+$value1['telephone']="000-00-0011";
+
+$data_areas=array();
+$data_areas[]=$value1;
+$data_areas[]=$value1;
+$data_areas[]=$value1;

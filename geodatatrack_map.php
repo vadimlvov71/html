@@ -65,25 +65,21 @@
                         <div class='col-sm-12 title-row'>Areas</div>
                         ";
                         foreach($headers_areas as $header){
-                            echo "<div class='col-sm-2 header-row'>".$header."</div>";
+                            echo "<div class='col-sm-3 header-row'>".$header."</div>";
                         }          
                                         
-                        foreach($data as $dataItem){
-                            $i=0;
-                                foreach($dataItem as $item){
-                                    if($i<4){
-                                        echo "I ::".$i."<br>";
-                                        echo "<div class='col-sm-2 data-item'>".$item."</div>";
-                                    }
-                                    
-                                    $i++;
-                                }
+                        foreach($data_areas as $dataItem){
+                            foreach($dataItem as $item){
+                                echo "<div class='col-sm-3 data-item'>".$item."</div>";
+                            }
                         }
 
                         echo "
                       
                     </div>
                 </div>";
+                echo "<pre>";
+                print_r($data_areas);
 
 ?>
     </body>
