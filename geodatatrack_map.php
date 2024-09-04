@@ -17,7 +17,7 @@
             /////
              echo "<div class='container'>
                     <div class='header row'>
-                        <div class='page-title col-sm-6'>ABC Org <span>/Farm ABC</span></div>
+                        <div class='page-title col-sm-6'>ABC Org <span> / Farm ABC</span></div>
                         <div class='col-sm-6'>
                             <div class='btn btn-outline-secondary btn-add' onclick='add_edit_propety();'>Edit</div>
                             <div class='btn btn-outline-primary btn-add' onclick='add_edit_propety();'>Report</div>
@@ -53,7 +53,7 @@
                         echo "
                             <div class='col-sm-4'>
                                 <div class='map'>
-                                    <img src='images/map1.png'>
+                                    <img src='images/map1.png' width='400'>
                                 </div>
                             </div>
                         ";
