@@ -55,10 +55,10 @@
                         ";
                     echo "
                     </div>
-                    <div class='btn btn-outline-secondary btn-add' onclick='add_edit_category();'>Add Area</div>
+                    <div class='btn btn-outline-secondary btn-add' onclick='add_edit_category();'>Add Surveys Point</div>
                     <div style=clear:both;></div>
                     <div class='row row-block form-block'>
-                        <div class='col-sm-12 title-row'>Areas</div>
+                        <div class='col-sm-12 title-row'>Surveys Points</div>
                         ";
                         foreach($headers_areas as $header){
                             echo "<div class='col-sm-3 header-row'>".$header."</div>";
