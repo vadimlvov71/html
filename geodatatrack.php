@@ -145,6 +145,7 @@
     }
     .title-row{
         border-bottom: 1px solid #e9f4ff;
+        color: #74787b;
         font-size:1.1rem;
         padding-left:0!important;
     }
