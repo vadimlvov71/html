@@ -3,13 +3,13 @@
     echo ("
     <div class='form-group1' style='padding: 6px 6px;'>
         <div><label class='input'>".$label."</label></div>
-        <div class='input'><input class='form-control-new search-input' type=text name='global[fields'][_id']' value='".$value."'></div>
+        <div class='input'><input style='width: 100%;' class='form-control-new search-input' type=text name='global[fields'][_id']' value='".$value."'></div>
     </div>
     ");
     if($cat){
         echo ("
         <div class='form-group1 input' style='padding: 6px 6px;'>
-            <input class='form-control-new search-input' type=text name='global[fields'][_id']' value='".$cat."'>
+            <input style='width: 100%;' class='form-control-new search-input' type=text name='global[fields'][_id']' value='".$cat."'>
         </div>
         ");
     }
