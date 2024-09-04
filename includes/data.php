@@ -68,7 +68,7 @@ $value3['metadata']="Metadata";
 $value3['category1']="Category 1";
 
 $value4=array();
-$value4['name']="TestName111";
+$value4['name']="Survey Name";
 $value4['latitude']="60";
 $value4['long']="120";
 $value4['metadata']="Metadata";
