@@ -28,20 +28,19 @@
                         echo "
                             <div class='col-sm-6' style='padding: 6px 6px;'>
                         ";
-                            inputFields("Name", $value['name']);
+                            inputFields("Name", $value1['name']);
 
                             echo "
                                 <div class='container-flex'>
                             ";
-                            inputFields("Contact", $value['contact']); 
-                            inputFields("Contact", $value['contact']); 
+                            inputFields("Log/Lat from", $value1['coord_from']); 
+                            inputFields("Log/Lat to", $value1['coord_to']); 
                             echo "    
                                 </div>
                             ";
                             
-                            inputFields("Telephone", $value['telephone']);
-                            inputFields("Email", $value['email']);
-                            inputFields("Category", $value['category'], "Category 2");
+                            inputFields("Category", $value1['category1'], "Category 2");
+                            inputFields("Metadata", $value1['metadata'], "Metadata 2");
                         echo "
                                 
                             </div>
