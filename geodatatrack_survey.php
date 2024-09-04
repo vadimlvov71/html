@@ -82,9 +82,9 @@
                                     echo "<div class='col-sm-2 data-item'>".$dataItem['category']."</div>";
                                     echo "<div class='col-sm-2 data-item'>".$dataItem['metadata']."</div>";
                                     echo "<div class='col-sm-2 data-item'>".$dataItem['latest']."</div>";
-                                    echo "<div class='col-sm-2 data-item'>
+                                    echo "<div class='col-sm-2 data-item' style='padding-right:0;padding-left:0;'>
                                         <div class='container-flex'>
-                                            <div>
+                                            <div style='padding-right: 8px;'>
                                                 <div class='btn-group'>
                                                 <button type='button' style='font-size: 0.7rem; padding:5px 6px;' class='btn btn-outline-secondary dropdown-toggle' data-toggle='dropdown' aria-expanded='false'>
                                                     Survey type
