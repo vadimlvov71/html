@@ -98,7 +98,7 @@
                                                 </div>
                                                 </div>
                                             </div>
-                                            <div style='font-size:0.7rem;' class='btn btn-outline-secondary ' onclick='add_edit_category();'>Add Survey</div>
+                                            <div style='font-size:0.7rem;padding: 4px 7px;' class='btn btn-outline-secondary ' onclick='add_edit_category();'>Add Survey</div>
                                         </div>
                                     </div>";
                                 //}
