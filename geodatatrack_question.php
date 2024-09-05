@@ -27,13 +27,13 @@
                    
                        echo "
                            <div class='col-sm-3' style='padding: 6px 6px;'>
-                               <div class='row row-block form-block'>
-                                   <table><tr><td>Questions</td><td>Answers</td></tr>
+                               <div class='row-block form-block'>
+                                   <table><tr><td class='th'>Questions</td><td class='th'>Answers</td></tr>
                        ";
                                 foreach($value5 as $key => $value){
                                     echo "<tr>
-                                        <td>".$key."</td>
-                                        <td>".$value."</td>
+                                        <td style='padding-left:11px;'>".$key."</td>
+                                        <td class='td-value'>".$value."</td>
                                     </tr>";
                                 }
                         echo "  
@@ -44,11 +44,11 @@
                       
                        echo "
                             <div class='col-sm-9'>
-                                <div class='row row-block form-block'>
+                                <div class='row row-block form-block1'>
                                     <div class='col-sm-4'>
                                         <div class='field'>Some Field 1</div>
                                         <div class='field'>Some Field 2</div>
-                                        <div class='description'>".$description."</div>
+                                        <div class='description field'>".$description."</div>
                                     </div>
                                     <div class='col-sm-8 '>
                                        <div class='btn btn-outline-secondary btn-add' onclick='add_edit_propety();'>New Note/Attachment</div>
@@ -57,8 +57,6 @@
                                        <div style='padding:1px 0 0px 0;'>
                                            <div class='created'>added by <span>".$createdBy."</span> on <span>".$createdTime."</span></div>
                                            <div><img src='images/field.jpeg' width='300'></div>
-                                      
-                                         
                                        </div>
                                     </div>
                                 </div>
@@ -70,60 +68,13 @@
                    <div style=clear:both;></div>
                    <div class='row row-block form-block'>
                        <div class='col-sm-12 title-row'>Surveys Points</div>
-                       <div class='col-sm-12 row'>
-                      
-                           ";
-                           foreach($headers_surveys as $header){
-                               echo "<div class='col-sm-2 header-row'>".$header."</div>";
-                           }
-                       echo "
-                           <div class='col-sm-2 header-row'>Latest Survey</div>
-                           <div class='col-sm-2 data-item'>-</div>
-                       </div>
-                      
-                      
-                       <div class='col-sm-12 row'>
+                       
                        ";        
-                           echo "";               
-                           foreach($data_surveys as $dataItem){
-                               //foreach($dataItem as $item){
-                                   echo "<div class='col-sm-2 data-item'>".$dataItem['name']."</div>";
-                                   echo "<div class='col-sm-2 data-item coordinates'><span class='coordinates'>".$dataItem['latitude']."</span> / ".$dataItem['long']."</div>";
-                                   echo "<div class='col-sm-2 data-item'>".$dataItem['category']."</div>";
-                                   echo "<div class='col-sm-2 data-item'>".$dataItem['metadata']."</div>";
-                                   echo "<div class='col-sm-2 data-item'>".$dataItem['latest']."</div>";
-                                   echo "<div class='col-sm-2 data-item' style='padding-right:0;padding-left:0;'>
-                                       <div class='container-flex'>
-                                           <div style='padding-right: 8px;'>
-                                               <div class='btn-group'>
-                                               <button type='button' style='font-size: 0.7rem; padding:5px 6px;' class='btn btn-outline-secondary dropdown-toggle' data-toggle='dropdown' aria-expanded='false'>
-                                                   Survey type
-                                               </button>
-                                               <div class='dropdown-menu' style='font-size: 0.7rem; min-width: 2rem;'>
-                                                   <a class='dropdown-item' href='#'>type1</a>
-                                                   <div class='dropdown-divider'></div>
-                                                   <a class='dropdown-item' href='#'>type2</a>
-                                                   <div class='dropdown-divider'></div>
-                                                   <a class='dropdown-item' href='#'>type3</a>
-                                               </div>
-                                               </div>
-                                           </div>
-                                           <div style='font-size:0.7rem;padding: 4px 7px;' class='btn btn-outline-secondary ' onclick='add_edit_category();'>Add Survey</div>
-                                       </div>
-                                   </div>";
-                               //}
-                           }
-
-
+                           
                            echo "
-                       </div>
-                       <div class='col-sm-12 data-item' style='padding:20px 0;'>
-                           <div class='container-flex'>
-                               <div></div>
-                               <div></div>
-                           </div>
-                       </div>
-                   </div>
+                       
+                       
+                    </div>
                   
                </div>";
                /*echo "<pre>";
@@ -134,6 +85,7 @@
    </body>
    <style>
        :root {
+        --text:#8b95b9;
        --header: #4fa5f9;
        --blue: #1e90ff;
        --white: #ffffff;
@@ -149,7 +101,7 @@
            /*font-weight:700;*/
         }
         .description{
-            color: #8b95b9;
+            color: var(--text);
             font-size: 0.8rem;
         }
         .field{
@@ -165,12 +117,23 @@
            width:100%;
            border-bottom: 1px solid var(--header);
        }
+       .td-value{
+        text-align:right;
+        padding-right:11px;
+       }
+       .th{
+            background:#eff5fb;
+            color: var(--header);
+            font-size: 0.8rem;
+           text-align:center;
+       }
    table {
        border-collapse: collapse;
        width:100%;
    }
    td {
-       border: 1px solid grey;
+       border: 1px solid #c7cbdb;
+       color: var(--text);
    }
    </style>
 </html>
