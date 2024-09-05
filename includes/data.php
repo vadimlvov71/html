@@ -16,18 +16,22 @@
 }
 function dropDown($id, $options){
     echo "
+    
     <div class='btn-group'>
-        <button type='button' style='font-size: 0.7rem; padding:5px 6px;' class='btn btn-outline-secondary dropdown-toggle' data-toggle='dropdown' aria-expanded='false'>
-            ".$name."
-        </button>
-        <div class='dropdown-menu' style='font-size: 0.7rem; min-width: 2rem;'>";
+        <select class='custom-select'>
+        ";
+            $selected = " ";
             foreach($options as $key => $value){
-                echo "<a class='dropdown-item' href='#'>".$value."</a>
-                    <div class='dropdown-divider'></div>
+                if($key == $id){
+                    $selected = "selected";
+                }else{
+                    $selected = "";
+                }
+                echo "<option ".$selected." value='".$key."'>".$value."</option>
                 ";
             }
     echo "
-        </div>
+        </select>
     </div>";
 }
 $headers_propeties=array("Name", "Address", "Contact", "Telephone", "Email", "Metadata");

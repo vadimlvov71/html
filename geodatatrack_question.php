@@ -22,16 +22,18 @@
                     </div>
                     <div class='row'>
                        <div class='col-sm-3'>
+                       <div class='label'>Survey Title</div>
                        ";
-                       dropDown("name", $options1);
+                       dropDown("3", $options1);
                         echo "
                        </div>
-                       <div class='col-sm-3'>222</div>
+                       <div class='col-sm-3'>
+                       
+                       </div>
                        <div class='col-sm-3'>333</div>
                        <div class='col-sm-3'>444</div>
                    </div>
                    <div class='row'>";
-                   
                        echo "
                            <div class='col-sm-3' style='padding: 6px 6px;'>
                                <div class='row-block form-block1'>
@@ -125,6 +127,10 @@
            padding:10px 0;
            width:100%;
            border-bottom: 1px solid var(--header);
+       }
+       .label{
+            color: var(--header);
+            font-size:0.9rem;
        }
        .td-value{
         text-align:right;
