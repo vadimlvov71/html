@@ -27,7 +27,7 @@
                    
                        echo "
                            <div class='col-sm-3' style='padding: 6px 6px;'>
-                               <div class='row-block form-block'>
+                               <div class='row-block form-block1'>
                                    <table><tr><td class='th'>Questions</td><td class='th'>Answers</td></tr>
                        ";
                                 foreach($value5 as $key => $value){
@@ -44,11 +44,11 @@
                       
                        echo "
                             <div class='col-sm-9'>
-                                <div class='row row-block form-block1'>
+                                <div class='row row-block1 form-block'>
                                     <div class='col-sm-4'>
                                         <div class='field'>Some Field 1</div>
                                         <div class='field'>Some Field 2</div>
-                                        <div class='description field'>".$description."</div>
+                                        <div class='description'>".$description."</div>
                                     </div>
                                     <div class='col-sm-8 '>
                                        <div class='btn btn-outline-secondary btn-add' onclick='add_edit_propety();'>New Note/Attachment</div>
@@ -103,6 +103,7 @@
         .description{
             color: var(--text);
             font-size: 0.8rem;
+            padding:6px 0;
         }
         .field{
             border-left: 3px solid #e6e7e8;
