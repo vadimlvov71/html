@@ -28,20 +28,19 @@
                        echo "
                            <div class='col-sm-3' style='padding: 6px 6px;'>
                                <div class='row row-block form-block'>
-                                   <table>
-                                   <tr>
-                                       <td>Questions</td><td>Answers</td>
-                                   </tr>
-                                   <tr>
-                                       <td>aaaaa</td><td>bbbbb</td>
-                                   </tr>
-                                   </table>
-                               </div>
+                                   <table><tr><td>Questions</td><td>Answers</td></tr>
                        ";
-                      
-                       echo "  
+                                foreach($value5 as $key => $value){
+                                    echo "<tr>
+                                        <td>".$key."</td>
+                                        <td>".$value."</td>
+                                    </tr>";
+                                }
+                        echo "  
+                                    </table>
+                                </div>
                            </div>
-                       ";
+                        ";
                       
                        echo "
                             <div class='col-sm-9'>
