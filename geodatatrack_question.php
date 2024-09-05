@@ -17,11 +17,18 @@
            include "includes/data.php";
            /////
             echo "<div class='container'>
-                   <div class='header row'>
-                       <div class='page-title col-sm-6'>ABC Org <span>/ Farm ABC</span> / Field ABC</div>
-                       <div class='col-sm-6'>
-                           <div class='btn btn-outline-primary btn-add' onclick='add_edit_propety();'>Report</div>
+                    <div class='header row'>
+                       <div class='page-title col-sm-6'>ABC Org <span>/ Farm ABC</span> / Field ABC / Survey ABC</div>
+                    </div>
+                    <div class='row'>
+                       <div class='col-sm-3'>
+                       ";
+                       dropDown("name", $options1);
+                        echo "
                        </div>
+                       <div class='col-sm-3'>222</div>
+                       <div class='col-sm-3'>333</div>
+                       <div class='col-sm-3'>444</div>
                    </div>
                    <div class='row'>";
                    
@@ -64,7 +71,7 @@
                        ";
                    echo "
                    </div>
-                   <div class='btn btn-outline-secondary btn-add' onclick='add_edit_category();'>Add Surveys Point</div>
+                   
                    <div style=clear:both;></div>
                    <div class='row row-block form-block'>
                        <div class='col-sm-12 title-row'>Surveys Points</div>
@@ -108,6 +115,7 @@
         .field{
             border-left: 3px solid #e6e7e8;
             border-bottom: 1px solid #e6e7e8;
+            color: var(--header);
             padding: 0px 0px 0px 6px;
             margin-top: 4px;
             font-size: 0.8rem;

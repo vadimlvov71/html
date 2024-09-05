@@ -86,16 +86,16 @@
                                         <div class='container-flex'>
                                             <div style='padding-right: 8px;'>
                                                 <div class='btn-group'>
-                                                <button type='button' style='font-size: 0.7rem; padding:5px 6px;' class='btn btn-outline-secondary dropdown-toggle' data-toggle='dropdown' aria-expanded='false'>
-                                                    Survey type
-                                                </button>
-                                                <div class='dropdown-menu' style='font-size: 0.7rem; min-width: 2rem;'>
-                                                    <a class='dropdown-item' href='#'>type1</a>
-                                                    <div class='dropdown-divider'></div>
-                                                    <a class='dropdown-item' href='#'>type2</a>
-                                                    <div class='dropdown-divider'></div>
-                                                    <a class='dropdown-item' href='#'>type3</a>
-                                                </div>
+                                                    <button type='button' style='font-size: 0.7rem; padding:5px 6px;' class='btn btn-outline-secondary dropdown-toggle' data-toggle='dropdown' aria-expanded='false'>
+                                                        Survey type
+                                                    </button>
+                                                    <div class='dropdown-menu' style='font-size: 0.7rem; min-width: 2rem;'>
+                                                        <a class='dropdown-item' href='#'>type1</a>
+                                                        <div class='dropdown-divider'></div>
+                                                        <a class='dropdown-item' href='#'>type2</a>
+                                                        <div class='dropdown-divider'></div>
+                                                        <a class='dropdown-item' href='#'>type3</a>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div style='font-size:0.7rem;padding: 4px 7px;' class='btn btn-outline-secondary ' onclick='add_edit_category();'>Add Survey</div>

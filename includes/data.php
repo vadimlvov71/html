@@ -14,6 +14,22 @@
         ");
     }
 }
+function dropDown($id, $options){
+    echo "
+    <div class='btn-group'>
+        <button type='button' style='font-size: 0.7rem; padding:5px 6px;' class='btn btn-outline-secondary dropdown-toggle' data-toggle='dropdown' aria-expanded='false'>
+            ".$name."
+        </button>
+        <div class='dropdown-menu' style='font-size: 0.7rem; min-width: 2rem;'>";
+            foreach($options as $key => $value){
+                echo "<a class='dropdown-item' href='#'>".$value."</a>
+                    <div class='dropdown-divider'></div>
+                ";
+            }
+    echo "
+        </div>
+    </div>";
+}
 $headers_propeties=array("Name", "Address", "Contact", "Telephone", "Email", "Metadata");
 $headers_areas=array("Name", "Long/Latit", "Categories", "Metadata");
 $headers_surveys=array("Name", "Long/Latit", "Categories", "Metadata");
@@ -92,3 +108,8 @@ $value5['B05']=1;
 $value5['C01']=3;
 $value5['C07']=5;
 $value5['Total']=57;
+
+$options1=array();
+$options1['1']="July 2024 Back camp on ridge";
+$options1['2']="bbbb";
+$options1['3']="cccc";
