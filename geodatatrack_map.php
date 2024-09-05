@@ -53,7 +53,7 @@
                         echo "
                             <div class='col-sm-4'>
                                 <div class='map'>
-                                    <img src='images/map1.png' width='400'>
+                                    <img src='images/map1.png' width='300'>
                                 </div>
                             </div>
                         ";
