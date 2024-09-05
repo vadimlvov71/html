@@ -47,9 +47,9 @@
                             <div class='col-sm-9'>
                                 <div class='row row-block form-block'>
                                     <div class='col-sm-4'>
-                                        <div class=''>Some Field 1</div>
-                                        <div class=''>Some Field 2</div>
-                                        <div class=''>".$description."</div>
+                                        <div class='field'>Some Field 1</div>
+                                        <div class='field'>Some Field 2</div>
+                                        <div class='description'>".$description."</div>
                                     </div>
                                     <div class='col-sm-8 '>
                                        <div class='btn btn-outline-secondary btn-add' onclick='add_edit_propety();'>New Note/Attachment</div>
@@ -139,16 +139,28 @@
        --blue: #1e90ff;
        --white: #ffffff;
        }
-       .created{
+        .created{
            color: var(--header);
            font-size: 0.7rem;
            padding:0 0 10px 0;
            text-align:right;
-       }
-       .created span{
+        }
+        .created span{
            color: #666;
            /*font-weight:700;*/
-       }
+        }
+        .description{
+            color: #8b95b9;
+            font-size: 0.8rem;
+        }
+        .field{
+            border-left: 3px solid #e6e7e8;
+            border-bottom: 1px solid #e6e7e8;
+            padding: 0px 0px 0px 6px;
+            margin-top: 4px;
+            font-size: 0.8rem;
+        }
+
        .devide{
            padding:10px 0;
            width:100%;
