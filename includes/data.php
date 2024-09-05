@@ -117,3 +117,17 @@ $options1=array();
 $options1['1']="July 2024 Back camp on ridge";
 $options1['2']="bbbb";
 $options1['3']="cccc";
+
+$options2=array();
+$options2['1']="type01";
+$options2['2']="bbbb";
+$options2['3']="cccc";
+
+$options3=array();
+$options3['1']="ABC123";
+$options3['2']="bbbb";
+$options3['3']="ABC789";
+
+$options4=array();
+$options4['1']="5/9/2024";
+

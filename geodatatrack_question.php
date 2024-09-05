@@ -20,18 +20,31 @@
                     <div class='header row'>
                        <div class='page-title col-sm-6'>ABC Org <span>/ Farm ABC</span> / Field ABC / Survey ABC</div>
                     </div>
-                    <div class='row'>
+                    <div class='row' style='margin-bottom:16px;'>
                        <div class='col-sm-3'>
                        <div class='label'>Survey Title</div>
                        ";
-                       dropDown("3", $options1);
-                        echo "
+                            dropDown("3", $options1);
+                       echo "
                        </div>
                        <div class='col-sm-3'>
-                       
+                            <div class='label'>Survey Type</div>
+                       ";
+                            dropDown("3", $options2);
+                       echo "
                        </div>
-                       <div class='col-sm-3'>333</div>
-                       <div class='col-sm-3'>444</div>
+                       <div class='col-sm-3'>
+                            <div class='label'>Survey Code</div>
+                            ";
+                                dropDown("1", $options3);
+                            echo "
+                        </div>
+                       <div class='col-sm-3'>
+                            <div class='label'>Survey Date</div>
+                            ";
+                                dropDown("1", $options4);
+                            echo "
+                        </div>
                    </div>
                    <div class='row'>";
                        echo "
@@ -65,7 +78,7 @@
                                         <div class='devide'></div>
                                        <div style='padding:1px 0 0px 0;'>
                                            <div class='created'>added by <span>".$createdBy."</span> on <span>".$createdTime."</span></div>
-                                           <div><img src='images/field.jpeg' width='300'></div>
+                                           <div><img src='images/field.jpeg' width='300' align='right'></div>
                                        </div>
                                     </div>
                                 </div>
@@ -76,7 +89,7 @@
                    
                    <div style=clear:both;></div>
                    <div class='row row-block form-block'>
-                       <div class='col-sm-12 title-row'>Surveys Points</div>
+                       <div class='col-sm-12 title-row'>-</div>
                        
                        ";        
                            
