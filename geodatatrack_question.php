@@ -47,7 +47,8 @@
                         echo "
                             <div class='col-sm-9'>
                                 <div class='row row-block form-block'>
-                                    right
+                                    <div class='col-sm-4 '>11111</div>
+                                    <div class='col-sm-8 '><img src='images/field.jpeg' width='300'></div>
                                 </div>
                             </div>
                         ";
