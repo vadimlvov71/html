@@ -24,19 +24,20 @@
                             <div class='btn btn-outline-primary btn-add' onclick='add_edit_propety();'>Report</div>
                         </div>
                     </div>
-                    <div class='row form-block'>";
+                    <div class='row'>";
                      
                         echo "
                             <div class='col-sm-3' style='padding: 6px 6px;'>
-
-                            <table>
-                            <tr>
-                                <td>Questions</td><td>Answers</td>
-                            </tr>
-                            <tr>
-                                <td>aaaaa</td><td>bbbbb</td>
-                            </tr>
-                            </table>
+                                <div class='row row-block form-block'>
+                                    <table>
+                                    <tr>
+                                        <td>Questions</td><td>Answers</td>
+                                    </tr>
+                                    <tr>
+                                        <td>aaaaa</td><td>bbbbb</td>
+                                    </tr>
+                                    </table>
+                                </div>
                         ";
                         
                         echo "   
@@ -45,7 +46,9 @@
                         
                         echo "
                             <div class='col-sm-9'>
-                                right
+                                <div class='row row-block form-block'>
+                                    right
+                                </div>
                             </div>
                         ";
                     echo "
