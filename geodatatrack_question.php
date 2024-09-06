@@ -122,11 +122,11 @@
                                         </div>
                                         <div>
                                             <div class='score'>A</div>
-                                            <div class='score-text'>Score1</div>
+                                            <div class='score-text'>Score2</div>
                                         </div>
                                         <div>
                                             <div class='score'>B</div>
-                                            <div class='score-text'>Score1</div>
+                                            <div class='score-text'>Score3</div>
                                         </div>
                                     </div>
                                     <div class='col-sm-4'>
@@ -216,13 +216,14 @@
        .score{
             background:#eff5fb;
             border: 3px solid #e6e7e8;
+            color: var(--text);
             font-size:1.8rem;
             margin:0 10px;
             padding: 10px;
        }
        .score-text{
             color: var(--text);
-            font-size:0.9rem;
+            font-size:0.7rem;
             text-align:center;
        }
        .signature{
@@ -238,7 +239,6 @@
             border-bottom-left-radius: 0.75rem;
             border-top-left-radius: 0.75rem;
             border-bottom-left-radius: 0.75rem;
-            height:220px;
             padding: 16px 0;
             transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
             box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 3px;

@@ -140,6 +140,8 @@ $value5['B01']=7;
 $value5['B05']=1;
 $value5['C01']=3;
 $value5['C07']=5;
+$value5['CE45']=3;
+$value5['D66']=6;
 $value5['Total']=57;
 
 $options1=array();
