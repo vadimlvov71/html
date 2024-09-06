@@ -76,9 +76,10 @@
         color: #6ab1f9;
     }
     .key{
-        font-size:0.8rem;
+        font-size:0.7rem;
         padding-right:6px;
         background:#fafbe4cc;
+        background:#f0f6fd;
         font-style:italic;
         text-align:right;
         width:80px;
