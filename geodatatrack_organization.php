@@ -36,9 +36,11 @@
                                 echo "<div class='row'>"; 
                                     foreach($dataItem as $item){
                                         if(is_array($item)){
-                                            echo "<div class='col-sm-3 data-array'>";
+                                            echo "<div class='col-sm-3 data-item'>";
                                             foreach($item as $key => $value){
-                                                echo "<div class='data-item'><span>".$key."</span> ".$value."</div>";
+                                                echo "<div class='data-item-array container-flex'>
+                                                <div class='key'>".$key."</div> <div>".$value."</div>
+                                                </div>";
                                             }
                                             echo "</div>";
                                         }else{
@@ -60,7 +62,25 @@
         width:200px;
     }
     .data-item {
+        border-top: 1px solid #d0e6fd;
         font-size: 0.9rem;
+    }
+    .data-item-array{
+        border-bottom: 1px dotted #ccc;
+    }
+    .data-item-array span{
+        font-style:italic;
+    }
+    .data-item-array::first-letter {
+        /*font-size: 200%;*/
+        color: #6ab1f9;
+    }
+    .key{
+        padding-right:6px;
+        background:#fafbe4cc;
+        font-style:italic;
+        text-align:right;
+        width:80px;
     }
     </style>
 </html>
