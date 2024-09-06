@@ -22,11 +22,11 @@
                     </div>
                     <div class='row' style='margin-bottom:16px;'>
                        <div class='col-sm-3'>
-                       <div class='label'>Survey Title</div>
-                       ";
-                            dropDown("1", $options1);
-                       echo "
-                       </div>
+                            <div class='label'>Survey Title</div>
+                            ";
+                                    dropDown("1", $options1);
+                            echo "
+                        </div>
                        <div class='col-sm-3'>
                             <div class='label'>Survey Type</div>
                        ";
@@ -43,6 +43,18 @@
                             <div class='label'>Survey Date</div>
                             ";
                                 dropDown("1", $options4);
+                            echo "
+                        </div>
+                        <div class='col-sm-3'>
+                            <div class='label'>Organization</div>
+                            ";
+                                    dropDown("1", $orgNames);
+                            echo "
+                        </div>
+                        <div class='col-sm-3'>
+                            <div class='label'>Organization</div>
+                            ";
+                                    dropDown("1", $orgNames);
                             echo "
                         </div>
                    </div>
