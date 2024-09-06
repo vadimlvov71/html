@@ -239,11 +239,12 @@
             border-bottom-left-radius: 0.75rem;
             border-top-left-radius: 0.75rem;
             border-bottom-left-radius: 0.75rem;
-            padding: 16px 0;
+            padding: 12px 0;
             transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
             box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 3px;
        }
        .summary-title{
+            padding-bottom:12px;
             color: #e39292;
             font-size:0.8rem;
        }
