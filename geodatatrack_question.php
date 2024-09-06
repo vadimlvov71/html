@@ -24,7 +24,7 @@
                        <div class='col-sm-3'>
                        <div class='label'>Survey Title</div>
                        ";
-                            dropDown("3", $options1);
+                            dropDown("1", $options1);
                        echo "
                        </div>
                        <div class='col-sm-3'>

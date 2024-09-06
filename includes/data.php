@@ -18,7 +18,7 @@ function dropDown($id, $options){
     echo "
     
     <div class='btn-group'>
-        <select class='custom-select'>
+        <select class='custom-select' autocomplete='off'>
         ";
             $selected = " ";
             foreach($options as $key => $value){
