@@ -26,13 +26,22 @@
                     <div class='row row-block form-block'>
                         <div class='col-sm-12 title-row'>Organizations</div>
                         ";
-                        foreach($headers_propeties as $header){
-                            echo "<div class='col-sm-2 header-row'>".$header."</div>";
+                        foreach($headers_orgs as $header){
+                            echo "<div class='col-sm-1 header-row'>".$header."</div>";
                         }          
                                         
                         foreach($orgs as $dataItem){
                                 foreach($dataItem as $item){
-                                    echo "<div class='col-sm-2 data-item'>".$item."</div>";
+                                    if(is_array($item)){
+                                        echo "<div class='col-sm-2 data-item'>";
+                                        foreach($item as $key => $valee){
+                                            echo "<div class='data-item'>".$valee."</div>";
+                                        }
+                                        echo "</div>";
+                                    }else{
+                                        echo "<div class='col-sm-1 data-item'>".$item."</div>";
+                                    }
+                                    
                                 }
                         }
 

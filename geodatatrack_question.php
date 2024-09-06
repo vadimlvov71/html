@@ -57,6 +57,12 @@
                                     dropDown("1", $orgNames);
                             echo "
                         </div>
+                        <div class='col-sm-3'>
+                            <div class='label'>Organization</div>
+                            ";
+                                    dropDown("1", $orgNames);
+                            echo "
+                        </div>
                    </div>
                    <div class='row'>";
                        echo "

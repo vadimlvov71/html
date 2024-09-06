@@ -34,6 +34,7 @@ function dropDown($id, $options){
         </select>
     </div>";
 }
+$headers_orgs=array("Name", "Address", "Contact", "Telephone", "Email", "Categories", "Metadata");
 $headers_propeties=array("Name", "Address", "Contact", "Telephone", "Email", "Metadata");
 $headers_areas=array("Name", "Long/Latit", "Categories", "Metadata");
 $headers_surveys=array("Name", "Long/Latit", "Categories", "Metadata");
@@ -44,6 +45,7 @@ $value['address']="Baker street";
 $value['contact']="aaaaaa";
 $value['telephone']="2 (999) 000-00-00";
 $value['email']="aaa@aaa.com";
+$value['category']=array("Region" => "Africa", "EcoRegion" => "Desert", "UN coding" => "ABC01");
 $value['metadata']="Metadata ABC";
 
 $value1=array();
@@ -52,6 +54,7 @@ $value1['address']="Douning street";
 $value1['contact']="bbbbb";
 $value1['telephone']="1 (777) 222-22-2";
 $value1['email']="bbbb@bbbbb.com";
+$value1['category']=array("Region" => "Africa", "EcoRegion" => "Savanna", "UN coding" => "DEF04");
 $value1['metadata']="Metadata DEF";
 $orgs=array();
 $orgs[]=$value;
