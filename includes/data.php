@@ -159,3 +159,12 @@ $options3['3']="ABC789";
 $options4=array();
 $options4['1']="5/9/2024";
 
+$areas=array();
+$areas['1']="Savanna";
+$areas['2']="Bono";
+$areas['3']="Volta";
+
+$points=array();
+$points['1']="Point ABC";
+$points['2']="Point DEF";
+$points['3']="Point XYZ";

@@ -48,19 +48,31 @@
                         <div class='col-sm-3'>
                             <div class='label'>Organization</div>
                             ";
-                                    dropDown("3", $orgNames);
+                                dropDown("3", $orgNames);
                             echo "
                         </div>
                         <div class='col-sm-3'>
                             <div class='label'>Organization</div>
                             ";
-                                    dropDown("2", $orgNames);
+                                dropDown("2", $orgNames);
                             echo "
                         </div>
                         <div class='col-sm-3'>
                             <div class='label'>Property</div>
                             ";
-                                    dropDown("1", $propertyNames);
+                                dropDown("1", $propertyNames);
+                            echo "
+                        </div>
+                        <div class='col-sm-3'>
+                            <div class='label'>Area</div>
+                            ";
+                                dropDown("2", $areas);
+                            echo "
+                        </div>
+                        <div class='col-sm-3'>
+                            <div class='label'>Survey Point</div>
+                            ";
+                                dropDown("3", $points);
                             echo "
                         </div>
                    </div>
@@ -140,6 +152,9 @@
            color: #666;
            /*font-weight:700;*/
         }
+        .custom-select{
+            color: var(--text)!important;
+        }
         .description{
             color: var(--text);
             font-size: 0.8rem;
@@ -162,6 +177,7 @@
        .label{
             color: var(--header);
             font-size:0.9rem;
+            padding: 10px 0 0 0;
        }
        .td-value{
         text-align:right;
