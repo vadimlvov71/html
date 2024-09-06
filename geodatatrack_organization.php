@@ -23,29 +23,33 @@
                         </div>
                     </div>
                     
-                    <div class='row row-block form-block'>
+                    <div class='row-block form-block'>
                         <div class='col-sm-12 title-row'>Organizations</div>
-                        ";
-                        foreach($headers_orgs as $header){
-                            echo "<div class='col-sm-1 header-row'>".$header."</div>";
-                        }          
-                                        
-                        foreach($orgs as $dataItem){
-                                foreach($dataItem as $item){
-                                    if(is_array($item)){
-                                        echo "<div class='col-sm-2 data-item'>";
-                                        foreach($item as $key => $valee){
-                                            echo "<div class='data-item'>".$valee."</div>";
+                        <div class='row'>
+                            ";
+                            foreach($headers_orgs as $header){
+                                echo "<div class='col header-row'>".$header."</div>";
+                            }          
+                        echo "</div>  
+                        ";              
+                            foreach($orgs as $dataItem){
+                                echo "<div class='row'>"; 
+                                    foreach($dataItem as $item){
+                                        if(is_array($item)){
+                                            echo "<div class='col data-item'>";
+                                            foreach($item as $key => $value){
+                                                echo "<div class='data-item'><span>".$key."</span> ".$value."</div>";
+                                            }
+                                            echo "</div>";
+                                        }else{
+                                            echo "<div class='col data-item'>".$item."</div>";
                                         }
-                                        echo "</div>";
-                                    }else{
-                                        echo "<div class='col-sm-1 data-item'>".$item."</div>";
+                                        
                                     }
-                                    
-                                }
-                        }
+                                echo "</div>"; 
+                            }
 
-                        echo "
+                            echo "
                       
                     </div>
                 </div>";

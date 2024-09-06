@@ -63,6 +63,7 @@ $orgs[]=$value;
 $orgs[]=$value1;
 
 $orgNames=array("1" => "ABC Org", "2" => "DEF Org", "3" => "XYZ Org");
+$propertyNames=array("1" => "ABC Prop", "2" => "DEF Prop", "3" => "XYZ Prop");
 
 $value=array();
 $value['name']="TestName";
@@ -147,8 +148,8 @@ $options1['3']="cccc";
 
 $options2=array();
 $options2['1']="type01";
-$options2['2']="bbbb";
-$options2['3']="cccc";
+$options2['2']="type02";
+$options2['3']="type03";
 
 $options3=array();
 $options3['1']="ABC123";

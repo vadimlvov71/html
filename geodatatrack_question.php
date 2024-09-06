@@ -48,19 +48,19 @@
                         <div class='col-sm-3'>
                             <div class='label'>Organization</div>
                             ";
-                                    dropDown("1", $orgNames);
+                                    dropDown("3", $orgNames);
                             echo "
                         </div>
                         <div class='col-sm-3'>
                             <div class='label'>Organization</div>
                             ";
-                                    dropDown("1", $orgNames);
+                                    dropDown("2", $orgNames);
                             echo "
                         </div>
                         <div class='col-sm-3'>
-                            <div class='label'>Organization</div>
+                            <div class='label'>Property</div>
                             ";
-                                    dropDown("1", $orgNames);
+                                    dropDown("1", $propertyNames);
                             echo "
                         </div>
                    </div>
