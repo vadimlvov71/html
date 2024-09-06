@@ -103,50 +103,47 @@
                                         <div class='description'>".$description."</div>
                                     </div>
                                     <div class='col-sm-8 '>
-                                       <div class='btn btn-outline-secondary btn-add' onclick='questionOpen();'>New Note/Attachment</div>
-                                       <div style=clear:both;></div>
+                                        <div class='btn btn-outline-secondary btn-add' onclick='questionOpen();'>New Note/Attachment</div>
+                                        <div style=clear:both;></div>
                                         <div class='devide'></div>
-                                       <div style='padding:1px 0 0px 0;'>
+                                        <div style='padding:1px 0 0px 0;'>
                                            <div class='created'>added by <span>".$createdBy."</span> on <span>".$createdTime."</span></div>
                                            <div><img src='images/field.jpeg' width='300' align='right'></div>
                                        </div>
                                     </div>
                                 </div>
+                                <!-- -->
+                                <div class='row row-block signature-block summary'>
+                                    <div class='col-sm-12 title-row'>Summary and Verification</div>
+                                    <div class='col-sm-4 container-flex'>
+                                        <div>
+                                            <div class='score'>D</div>
+                                            <div class='score-text'>Score1</div>
+                                        </div>
+                                        <div>
+                                            <div class='score'>A</div>
+                                            <div class='score-text'>Score1</div>
+                                        </div>
+                                        <div>
+                                            <div class='score'>B</div>
+                                            <div class='score-text'>Score1</div>
+                                        </div>
+                                    </div>
+                                    <div class='col-sm-4'>222</div>
+                                    <div class='col-sm-4'>
+                                        <div class='signature'></div>
+                                    </div>
+                                    ";         
+                                echo "
+                                </div>
+                                <!-- -->
                             </div>
                        ";
                    echo "
                    </div>
                    
                    <div style=clear:both;></div>
-                   <div class='row row-block signature-block summary'>
-                        <div class='col-sm-12 title-row'>Summary and Verification</div>
-                        <div class='col-sm-4 container-flex'>
-                            <div>
-                                <div class='score'>D</div>
-                                <div class='score-text'>Score1</div>
-                            </div>
-                            <div>
-                                <div class='score'>A</div>
-                                <div class='score-text'>Score1</div>
-                            </div>
-                            <div>
-                                <div class='score'>B</div>
-                                <div class='score-text'>Score1</div>
-                            </div>
-                        </div>
-                        <div class='col-sm-4'>222</div>
-                        <div class='col-sm-4'>
-                            <div class='signature'></div>
-                        </div>
-                       
-                       
-                       ";        
-                           
-                           echo "
-                       
-                       
-                    </div>
-                  
+                   
                </div>";
 
                echo "
