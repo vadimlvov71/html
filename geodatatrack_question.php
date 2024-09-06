@@ -103,7 +103,7 @@
                                         <div class='description'>".$description."</div>
                                     </div>
                                     <div class='col-sm-8 '>
-                                       <div class='btn btn-outline-secondary btn-add' onclick='add_edit_propety();'>New Note/Attachment</div>
+                                       <div class='btn btn-outline-secondary btn-add' onclick='questionOpen();'>New Note/Attachment</div>
                                        <div style=clear:both;></div>
                                         <div class='devide'></div>
                                        <div style='padding:1px 0 0px 0;'>
@@ -118,8 +118,25 @@
                    </div>
                    
                    <div style=clear:both;></div>
-                   <div class='row row-block form-block'>
-                       <div class='col-sm-12 title-row'>-</div>
+                   <div class='row row-block form-block summary'>
+                        <div class='col-sm-12 title-row'>Summary and Verification</div>
+                        <div class='col-sm-4 container-flex'>
+                            <div>
+                                <div class='score'>D</div>
+                                <div class='score-text'>Score1</div>
+                            </div>
+                            <div>
+                                <div class='score'>A</div>
+                                <div class='score-text'>Score1</div>
+                            </div>
+                            <div>
+                                <div class='score'>B</div>
+                                <div class='score-text'>Score1</div>
+                            </div>
+                        </div>
+                        <div class='col-sm-4'>222</div>
+                        <div class='col-sm-4'>333</div>
+                       
                        
                        ";        
                            
@@ -129,6 +146,22 @@
                     </div>
                   
                </div>";
+
+               echo "
+               <script>
+               function questionOpen(item_id=0){
+                var title='Add Category';
+                var action='add';
+                
+                if(item_id!=0){
+                    title='Edit Category';
+                    action='edit';
+                }
+                default_modal(title);
+                $('#default_message').html('Loading...').load('/?metadata&page=categories&add_edit=' + action + '&table=bb_as_catalogue_categories&item_id=' + item_id +'&global[display_errors]=1');
+                }
+                </script>
+                ";
                /*echo "<pre>";
                print_r($data_areas);*/
 
@@ -178,6 +211,13 @@
             color: var(--header);
             font-size:0.9rem;
             padding: 10px 0 0 0;
+       }
+       .score{
+            background:#eff5fb;
+            border: 3px solid #e6e7e8;
+            font-size:1.8rem;
+            margin:0 10px;
+            padding: 10px;
        }
        .td-value{
         text-align:right;
