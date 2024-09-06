@@ -118,7 +118,7 @@
                    </div>
                    
                    <div style=clear:both;></div>
-                   <div class='row row-block form-block summary'>
+                   <div class='row row-block signature-block summary'>
                         <div class='col-sm-12 title-row'>Summary and Verification</div>
                         <div class='col-sm-4 container-flex'>
                             <div>
@@ -135,7 +135,9 @@
                             </div>
                         </div>
                         <div class='col-sm-4'>222</div>
-                        <div class='col-sm-4'>333</div>
+                        <div class='col-sm-4'>
+                            <div class='signature'></div>
+                        </div>
                        
                        
                        ";        
@@ -218,6 +220,25 @@
             font-size:1.8rem;
             margin:0 10px;
             padding: 10px;
+       }
+       .signature{
+            background:#fff;
+            border: 3px solid #ccc;
+            height:100px;
+       }
+       .signature-block{
+            background: #f9e8e8;
+            border: 1px solid #e39292;
+ 
+            border-radius: .75rem;
+                border-top-left-radius: 0.75rem;
+                border-bottom-left-radius: 0.75rem;
+            border-top-left-radius: 0.75rem;
+            border-bottom-left-radius: 0.75rem;
+            height:220px;
+            padding: 16px 0;
+            transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 3px;
        }
        .td-value{
         text-align:right;
