@@ -76,6 +76,7 @@
         color: #6ab1f9;
     }
     .key{
+        font-size:0.8rem;
         padding-right:6px;
         background:#fafbe4cc;
         font-style:italic;
