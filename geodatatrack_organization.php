@@ -36,13 +36,13 @@
                                 echo "<div class='row'>"; 
                                     foreach($dataItem as $item){
                                         if(is_array($item)){
-                                            echo "<div class='col data-item'>";
+                                            echo "<div class='col-sm-3 data-array'>";
                                             foreach($item as $key => $value){
                                                 echo "<div class='data-item'><span>".$key."</span> ".$value."</div>";
                                             }
                                             echo "</div>";
                                         }else{
-                                            echo "<div class='col data-item'>".$item."</div>";
+                                            echo "<div class='col-sm-2 data-item'>".$item."</div>";
                                         }
                                         
                                     }
@@ -56,7 +56,12 @@
 ?>
     </body>
     <style>
-    
+    .data-array{
+        width:200px;
+    }
+    .data-item {
+        font-size: 0.9rem;
+    }
     </style>
 </html>
 
