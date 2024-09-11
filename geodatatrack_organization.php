@@ -12,8 +12,31 @@
     </head>
     <body>
         <?php
-        include "includes/data.php";
-            
+        //include "includes/data.php";
+        $headers_orgs=array("Name", "Contact", "Contact Info", "Categories", "Metadata");
+ 
+        $value=array();
+        $value['name']="ABC Org";
+        //$value['address']="Baker street";
+        $value['contact']="unclear????";
+        $value['contact_info']=array("telephone" => "2 (999) 000-00-00", "email" => "aaa@aaa.com", "address" => "Baker street");
+        //$value['telephone']="2 (999) 000-00-00";
+        //$value['email']="aaa@aaa.com";
+        $value['category']=array("Region" => "Africa", "EcoRegion" => "Desert", "UN coding" => "ABC01");
+        $value['metadata']="Metadata ABC";
+        $value1=array();
+        $value1['name']="DEF Org";
+        $value1['contact']="unclear????";
+        $value1['contact_info']=array("telephone" => "1 (777) 222-22-2", "email" => "bbbb@bbbbb.com", "address" => "Coronation street");
+        $value1['category']=array("Region" => "Africa", "EcoRegion" => "Savanna", "UN coding" => "DEF04");
+        $value1['metadata']="Metadata DEF";
+        $value1['category']=array("Region" => "Africa", "EcoRegion" => "Savanna", "UN coding" => "DEF04");
+        $value1['metadata']="Metadata DEF";
+        $orgs=array();
+        $orgs[]=$value;
+        $orgs[]=$value1;
+        $orgs[]=$value;
+        $orgs[]=$value1;
             /////
              echo "<div class='container'>
                     <div class='header row'>
@@ -81,6 +104,7 @@
         background:#fafbe4cc;
         background:#f0f6fd;
         font-style:italic;
+        line-height: 21px;
         text-align:right;
         width:80px;
     }
