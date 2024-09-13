@@ -152,19 +152,84 @@
         echo "<pre>";
         //print_r($group_by_postcode);
          echo "</pre>";
-
-        ##############################################################
         function setPages($array, $pageArray=[], $page_number="one", $rows_number=3, $cycle=1){
+            $rows_number_limit = 12;
+            echo "<div style='color:red'>cycle: ".$cycle."</div>";
+            echo "rows_number start:".$rows_number."<br>";
+            //////////////
+            $array_new=[];
+            foreach($array as $key => $list){
+                echo "key: ".$key."<br>";
+                $i=0;
+                foreach($list as $key1 => $item){
+                    echo "rows_number inside:".$rows_number."<br>";
+                    echo "rows_number_limit:".$rows_number_limit."<br>";
+                    if($rows_number < $rows_number_limit){ 
+                        echo "ITEM_____________:".$item['waste_type_name']."<br>";
+                        $rows_number++;
+                        $array_new[$key][]=$item;
+                        unset($array[$key][$i]);
+                       /* if($page_number=="one"){
+                            $page_number="two";
+                        }else if($page_number=="two"){
+                            $page_number="three"; 
+                        }*/
+                    }else{
+                        $rows_number=3;                      
+                        break;
+                    }
+                    $i++;
+                }
+               //TO DO how many rows passed farther
+                if(empty($array[$key])){
+                    echo "Delete<br>";
+                   // print_r( $array[$key]);
+                   unset($array[$key]);
+                }
+                echo "<pre>";
+                //print_r($array);
+                echo "</pre>";
+                $pageArray[$page_number][]=$array_new;
+               
+               
+                if( $cycle === 1){
+                   // $rows_number += 3;
+                    //$page_number="";
+                    return setPages($array, $pageArray, $page_number, $rows_number, ++$cycle);
+                    return $pageArray;
+                }
+                if( $cycle === 2){
+                    //$rows_number += 3;
+                    //$page_number="two";
+                    return setPages($array, $pageArray, $page_number, $rows_number, ++$cycle);
+                    return $pageArray;
+                }
+                if( $cycle === 3){
+                    //$rows_number += 3;
+                   // $page_number="";
+                    return setPages($array, $pageArray, $page_number, $rows_number, ++$cycle);
+                    return $pageArray;
+                }
+                if( $cycle === 4){
+                    //$rows_number += 3;
+                   // $page_number="";
+                    //return setPages($array, $pageArray, $page_number, $rows_number, $cycle);
+                    return $pageArray;
+                }
+            }
+            
+            ////////////////////
+            //$cycle++;
+            echo "<div style='color:green'>cycle: ".$cycle."</div>";
+        }
+        ##############################################################
+        function setPages1($array, $pageArray=[], $page_number="one", $rows_number=3, $cycle=1){
             
             echo "rows_number start:".$rows_number."<br>";
             echo "<div style='color:red'>cycle: ".$cycle."</div>";
             echo "page_number: ".$page_number."<br>";
             $rows_number_limit = 11;
-            
-            if($i==1){
-                //
-                //exit;
-            }
+           
             //$page_num = 0;
             $array_new=[];
             
@@ -204,9 +269,17 @@
                         $rows_number=3;
                         
                         echo "<div style='color:blue'><pre>";
-                        print_r($array_new);
+                       // print_r($array_new);
                         echo "</pre></div>";
-                        
+                        if($cycle === 5){
+                            echo "vvvvvvvvvvvvvvvv<br>";
+                            exit;
+                        }
+                        if(empty($array[$key])){
+                            echo "Delete 22222<br>";
+                           // print_r( $array[$key]);
+                           unset($array[$key]);
+                        }
                         //exit;
                         $pageArray[$page_number][]=$array_new;
                          //header coefficient
@@ -220,7 +293,20 @@
                    // print_r( $array[$key]);
                    unset($array[$key]);
                 }
-                   
+               /* if($cycle === 4){
+                    echo "stop<br>";
+                   exit;
+                }*/
+                /*
+                if($rows_number >= 9){
+                    echo "<div style='color:red'>LIMIT</div>";
+                    echo "rows_number:".$rows_number."<br>";
+                    $page_number="three";
+                    exit;
+                    return setPages($array, $pageArray, $page_number, $rows_number, ++$cycle);
+                    
+                }   
+                */
                 //echo "!!!!!!!!!!!!!!!!!rows_number:".$rows_number."<br>";
                 
                
@@ -243,17 +329,30 @@
                         //unset($array[$key]);
                     } 
                 }*/
-                /*echo "<pre>";
-                print_r($array);
-                 echo "</pre>";*/
+                if($cycle === 4){
+                    echo "<pre>";
+                    print_r($array);
+                     echo "</pre>";
+                }
+               
                 echo "rows_number end:".$rows_number."<br>";
                 $cycle++;
                 echo "<div style='color:green'>cycle: ".$cycle."</div>";
                 //return $pageArray;
                 echo "page_num: ".$page_num."<br>";
                 if( $cycle === 4 ){
+                    $rows_number += 3;
+                    $page_number="three";
+                    return setPages($array, $pageArray, $page_number, $rows_number, $cycle);
                     return $pageArray;
-                    $page_number="two";
+                    
+                }
+                if( $cycle === 6){
+                    $rows_number += 3;
+                    $page_number="three";
+                    //return setPages($array, $pageArray, $page_number, $rows_number, $cycle);
+                    return $pageArray;
+                    
                 }
                 if( $cycle ===2){
                // if(count($array) !== 0){
@@ -277,12 +376,6 @@
                 }
                 //return $pageArray;
             }
-           /* foreach($pageArray as $key => $page){
-                foreach($page as $key1 => $page_item){
-            //if($key==="B70 0AQ"){
-                echo "key:".$key1."<br>";
-                }
-            }*/
 
         }
         echo "rows_array_count:".$rows_array_count."<br>";
