@@ -1,5 +1,5 @@
     <?php
-    error_reporting(0);
+    error_reporting(1);
     //Array ( [totals] => Array ( [total_milesNUM] => 29520.01814396 [total_litres_usedNUM] => 10302.48633224204 [total_tonnageNUM] => 141.45000000 [total_co2_emissionsNUM] => 26230.43927658 )
     $temp1 = [];
     $temp1=array('total_milesNUM' => 29520.01814396, 'total_litres_usedNUM' => 10302.48633224204, 'total_tonnageNUM' => 141.45000000, 'total_co2_emissionsNUM' => 26230.43927658);
@@ -82,10 +82,33 @@
 
     $transport_stats['by_destination'] = $temp;
 
-   /*echo "<pre>";
-    print_r($transport_stats);
+   echo "<pre>";
+   //print_r($transport_stats['by_destination']);
     echo "</pre>";
-    exit;*/
+    //////
+    /*
+    function setPages($array){
+        foreach($array as $key => $list){
+            
+            $temp=[];
+            $temp[][$key] = $list;
+            $pageArray[]=$temp;
+           // echo "key:".$key."<br>";
+          
+        }
+        return $pageArray;
+    }
+    echo "rows_array_count:".$rows_array_count."<br>";
+    $new_group_by_postcode = $transport_stats['by_destination'];
+    $pageArray=[];
+    $pageArray[] = setPages($new_group_by_postcode );
+    echo "<pre>";
+    print_r($pageArray);
+     echo "</pre>";
+     */
+    /////////////
+    /////////////////
+   
     $group_by_postcode=array();
     $cells_count=0;
     $transport_stats_exists=false;
@@ -114,10 +137,7 @@
                 }
             }
 
-   echo "<pre>";
-    print_r($group_by_postcode);
-    echo "</pre>";
-    exit;
+
         //$group_count_array=array();
         //$group_count=0;
         $rows_array_count=0;
@@ -129,24 +149,150 @@
             $group_count[$key]=count($group);
             $page_data[] = $key;
         }
-        //echo " rows_array_count:". $rows_array_count."<br>";
-        $page_count=ceil($rows_array_count/5);
-        //echo $page_count;
-        $page_array=array_fill(0, $page_count, 'page');
-            /////////////////////////
-    
-        //$page=array();
-        /*foreach($group_by_postcode as $key => $group){
-            $page[] = $key;
-        // echo count($group)."<br>";
+        echo "<pre>";
+        //print_r($group_by_postcode);
+         echo "</pre>";
+
+        ##############################################################
+        function setPages($array, $pageArray=[], $page_number="one", $rows_number=3, $cycle=1){
+            echo "rows_number start:".$rows_number."<br>";
+            echo "<div style='color:red'>cycle: ".$cycle."</div>";
+            echo "page_number: ".$page_number."<br>";
+            $rows_number_limit = 11;
             
-        }*/
+            if($i==1){
+                //
+                //exit;
+            }
+            //$page_num = 0;
+            $array_new=[];
+            
+            foreach($array as $key => $list){
+                echo "key: ".$key."<br>"; 
+                echo "key count:::: ".count($list)."<br>";
+               // echo "rows_number before:".$rows_number."<br>";
+                //$rows_number += count($list);
+                echo "rows_number before:".$rows_number."<br>";
+                /*
+                echo "AAAAAA________________<pre>";
+                print_r( $array);
+                echo "</pre>";
+                  */  
+                    $i = 0;
+                    
+                foreach($list as $key1 => $item){
+                    echo "rows_number inside:".$rows_number."<br>";
+                    echo "i :::::::::::::".$i."<br>";
+                    if($rows_number <= $rows_number_limit){ 
+                        
+                        echo "ITEM_____________-:".$item['waste_type_name']."<br>";
+                        $rows_number ++;
+                        $array_new[$key][]=$item;
+                    /* echo "###########________________<pre>";
+                        print_r( $array[$key][$i]);
+                        echo "</pre>";*/
+                        unset($array[$key][$i]);
+                    }else{
+                        echo "<div style='color:red'>ITEM_____________-:".$item['waste_type_name']."</div>";
+                        /*
+                        echo "rows_number zzz:".$rows_number."<br>";
+                        echo "zzzzzzzzzzzzzzzzz<br>";
+                        echo "item:".$item['waste_type_name']."<br>";
+                        echo "zzzzzzzzzzzzzzzzz<br>";
+                        */
+                        $rows_number=0;
+                        /*echo "NEW<pre>";
+                        print_r($array_new);
+                        echo "</pre>";*/
+                        //exit;
+                        $pageArray[$page_number][]=$array_new;
+                        return setPages($array, $pageArray, "two", $rows_number, ++$cycle);
+                    }
+                    $i++;
+                }
+                if(empty($array[$key])){
+                    echo "Delete<br>";
+                   // print_r( $array[$key]);
+                   unset($array[$key]);
+                }
+                   
+                //echo "!!!!!!!!!!!!!!!!!rows_number:".$rows_number."<br>";
+                //$rows_number += 3;
+               
+               // $temp=[];
+                //$temp[$key] = $list;
+                $pageArray[$page_number][]=$array_new;
+               
+                echo "<pre>";
+              // print_r( $array);
+                echo "</pre>";
+               // echo "count:".count($pageArray)."<br>";
+                $page_num += count($pageArray) * 3;
+                /*foreach($pageArray as $key => $page){
+                    foreach($page as $key1 => $page_item){
+                        //echo "count page:".count($page_item)."<br>";
+                        echo "<pre>";
+                        print_r($array);
+                         echo "</pre>";
+                        $page_num += count($page_item);
+                        //unset($array[$key]);
+                    } 
+                }*/
+                /*echo "<pre>";
+                print_r($array);
+                 echo "</pre>";*/
+                echo "rows_number end:".$rows_number."<br>";
+                $cycle++;
+                echo "<div style='color:green'>cycle: ".$cycle."</div>";
+                //return $pageArray;
+                echo "page_num: ".$page_num."<br>";
+                if( $cycle ===2){
+               // if(count($array) !== 0){
+                    return setPages($array, $pageArray, $page_number, $rows_number, $cycle);
+                    return $pageArray;
+                   
+                }else{
+                    if( $i === 3 ){
+                        return $pageArray;
+                        $page_number="two";
+                    }
+                    
+                    
+                    echo "count_array::: ".count($array)."<br>";
+                }
+                /*else{
+                    return $pageArray;
+                }*/
+                
+                if(count($pageArray)){
+                    //return $pageArray;
+                }
+                //return $pageArray;
+            }
+           /* foreach($pageArray as $key => $page){
+                foreach($page as $key1 => $page_item){
+            //if($key==="B70 0AQ"){
+                echo "key:".$key1."<br>";
+                }
+            }*/
+
+        }
+        echo "rows_array_count:".$rows_array_count."<br>";
+        $new_group_by_postcode = $group_by_postcode;
+        $pageArray=[];
+        $pageArray[] = setPages($new_group_by_postcode );
+      
+         echo "12345678_______<pre>";
+         print_r($pageArray);
+          echo "</pre>";
+         ///////////////////////////
+         exit;
         $temp=array();
         $page1=array();
         $groupArray=array();
         $i=1;
         echo "<pre>";
-       // print_r($group_count);
+        print_r($group_count);
         echo "</pre>";
         foreach($group_by_postcode as $key => $group){
             foreach($group as $key1 => $stat){
@@ -183,7 +329,7 @@
                     $page1[]=$temp;
                     $temp=[];
                 }
-                echo "i:".$i."<br>";
+               // echo "i:".$i."<br>";
                 
                 if ($i == $rows_array_count && count($temp) < 4) {
                     //echo "last:".$i."<br>";
@@ -197,9 +343,13 @@
                 $i++ ; 
             }
         }
-        echo "rows_array_count:".$rows_array_count."<br>";
+        
+      
+        
+        
+        
         echo "<pre>$$$$$$";
-      //  print_r($group_by_postcode );
+        print_r($pageArray);
         echo "&&&&&&</pre>";
         //$page_data=array();
         $page_data_array=array();
@@ -223,7 +373,7 @@
     }
 
     echo "########################<pre>";
-    print_r($page_data_array);
+   // print_r($page_data_array);
     echo "</pre>";
        /* foreach($transport_stats['by_destination'] as $stat){
             $temp[$stat['wtn_destination_postcode']][]="";
