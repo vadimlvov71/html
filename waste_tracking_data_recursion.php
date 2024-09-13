@@ -155,6 +155,7 @@
 
         ##############################################################
         function setPages($array, $pageArray=[], $page_number="one", $rows_number=3, $cycle=1){
+            
             echo "rows_number start:".$rows_number."<br>";
             echo "<div style='color:red'>cycle: ".$cycle."</div>";
             echo "page_number: ".$page_number."<br>";
@@ -200,12 +201,16 @@
                         echo "item:".$item['waste_type_name']."<br>";
                         echo "zzzzzzzzzzzzzzzzz<br>";
                         */
-                        $rows_number=0;
-                        /*echo "NEW<pre>";
+                        $rows_number=3;
+                        
+                        echo "<div style='color:blue'><pre>";
                         print_r($array_new);
-                        echo "</pre>";*/
+                        echo "</pre></div>";
+                        
                         //exit;
                         $pageArray[$page_number][]=$array_new;
+                         //header coefficient
+                        //$rows_number += 3;
                         return setPages($array, $pageArray, "two", $rows_number, ++$cycle);
                     }
                     $i++;
@@ -217,7 +222,7 @@
                 }
                    
                 //echo "!!!!!!!!!!!!!!!!!rows_number:".$rows_number."<br>";
-                //$rows_number += 3;
+                
                
                // $temp=[];
                 //$temp[$key] = $list;
@@ -246,16 +251,19 @@
                 echo "<div style='color:green'>cycle: ".$cycle."</div>";
                 //return $pageArray;
                 echo "page_num: ".$page_num."<br>";
+                if( $cycle === 4 ){
+                    return $pageArray;
+                    $page_number="two";
+                }
                 if( $cycle ===2){
                // if(count($array) !== 0){
+                    //header coefficient
+                    $rows_number += 3;
                     return setPages($array, $pageArray, $page_number, $rows_number, $cycle);
                     return $pageArray;
                    
                 }else{
-                    if( $i === 3 ){
-                        return $pageArray;
-                        $page_number="two";
-                    }
+                    
                     
                     
                     echo "count_array::: ".count($array)."<br>";
@@ -282,7 +290,7 @@
         $pageArray=[];
         $pageArray[] = setPages($new_group_by_postcode );
       
-         echo "12345678_______<pre>";
+         echo "<div style='color:red'><pre>";
          print_r($pageArray);
           echo "</pre>";
          ///////////////////////////
