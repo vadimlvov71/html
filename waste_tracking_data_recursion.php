@@ -162,7 +162,7 @@
             $array_new=[];
             if( $cycle === 3){
             echo "<div style='color:green'><pre>";
-                        print_r( $array);
+                       // print_r( $array);
                         echo "</pre></div>";
             }
             foreach($array as $key => $list){
@@ -178,7 +178,7 @@
                         $rows_number++;
                         $array_new[$key][]=$item;
                         echo "###########________________<pre>";
-                        print_r( $array[$key][$i]);
+                       // print_r( $array[$key][$i]);
                         echo "</pre>";
                         unset($array[$key][$i]);
                         
@@ -192,13 +192,14 @@
                     $i++;
                 }
                 //reindexing
-                if(!empty($array[$key])){
+                $array[$key]= array_values($array[$key]);
+                /*if(!empty($array[$key])){
                     if( $cycle === 2){
                         echo "###########________________<pre>";
-                        print_r( $array[$key][$i]);
+                        print_r( $array[$key]);
                         echo "</pre>";
                     }
-                }
+                }*/
                 echo "<div style='color:red'>rows_number: ".$rows_number."</div>";
                //TO DO how many rows passed farther
                 if(empty($array[$key])){
