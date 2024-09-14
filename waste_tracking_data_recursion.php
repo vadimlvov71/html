@@ -160,6 +160,11 @@
             echo "rows_number start:".$rows_number."<br>";
             //////////////
             $array_new=[];
+            if( $cycle === 3){
+            echo "<div style='color:green'><pre>";
+                        print_r( $array);
+                        echo "</pre></div>";
+            }
             foreach($array as $key => $list){
                 echo "key: ".$key."<br>";
                 $i=0;
@@ -172,8 +177,12 @@
                         echo "<div style='color:green'>ITEM:".$array[$key][$i]['waste_type_name']."</div>";
                         $rows_number++;
                         $array_new[$key][]=$item;
-                        //unset($array[$key][$i]);
+                        echo "###########________________<pre>";
+                        print_r( $array[$key][$i]);
+                        echo "</pre>";
                         unset($array[$key][$i]);
+                        
+                       
                     }else{
                         $rows_number=3;
                         $page_limit = true;
@@ -181,6 +190,14 @@
                         break;
                     }
                     $i++;
+                }
+                //reindexing
+                if(!empty($array[$key])){
+                    if( $cycle === 2){
+                        echo "###########________________<pre>";
+                        print_r( $array[$key][$i]);
+                        echo "</pre>";
+                    }
                 }
                 echo "<div style='color:red'>rows_number: ".$rows_number."</div>";
                //TO DO how many rows passed farther
