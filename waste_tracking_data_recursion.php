@@ -152,8 +152,12 @@
         echo "<pre>";
         //print_r($group_by_postcode);
          echo "</pre>";
-        function setPages($array, $pageArray=[], $page_number="one", $rows_number=3, $cycle=1){
-            //$rows_number += 3;
+         ##################################
+         #####################
+         ##############
+
+        function setPages($array, $pageArray=[], $page_number=1, $rows_number=0, $cycle=1){
+            $rows_number += 3;
             echo "rows_number start:".$rows_number."<br>";
             /*if($rows_number > 8){
                 if($page_number=="one"){
@@ -167,7 +171,7 @@
             $page_limit = false;
             echo "<div style='color:red'>page_number: ".$page_number."</div>";
             echo "<div style='color:red'>cycle: ".$cycle."</div>";
-            echo "rows_number start:".$rows_number."<br>";
+           // echo "rows_number start:".$rows_number."<br>";
             //////////////
             $array_new=[];
             if( $cycle === 3){
@@ -179,12 +183,12 @@
                 echo "key: ".$key."<br>";
                 $i=0;
                 foreach($list as $key1 => $item){
-                    echo "index: ".$i."<br>";
-                    echo "rows_number inside:".$rows_number."<br>";
-                    echo "rows_number_limit:".$rows_number_limit."<br>";
+                    //echo "index: ".$i."<br>";
+                   // echo "rows_number inside:".$rows_number."<br>";
+                    //echo "rows_number_limit:".$rows_number_limit."<br>";
                     if($rows_number < $rows_number_limit){ 
-                        echo "<div style='color:green'>ITEM:".$item['waste_type_name']."</div>";
-                        echo "<div style='color:green'>ITEM:".$array[$key][$i]['waste_type_name']."</div>";
+                       // echo "<div style='color:green'>ITEM:".$item['waste_type_name']."</div>";
+                       // echo "<div style='color:green'>ITEM:".$array[$key][$i]['waste_type_name']."</div>";
                         $rows_number++;
                         $array_new[$key][]=$item;
                        
@@ -192,7 +196,7 @@
                         //$rows_number=0;
                        
                     }else{
-                        $rows_number+=3;
+                        //$rows_number+=3;
                         $page_limit = true;
                                               
                         break;
@@ -216,25 +220,43 @@
                    // print_r( $array[$key]);
                    unset($array[$key]);
                 }
-                if( $cycle === 3){
-               /* echo "<div style='color:blue'><pre>";
-                print_r($array);
-                echo "</pre></div>";*/
+                if( $cycle === 4){
+                   /* echo "<div style='color:blue'><pre>";
+                    print_r($array_new);
+                    echo "</pre></div>";*/
                 }
                 $pageArray[$page_number][]=$array_new;
-                if($page_limit == true){
-                    if($page_number=="one"){
+
+                if($rows_number === 12){
+                    $page_limit = true;
+                    $rows_number = 0;
+                }
+                if($page_limit == true ){
+                    $page_number++;
+                    /*if($page_number=="one"){
                         $page_number="two";
                     }else if($page_number=="two"){
                         $page_number="three"; 
-                    }
+                    }else if($page_number=="three"){
+                        $page_number="four"; 
+                    }*/
                 }
-                if( $cycle === 1){
-                    $rows_number += 3;
+               /* if( $cycle === 8){
+                    //$rows_number += 3;
                     //$page_number="";
-                    return setPages($array, $pageArray, $page_number, $rows_number, ++$cycle);
+                    
+                    echo "<div style='color:blue'><pre>";
+                    print_r($array);
+                    echo "</pre></div>";
                     return $pageArray;
+                }*/
+                if(empty($array)){
+                    return $pageArray;
+                }else{
+                    return setPages($array, $pageArray, $page_number, $rows_number, ++$cycle);
                 }
+                
+               /*
                 if( $cycle === 2){
                     //$rows_number += 3;
                     //$page_number="two";
@@ -250,9 +272,28 @@
                 if( $cycle === 4){
                     //$rows_number += 3;
                    // $page_number="";
+                    return setPages($array, $pageArray, $page_number, $rows_number, ++$cycle);
+                    return $pageArray;
+                }
+                if( $cycle === 5){
+                    //$rows_number += 3;
+                   // $page_number="";
+                    return setPages($array, $pageArray, $page_number, $rows_number, ++$cycle);
+                    return $pageArray;
+                }
+                if( $cycle === 6){
+                    //$rows_number += 3;
+                   // $page_number="";
+                    return setPages($array, $pageArray, $page_number, $rows_number, ++$cycle);
+                    return $pageArray;
+                }
+                if( $cycle === 7){
+                    //$rows_number += 3;
+                   // $page_number="";
                     //return setPages($array, $pageArray, $page_number, $rows_number, $cycle);
                     return $pageArray;
                 }
+                */
             }
             
             ////////////////////
@@ -349,7 +390,12 @@
                
                // $temp=[];
                 //$temp[$key] = $list;
-                $pageArray[$page_number][]=$array_new;
+                if(!empty($array_new)){
+                    $pageArray[$page_number][]=$array_new;
+                }else{
+                    echo "Empty<br>";
+                }
+                
                
                 echo "<pre>";
               // print_r( $array);
