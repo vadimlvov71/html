@@ -153,9 +153,19 @@
         //print_r($group_by_postcode);
          echo "</pre>";
         function setPages($array, $pageArray=[], $page_number="one", $rows_number=3, $cycle=1){
-            
+            //$rows_number += 3;
+            echo "rows_number start:".$rows_number."<br>";
+            /*if($rows_number > 8){
+                if($page_number=="one"){
+                    $page_number="two";
+                }else if($page_number=="two"){
+                    $page_number="three"; 
+                }
+                $rows_number = 0;
+            }*/
             $rows_number_limit = 12;
             $page_limit = false;
+            echo "<div style='color:red'>page_number: ".$page_number."</div>";
             echo "<div style='color:red'>cycle: ".$cycle."</div>";
             echo "rows_number start:".$rows_number."<br>";
             //////////////
@@ -177,20 +187,19 @@
                         echo "<div style='color:green'>ITEM:".$array[$key][$i]['waste_type_name']."</div>";
                         $rows_number++;
                         $array_new[$key][]=$item;
-                        echo "###########________________<pre>";
-                       // print_r( $array[$key][$i]);
-                        echo "</pre>";
+                       
                         unset($array[$key][$i]);
-                        
+                        //$rows_number=0;
                        
                     }else{
-                        $rows_number=3;
+                        $rows_number+=3;
                         $page_limit = true;
                                               
                         break;
                     }
                     $i++;
                 }
+                
                 //reindexing
                 $array[$key]= array_values($array[$key]);
                 /*if(!empty($array[$key])){
@@ -200,7 +209,7 @@
                         echo "</pre>";
                     }
                 }*/
-                echo "<div style='color:red'>rows_number: ".$rows_number."</div>";
+                echo "<div style='color:green'>rows_number end: ".$rows_number."</div>";
                //TO DO how many rows passed farther
                 if(empty($array[$key])){
                     echo "Delete<br>";
@@ -208,9 +217,9 @@
                    unset($array[$key]);
                 }
                 if( $cycle === 3){
-                echo "<div style='color:blue'><pre>";
+               /* echo "<div style='color:blue'><pre>";
                 print_r($array);
-                echo "</pre></div>";
+                echo "</pre></div>";*/
                 }
                 $pageArray[$page_number][]=$array_new;
                 if($page_limit == true){
